@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailors.lk | Find Your Own Tailor Here</title>
+    <title>Tailors.lk | Coming Soon</title>
     <meta name="description" content="Tailors.lk is building a digital home for Sri Lanka’s tailoring community. Join the directory and be discovered.">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <style>
@@ -497,6 +497,227 @@
             vertical-align: middle;
         }
 
+        /* New Footer Styles */
+        .footer {
+            background-color: #0a1423;
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-2px);
+            background-color: #f4c542;
+        }
+        
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #000000;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #f4c542;
+            text-decoration: underline;
+        }
+        
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-contact {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-contact a:hover {
+            background: #f4c542;
+            color: #000000;
+        }
+        
+        .footer-contact .contact-icon {
+            margin: 0;
+        }
+
+        /* Pre-launch specific styles */
+        .coming-soon {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .coming-soon::before {
+            content: "COMING SOON";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            color: #f4c542;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            z-index: 5;
+            pointer-events: none;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-value {
+            font-size: 3rem;
+            font-weight: 700;
+            background: #f4c542;
+            color: #000000;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .countdown-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: #666;
+        }
+        
+        .notification-form {
+            max-width: 400px;
+            margin: 2rem auto;
+        }
+        
+        .notification-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            font-family: inherit;
+            margin-bottom: 1rem;
+        }
+        
+        .notification-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #f4c542;
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .notification-btn:hover {
+            background: #000000;
+            color: #f4c542;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 253, 246, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f4c542;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
         @media (max-width: 768px) {
             .md-grid-cols-2 {
                 grid-template-columns: 1fr;
@@ -532,6 +753,31 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .social-icons {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .countdown {
+                gap: 0.5rem;
+            }
+            
+            .countdown-value {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -543,9 +789,36 @@
     </header>
 
     <section class="hero">
-        <h2 class="cormorant text-4xl md-text-6xl mb-4">Find Your Own Tailor Here</h2>
-        <p class="text-lg md-text-xl mb-8 max-w-2xl leading-relaxed mx-auto">Tailors.lk is building a digital home for Sri Lanka’s tailoring community.</p>
-        <button class="btn scroll-to-form">Join the Directory</button>
+        <div class="coming-soon">
+            <h2 class="cormorant text-4xl md-text-6xl mb-4">Find Your Own Tailor Here</h2>
+            <p class="text-lg md-text-xl mb-8 max-w-2xl leading-relaxed mx-auto">Tailors.lk is building a digital home for Sri Lanka’s tailoring community.</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            
+            <p class="text-lg mb-6">We're launching soon! Sign up to get notified.</p>
+            
+            <div class="notification-form">
+                <input type="email" class="notification-input" placeholder="Enter your email">
+                <button class="notification-btn">Get Notified</button>
+            </div>
+        </div>
     </section>
 
     <section class="py-8">
@@ -555,101 +828,34 @@
     </section>
 
     <section class="py-8">
-        <h3 class="cormorant text-2xl md-text-3xl text-center mb-8">What You Get</h3>
-        <div class="grid md-grid-cols-2 lg-grid-cols-4 gap-4">
-            <div class="glass-panel text-center">
-                <h4 class="font-bold mb-2">Your own profile page</h4>
+        <h3 class="cormorant text-2xl md-text-3xl text-center mb-8">What You'll Get</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <h4 class="feature-title">Your own profile page</h4>
+                <p>Showcase your skills and services to potential customers</p>
             </div>
-            <div class="glass-panel text-center">
-                <h4 class="font-bold mb-2">Free listing</h4>
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h4 class="feature-title">Free listing</h4>
+                <p>No cost to join our directory - reach customers at no charge</p>
             </div>
-            <div class="glass-panel text-center">
-                <h4 class="font-bold mb-2">Verified by us</h4>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h4 class="feature-title">Verified by us</h4>
+                <p>Gain customer trust with our verification process</p>
             </div>
-            <div class="glass-panel text-center">
-                <h4 class="font-bold mb-2">Reach new customers</h4>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h4 class="feature-title">Reach new customers</h4>
+                <p>Expand your business beyond word-of-mouth referrals</p>
             </div>
-        </div>
-    </section>
-
-    <section id="join-form" class="py-8">
-        <div class="glass-panel max-w-2xl mx-auto">
-            <h3 class="cormorant text-2xl md-text-3xl text-center mb-6">Join the Directory</h3>
-            <form id="tailorForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="entry.130327913" required>
-                </div>
-                <div class="form-group">
-                    <label for="businessName">Business Name</label>
-                    <input type="text" id="businessName" name="entry.70566231" required>
-                </div>
-                <div class="form-group">
-                    <label for="location">Location/Address</label>
-                    <input type="text" id="location" name="entry.2136965479" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="entry.496092124" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="entry.958771356" required>
-                </div>
-                <div class="form-group">
-                    <label>Services</label>
-                    <div class="services-grid">
-                        <!-- Updated service items with custom checkbox styling -->
-                        <div class="service-item">
-                            <input type="checkbox" id="service1" name="entry.189478647" value="Custom made garments">
-                            <span class="custom-checkbox"></span>
-                            <label for="service1">Custom made garments</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service2" name="entry.189478647" value="Ready made garments">
-                            <span class="custom-checkbox"></span>
-                            <label for="service2">Ready made garments</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service3" name="entry.189478647" value="Kurta Stitching">
-                            <span class="custom-checkbox"></span>
-                            <label for="service3">Kurta Stitching</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service4" name="entry.189478647" value="Western Wear">
-                            <span class="custom-checkbox"></span>
-                            <label for="service4">Western Wear</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service5" name="entry.189478647" value="Custom Design">
-                            <span class="custom-checkbox"></span>
-                            <label for="service5">Custom Design</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service6" name="entry.189478647" value="Saree Stitching">
-                            <span class="custom-checkbox"></span>
-                            <label for="service6">Saree Stitching</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service7" name="entry.189478647" value="Alterations">
-                            <span class="custom-checkbox"></span>
-                            <label for="service7">Alterations</label>
-                        </div>
-                        <div class="service-item">
-                            <input type="checkbox" id="service8" name="entry.189478647" value="Traditional wear">
-                            <span class="custom-checkbox"></span>
-                            <label for="service8">Traditional wear</label>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn w-full">Submit Application</button>
-            </form>
         </div>
     </section>
 
     <section class="py-8 text-center">
         <div class="counter" id="tailorCounter">0</div>
-        <p>tailors joined the directory</p>
+        <p>tailors interested in joining the directory</p>
     </section>
 
     <section class="py-8">
@@ -657,70 +863,42 @@
             <h3 class="cormorant text-2xl md-text-3xl text-center mb-6">Frequently Asked Questions</h3>
             <div class="faq-container">
                 <div class="faq-category">
-                    <h4 class="font-bold mb-2">✅ Listing & Verification</h4>
+                    <h4 class="font-bold mb-2">✅ Platform & Features</h4>
                     <div class="faq-item">
-                        <div class="faq-question">How long does it take to get listed?</div>
-                        <div class="faq-answer">We review submissions manually. You’ll hear back within a few days.</div>
+                        <div class="faq-question">What is Tailors.lk?</div>
+                        <div class="faq-answer">Tailors.lk is a digital platform connecting tailors in Sri Lanka with customers looking for custom tailoring services.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Do I need to upload photos or documents?</div>
-                        <div class="faq-answer">Not yet. We’ll contact you if we need anything additional.</div>
+                        <div class="faq-question">How will it benefit me as a tailor?</div>
+                        <div class="faq-answer">You'll get a professional online presence, reach new customers, and grow your business through our platform.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Can I list my tailoring business even if I work from home?</div>
-                        <div class="faq-answer">Yes—home-based tailors are welcome.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Is there a limit to how many services I can select?</div>
-                        <div class="faq-answer">No. Choose all that apply to your business.</div>
+                        <div class="faq-question">What services can I offer?</div>
+                        <div class="faq-answer">You can offer custom garments, alterations, traditional wear, western wear, and more - whatever services you provide.</div>
                     </div>
                 </div>
 
                 <div class="faq-category">
-                    <h4 class="font-bold mb-2">✅ Updates & Changes</h4>
-                    <div class="faq-item">
-                        <div class="faq-question">Can I update my listing later?</div>
-                        <div class="faq-answer">Yes. You’ll be able to request edits anytime.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">What if I move to a new location?</div>
-                        <div class="faq-answer">Just let us know—we’ll update your profile.</div>
-                    </div>
-                </div>
-
-                <div class="faq-category">
-                    <h4 class="font-bold mb-2">✅ Cost & Access</h4>
+                    <h4 class="font-bold mb-2">✅ Registration & Cost</h4>
                     <div class="faq-item">
                         <div class="faq-question">Is it free to join?</div>
-                        <div class="faq-answer">Yes. There’s no charge to be listed.</div>
+                        <div class="faq-answer">Yes, listing your business is completely free. There are no charges to join or maintain your profile.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Will I need to pay later?</div>
-                        <div class="faq-answer">We’ll always be transparent about any future changes. Right now, it’s free.</div>
-                    </div>
-                </div>
-
-                <div class="faq-category">
-                    <h4 class="font-bold mb-2">✅ Visibility & Reach</h4>
-                    <div class="faq-item">
-                        <div class="faq-question">Where will my profile appear?</div>
-                        <div class="faq-answer">On Tailors.lk’s public directory once it goes live.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Can customers contact me directly?</div>
-                        <div class="faq-answer">Yes. We’ll display your preferred contact method.</div>
+                        <div class="faq-question">How do I register?</div>
+                        <div class="faq-answer">Registration will open soon. Sign up with your email above to be notified when we launch.</div>
                     </div>
                 </div>
 
                 <div class="faq-category">
                     <h4 class="font-bold mb-2">✅ Support & Contact</h4>
                     <div class="faq-item">
-                        <div class="faq-question">Who do I contact if I have questions?</div>
-                        <div class="faq-answer">You can reach us via WhatsApp or email anytime.</div>
+                        <div class="faq-question">How can I get updates?</div>
+                        <div class="faq-answer">Sign up with your email to receive launch notifications and updates.</div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">Can I remove my listing if I change my mind?</div>
-                        <div class="faq-answer">Absolutely. Just send us a request.</div>
+                        <div class="faq-question">Can I contact you before launch?</div>
+                        <div class="faq-answer">Yes, you can reach us via WhatsApp or email anytime.</div>
                     </div>
                 </div>
             </div>
@@ -747,7 +925,7 @@
     <div class="success-popup" id="successPopup">
         <span class="close-btn" id="closePopup">×</span>
         <h3 class="cormorant text-2xl">Thank you!</h3>
-        <p>Your listing request has been received.</p>
+        <p>You'll be notified when we launch!</p>
     </div>
 
     <div class="whatsapp-btn" onclick="openWhatsApp()">
@@ -756,8 +934,55 @@
         </svg>
     </div>
 
-    <footer class="text-center py-4 text-sm">
-        <p>Tailors.lk © 2025 | Developed by <a href="https://elvariente.com" class="text-yellow-600 hover:underline">El Variente</a></p>
+    <!-- Updated Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@tailors.lk" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 16.6v-6.8c0-.66-.54-1.2-1.2-1.2H6.2c-.66 0-1.2.54-1.2 1.2v6.8c0 .66.54 1.2 1.2 1.2h2.6c.66 0 1.2-.54 1.2-1.2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 16.6v-6.8c0-.66-.54-1.2-1.2-1.2H6.2c-.66 0-1.2.54-1.2 1.2v6.8c0 .66.54 1.2 1.2 1.2h2.6c.66 0 1.2-.54 1.2-1.2z"/>
+                    </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/tailors.lk" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/tailors.lk.find" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 16.6v-6.8c0-.66-.54-1.2-1.2-1.2H6.2c-.66 0-1.2.54-1.2 1.2v6.8c0 .66.54 1.2 1.2 1.2h2.6c.66 0 1.2-.54 1.2-1.2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 16.6v-6.8c0-.66-.54-1.2-1.2-1.2H6.2c-.66 0-1.2.54-1.2 1.2v6.8c0 .66.54 1.2 1.2 1.2h2.6c.66 0 1.2-.54 1.2-1.2z"/>
+                    </svg>
+                </a>
+                <!-- Twitter/X -->
+                <a href="https://twitter.com/tailorslk" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-contact">
+                <a href="mailto:hello@tailors.lk">
+                    <span class="contact-icon">✉️</span> hello@tailors.lk
+                </a>
+                <a href="tel:+94758244216">
+                    <span class="contact-icon">📱</span> +94 75 824 4216
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#faq">FAQ</a>
+                <a href="#" id="scrollToTop">Back to Top</a>
+                <a href="https://elvariente.com" target="_blank">Developed by El Variente</a>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2025 Tailors.lk. All rights reserved.
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -844,25 +1069,39 @@
         
         animateParticles();
 
-        // Form Handling - Updated for Direct Submission using Prototype
-        document.getElementById('tailorForm').addEventListener('submit', async (e) => {
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date('January 1, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const diff = launchDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Notification Form Handling
+        document.querySelector('.notification-form').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            const formData = new FormData(document.getElementById('tailorForm'));
-            const params = new URLSearchParams(formData).toString();
-
-            const url = 'https://docs.google.com/forms/d/e/1FAIpQLSeQRwofFdTJizP8h2qDSjCkfkwQUm5sY2PVY0OxiCVWPBCe5Q/formResponse';
-
-            await fetch(url, {
-              method: 'POST',
-              mode: 'no-cors',
-              body: formData
-            });
-
+            const email = this.querySelector('.notification-input').value;
+            
+            // In a real implementation, you would send this to your backend
+            console.log('Notification email submitted:', email);
+            
             // Show success popup
             document.getElementById('successPopup').style.display = 'block';
             // Reset form
-            document.getElementById('tailorForm').reset();
+            this.reset();
         });
 
         // Success Popup Close
@@ -876,11 +1115,6 @@
                 const answer = this.nextElementSibling;
                 answer.classList.toggle('active');
             });
-        });
-
-        // Scroll to form
-        document.querySelector('.scroll-to-form').addEventListener('click', function() {
-            document.getElementById('join-form').scrollIntoView({ behavior: 'smooth' });
         });
 
         // Tailor Counter Animation
@@ -917,6 +1151,15 @@
         function openWhatsApp() {
             window.open('https://wa.me/94758244216', '_blank');
         }
+        
+        // Back to top functionality
+        document.getElementById('scrollToTop').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
