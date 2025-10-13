@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailors.lk - Sri Lanka's Tailoring Community</title>
+    <title>Tailors.lk - Find Local Tailors in Sri Lanka | Blouse Stitching, Saree Fitting, More</title>
+    <meta name="description" content="Find trusted tailors in Sri Lanka for blouse stitching, saree fitting, pant hemming, and custom clothing. Connect with local professionals in Colombo, Kandy, Galle, and more.">
+    <meta name="keywords" content="tailors in sri lanka, tailors in colombo, tailors in kandy, tailors in galle, blouse stitching, saree fitting, custom tailoring, local tailors, sri lanka tailoring">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* External CSS would be linked here, but embedded for this example */
         * {
             margin: 0;
             padding: 0;
@@ -15,8 +17,8 @@
 
         body {
             font-family: 'EB Garamond', serif;
-            background-color: #f8f4f0;
-            color: #333;
+            background-color: #fffbc7;
+            color: #030000;
             line-height: 1.6;
         }
 
@@ -27,486 +29,510 @@
         }
 
         /* Paper Print Aesthetic */
-        .card {
-            background: white;
-            border: 1px solid #e0d6cc;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            padding: 24px;
-            margin: 16px 0;
+        .strip {
+            background: #aaf1fa;
+            border: 1px solid #632220;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.3);
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 0; /* Sharp edges */
         }
 
-        .form-card {
-            background: white;
-            border: 2px solid #e0d6cc;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-            border-radius: 12px;
-            padding: 32px;
-            margin: 20px 0;
-        }
-
-        /* Header & Hero */
+        /* Header & Navbar */
         header {
-            background: white;
-            border-bottom: 1px solid #e0d6cc;
-            padding: 20px 0;
-            margin-bottom: 40px;
+            background: #aaf1fa;
+            border-bottom: 2px solid #632220;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(99, 34, 32, 0.2);
         }
 
-        .hero {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #030000;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #632220;
+            color: #aaf1fa;
+            box-shadow: 2px 2px 0px rgba(99, 34, 32, 0.5);
+        }
+
+        /* Search Section */
+        .search-section {
+            padding: 60px 0;
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #fffaf7 0%, #f8f4f0 100%);
-            border-bottom: 1px solid #e0d6cc;
-            margin-bottom: 40px;
+            background: linear-gradient(135deg, #fff8b0 0%, #fffbc7 100%);
+            border-bottom: 2px solid #632220;
         }
 
-        .hero h1 {
+        .search-section h1 {
             font-size: 2.5rem;
-            color: #800000;
-            margin-bottom: 16px;
-            font-weight: 700;
+            margin-bottom: 20px;
+            color: #632220;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            color: #666;
+        .search-bar {
             max-width: 600px;
             margin: 0 auto;
+            position: relative;
         }
 
-        /* How It Works */
-        .how-it-works {
-            margin: 60px 0;
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #632220;
+            border-radius: 0; /* Sharp edges */
+            font-family: inherit;
+            font-size: 1.1rem;
+            background: #aaf1fa;
         }
 
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .search-input:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.3);
         }
 
-        .step {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: #800000;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+        /* Tailors Strips */
+        .tailors-container {
+            display: none; /* Hidden by default */
             margin: 40px 0;
         }
 
-        .service-card {
-            transition: transform 0.3s ease;
+        .tailor-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .service-card:hover {
-            transform: translateY(-4px);
+        .tailor-info {
+            flex: 1;
+            min-width: 200px;
         }
 
-        .service-title {
-            color: #800000;
+        .tailor-name {
             font-size: 1.3rem;
+            color: #632220;
+            margin-bottom: 5px;
+        }
+
+        .tailor-area {
+            color: #666;
+            font-style: italic;
             margin-bottom: 8px;
         }
 
-        .service-price {
-            color: #2c5530;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin: 12px 0;
+        .tailor-services {
+            margin: 10px 0;
         }
 
         .btn {
-            background: #800000;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
+            background: #aaf1fa;
+            color: #030000;
+            border: 2px solid #632220;
+            padding: 10px 20px;
+            border-radius: 0; /* Sharp edges */
             cursor: pointer;
             font-family: inherit;
             font-size: 1rem;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 2px 2px 0px rgba(99, 34, 32, 0.3);
         }
 
         .btn:hover {
-            background: #660000;
+            background: #632220;
+            color: #aaf1fa;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.5);
+            transform: translate(-2px, -2px);
         }
 
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 16px;
+        .btn-contact {
+            background: #f5a6f3;
+            border-color: #632220;
         }
 
-        .btn-whatsapp:hover {
-            background: #128C7E;
+        .btn-contact:hover {
+            background: #632220;
+            color: #f5a6f3;
         }
 
-        /* Forms */
-        .form-group {
+        .btn-view {
+            background: #a6f5bd;
+            border-color: #632220;
+        }
+
+        .btn-view:hover {
+            background: #632220;
+            color: #a6f5bd;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* SEO Content */
+        .seo-content {
+            padding: 60px 0;
+        }
+
+        .seo-content h2 {
+            color: #632220;
             margin-bottom: 20px;
+            font-size: 2rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
+        .seo-content p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d0c0b0;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1rem;
+        /* Join Section */
+        .join-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff8b0 0%, #fffbc7 100%);
+            border-top: 2px solid #632220;
+            border-bottom: 2px solid #632220;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #800000;
-            box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.1);
+        .join-section h2 {
+            color: #632220;
+            margin-bottom: 20px;
+            font-size: 2rem;
         }
 
         /* Footer */
         footer {
-            background: white;
-            border-top: 1px solid #e0d6cc;
+            background: #aaf1fa;
+            border-top: 2px solid #632220;
             padding: 40px 0 20px;
             margin-top: 60px;
+            box-shadow: 0 -2px 4px rgba(99, 34, 32, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: #632220;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #030000;
+            transition: color 0.3s ease;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #632220;
+            background: #632220;
+            color: #aaf1fa;
+            box-shadow: 2px 2px 0px rgba(99, 34, 32, 0.3);
         }
 
         .social-links {
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-top: 10px;
         }
 
         .social-links a {
-            color: #800000;
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 1px solid #e0d6cc;
-            border-radius: 6px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #632220;
+            color: #aaf1fa;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 0; /* Sharp edges */
             transition: all 0.3s ease;
+            box-shadow: 2px 2px 0px rgba(99, 34, 32, 0.3);
         }
 
         .social-links a:hover {
-            background: #800000;
-            color: white;
+            background: #aaf1fa;
+            color: #632220;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.5);
+            transform: translate(-2px, -2px);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .search-section h1 {
                 font-size: 2rem;
             }
             
-            .hero p {
-                font-size: 1rem;
+            .tailor-strip {
+                flex-direction: column;
+                align-items: stretch;
             }
             
-            .services-grid {
+            .btn-group {
+                justify-content: center;
+            }
+            
+            .footer-content {
                 grid-template-columns: 1fr;
             }
-            
-            .form-card {
-                padding: 20px;
-            }
-        }
-
-        /* Hidden elements */
-        #google-form {
-            display: none;
-        }
-
-        .thank-you {
-            background: #d4edda;
-            color: #155724;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 1px solid #c3e6cb;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 style="text-align: center; color: #800000; font-size: 2rem; margin: 0;">Tailors.lk</h1>
+            <nav>
+                <img src="static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#join">Join as Tailor</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <main>
+        <section class="search-section" id="home">
+            <div class="container">
+                <h1>Find Tailors in Sri Lanka</h1>
+                <div class="search-bar">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Find Tailors in Your Area..." 
+                        oninput="filterTailors()"
+                    >
+                </div>
+            </div>
+        </section>
+
         <div class="container">
-            <h1>Sri Lanka's Tailoring Community</h1>
-            <p>Find professional tailors, book custom services, and get your garments tailored to perfection</p>
+            <div class="tailors-container" id="tailors-container">
+                <!-- Tailor strips will be loaded here -->
+            </div>
         </div>
-    </section>
 
-    <div class="container">
-        <section class="how-it-works">
-            <h2 style="text-align: center; color: #800000; margin-bottom: 40px; font-size: 2rem;">How It Works</h2>
-            <div class="steps">
-                <div class="step card">
-                    <div class="step-number">1</div>
-                    <h3>Choose Service</h3>
-                    <p>Browse our available tailoring services and select what you need</p>
-                </div>
-                <div class="step card">
-                    <div class="step-number">2</div>
-                    <h3>Book Online</h3>
-                    <p>Fill out the booking form with your details and preferences</p>
-                </div>
-                <div class="step card">
-                    <div class="step-number">3</div>
-                    <h3>Get Tailored</h3>
-                    <p>Connect with our professional tailors and get your perfect fit</p>
-                </div>
+        <section class="seo-content" id="about">
+            <div class="container">
+                <h2>Find Trusted Tailors in Sri Lanka</h2>
+                <p>Looking for tailors in Colombo? Tailors.lk connects you with trusted professionals specializing in blouse stitching, saree fall, pant hemming, and custom clothing. Our directory features experienced tailors across Sri Lanka, from major cities like Kandy and Galle to smaller towns.</p>
+                <p>Whether you need traditional Kandyan wear, modern Western cuts, or alterations for special occasions, our network of skilled tailors ensures quality craftsmanship and perfect fits. Browse profiles, read reviews, and book directly through our platform.</p>
+                <p>For tailors in Galle, Matara, Jaffna, or any other Sri Lankan city, Tailors.lk provides the most comprehensive local directory. Find professionals who understand local fabrics, styles, and cultural preferences.</p>
             </div>
         </section>
 
-        <section id="services-section">
-            <h2 style="color: #800000; margin-bottom: 30px;">Our Services</h2>
-            <div class="services-grid" id="services-container">
-                <!-- Services will be loaded here -->
+        <section class="join-section" id="join">
+            <div class="container">
+                <h2>Join as a Tailor</h2>
+                <p>Expand your business and reach new customers</p>
+                <a href="https://register.tailors.lk" class="btn btn-view">Join the Directory</a>
             </div>
         </section>
+    </main>
 
-        <section id="booking-section" style="display: none;">
-            <div class="form-card">
-                <h2 style="color: #800000; margin-bottom: 20px;">Book Your Service</h2>
-                <form id="booking-form" target="_self" onsubmit="submitBooking(event)">
-                    <input type="hidden" id="form-service-name" name="entry.123456789" value=""> <!-- Replace with actual Google Form entry ID -->
-                    <div class="form-group">
-                        <label for="full-name">Full Name *</label>
-                        <input type="text" id="full-name" name="entry.130327913" required> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="entry.496092124" required> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="location">Location *</label>
-                        <input type="text" id="location" name="entry.2136965479" required> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="selected-service">Service *</label>
-                        <input type="text" id="selected-service" name="entry.987654321" readonly> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" name="entry.111222333" rows="4"></textarea> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <button type="submit" class="btn">Book Now</button>
-                </form>
-                <div id="thank-you-message" style="display: none;">
-                    <div class="thank-you">
-                        <h3>Thank You!</h3>
-                        <p>Your booking request has been received. We'll contact you soon to confirm your appointment.</p>
-                        <a href="https://wa.me/94758244216" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact-section">
-            <div class="form-card">
-                <h2 style="color: #800000; margin-bottom: 20px;">Contact Us</h2>
-                <form id="contact-form" target="_self" onsubmit="submitContact(event)">
-                    <div class="form-group">
-                        <label for="contact-name">Name *</label>
-                        <input type="text" id="contact-name" name="entry.555666777" required> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-phone">Phone *</label>
-                        <input type="tel" id="contact-phone" name="entry.888999000" required> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message">Message *</label>
-                        <textarea id="contact-message" name="entry.111222444" rows="4" required></textarea> <!-- Replace with actual Google Form entry ID -->
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-                <div id="contact-thank-you" style="display: none;">
-                    <div class="thank-you">
-                        <h3>Message Sent!</h3>
-                        <p>We'll get back to you soon.</p>
-                        <a href="https://wa.me/94758244216" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card" style="text-align: center; margin: 40px 0;">
-            <h2 style="color: #800000; margin-bottom: 20px;">Are you a pro tailor?</h2>
-            <p>Join Sri Lanka's tailoring community and reach new customers</p>
-            <a href="https://register.tailors.lk" class="btn" target="_blank" style="margin-top: 20px;">Join as a Tailor</a>
-        </section>
-    </div>
-
-    <footer>
+    <footer id="contact">
         <div class="container">
-            <div class="social-links">
-                <a href="https://instagram.com/frockline.lk" target="_blank">Instagram</a>
-                <a href="https://web.facebook.com/frockline/" target="_blank">Facebook</a>
-                <a href="https://twitter.com/frocklinelk" target="_blank">Twitter</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="static/logo.png" alt="Tailors.lk Logo" class="footer-logo">
+                    <p>Connecting Sri Lanka's tailoring community since 2024</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Cities</h3>
+                    <ul class="footer-links">
+                        <li><a href="/colombo">Tailors in Colombo</a></li>
+                        <li><a href="/kandy">Tailors in Kandy</a></li>
+                        <li><a href="/galle">Tailors in Galle</a></li>
+                        <li><a href="/jaffna">Tailors in Jaffna</a></li>
+                        <li><a href="/matara">Tailors in Matara</a></li>
+                        <li><a href="/kurunegala">Tailors in Kurunegala</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/Tailors.lk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@Tailors.lk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/Tailorslk" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://facebook.com/Tailors.lk.find" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
             </div>
-            <p style="text-align: center; color: #666; margin-top: 20px;">© 2024 Tailors.lk - Sri Lanka's Tailoring Community</p>
         </div>
     </footer>
 
-    <script>
-        // Service data will be loaded from external JSON
-        let services = [];
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tailors.lk",
+        "description": "Find trusted tailors in Sri Lanka for blouse stitching, saree fitting, and custom clothing",
+        "url": "https://tailors.lk",
+        "logo": "static/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "LK"
+        },
+        "sameAs": [
+            "https://instagram.com/Tailors.lk",
+            "https://x.com/Tailorslk",
+            "https://facebook.com/Tailors.lk.find"
+        ]
+    }
+    </script>
 
-        // Load services from JSON
-        async function loadServices() {
+    <script>
+        // Sample data for demonstration - will be loaded from JSON in production
+        let tailors = [
+            {
+                "id": 1,
+                "name": "Sri Lanka Tailoring House",
+                "area": "Colombo 03",
+                "services": ["Blouse Stitching", "Saree Fitting", "Custom Suits"],
+                "phone": "94771234567",
+                "profile_url": "srilankatailoring.t.tailors.lk"
+            },
+            {
+                "id": 2,
+                "name": "Kandy Traditional Tailors",
+                "area": "Kandy City Center",
+                "services": ["Traditional Wear", "Wedding Outfits", "Alterations"],
+                "phone": "94712345678",
+                "profile_url": "kandytraditional.t.tailors.lk"
+            },
+            {
+                "id": 3,
+                "name": "Galle Coastal Tailoring",
+                "area": "Galle Fort",
+                "services": ["Casual Wear", "Beachwear", "Quick Repairs"],
+                "phone": "94753456789",
+                "profile_url": "gallecoastal.t.tailors.lk"
+            }
+        ];
+
+        // Load tailors from external JSON
+        async function loadTailors() {
             try {
-                const response = await fetch('services.json');
-                services = await response.json();
-                renderServices();
+                const response = await fetch('tailors.json');
+                tailors = await response.json();
             } catch (error) {
-                console.error('Error loading services:', error);
-                // Fallback services
-                services = [
-                    {
-                        "id": 1,
-                        "title": "Custom Suit Tailoring",
-                        "description": "Professional suit tailoring with premium fabrics and perfect fit",
-                        "price": "Rs. 15,000",
-                        "duration": "2-3 weeks"
-                    },
-                    {
-                        "id": 2,
-                        "title": "Wedding Dress Alterations",
-                        "description": "Expert alterations for wedding dresses and formal wear",
-                        "price": "Rs. 8,000",
-                        "duration": "1-2 weeks"
-                    },
-                    {
-                        "id": 3,
-                        "title": "Everyday Garment Sewing",
-                        "description": "Shirts, pants, casual wear with attention to detail",
-                        "price": "Rs. 2,500",
-                        "duration": "3-5 days"
-                    }
-                ];
-                renderServices();
+                console.error('Error loading tailors:', error);
+                // Use fallback data if JSON fails
             }
         }
 
-        function renderServices() {
-            const container = document.getElementById('services-container');
+        function renderTailors(tailorsList) {
+            const container = document.getElementById('tailors-container');
+            container.style.display = 'block'; // Show container when results exist
             container.innerHTML = '';
             
-            services.forEach(service => {
-                const card = document.createElement('div');
-                card.className = 'service-card card';
-                card.innerHTML = `
-                    <h3 class="service-title">${service.title}</h3>
-                    <p>${service.description}</p>
-                    <div class="service-price">${service.price}</div>
-                    <p><small>Duration: ${service.duration || '1-2 weeks'}</small></p>
-                    <button class="btn" onclick="bookService('${service.title}', ${service.id})">Book Now</button>
+            tailorsList.forEach(tailor => {
+                const strip = document.createElement('div');
+                strip.className = 'tailor-strip strip';
+                strip.innerHTML = `
+                    <div class="tailor-info">
+                        <h3 class="tailor-name">${tailor.name}</h3>
+                        <p class="tailor-area">${tailor.area}</p>
+                        <div class="tailor-services">
+                            <strong>Services:</strong> ${tailor.services.join(', ')}
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://wa.me/${tailor.phone}" class="btn btn-contact" target="_blank">Contact Tailor</a>
+                        <a href="https://${tailor.profile_url}" class="btn btn-view" target="_blank">View Tailor</a>
+                    </div>
                 `;
-                container.appendChild(card);
+                container.appendChild(strip);
             });
         }
 
-        function bookService(serviceName, serviceId) {
-            document.getElementById('selected-service').value = serviceName;
-            document.getElementById('form-service-name').value = serviceName; // Also set the hidden field
-            document.getElementById('services-section').style.display = 'none';
-            document.getElementById('booking-section').style.display = 'block';
-            document.getElementById('booking-form').style.display = 'block';
-            document.getElementById('thank-you-message').style.display = 'none';
+        function filterTailors() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const filtered = tailors.filter(tailor => 
+                tailor.name.toLowerCase().includes(searchTerm) ||
+                tailor.area.toLowerCase().includes(searchTerm) ||
+                tailor.services.some(service => service.toLowerCase().includes(searchTerm))
+            );
             
-            // Scroll to booking section
-            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function submitBooking(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // In a real implementation, you would submit the form data to your Google Form here.
-            // For example, using fetch() to POST the data.
-            // For this example, we'll simulate the submission and show the thank you message directly.
-
-            const name = document.getElementById('full-name').value;
-            const phone = document.getElementById('phone').value;
-            const location = document.getElementById('location').value;
-            const service = document.getElementById('selected-service').value;
-
-            if (!name || !phone || !location || !service) {
-                alert('Please fill in all required fields');
-                return;
+            if (filtered.length > 0) {
+                renderTailors(filtered);
+            } else {
+                // Hide container if no results
+                document.getElementById('tailors-container').style.display = 'none';
             }
-
-            // Simulate form submission success
-            document.getElementById('booking-form').style.display = 'none';
-            document.getElementById('thank-you-message').style.display = 'block';
-        }
-
-        function submitContact(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const name = document.getElementById('contact-name').value;
-            const phone = document.getElementById('contact-phone').value;
-            const message = document.getElementById('contact-message').value;
-
-            if (!name || !phone || !message) {
-                alert('Please fill in all required fields');
-                return;
-            }
-
-            // Simulate form submission success
-            document.getElementById('contact-form').style.display = 'none';
-            document.getElementById('contact-thank-you').style.display = 'block';
-            
-            // Scroll to thank you message
-            document.getElementById('contact-thank-you').scrollIntoView({ behavior: 'smooth' });
         }
 
         // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
-            loadServices();
+            loadTailors();
         });
-
-        // Add this script to handle Google Form submission if needed
-        // Note: Google Forms typically require iframe embedding for custom handling
-        // This is a simplified version that shows the WhatsApp handoff
     </script>
 </body>
 </html>
