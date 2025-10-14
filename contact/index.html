@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tailors.lk</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #fffbc7;
+            color: #030000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Paper Print Aesthetic */
+        .card {
+            background: #aaf1fa;
+            border: 1px solid #a3aeff;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.3);
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 0; /* Sharp edges */
+        }
+
+        /* Header & Navbar */
+        header {
+            background: #aaf1fa;
+            border-bottom: 2px solid #a3aeff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(163, 174, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #030000;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.5);
+        }
+
+        /* Contact Content */
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            color: #a3aeff;
+            margin-bottom: 20px;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            color: #a3aeff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #a3aeff;
+            margin-right: 15px;
+            width: 30px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border: 1px solid #a3aeff;
+            border-radius: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #030000;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #a3aeff;
+            border-radius: 0; /* Sharp edges */
+            font-family: inherit;
+            font-size: 1rem;
+            background: #fffbc7;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .btn {
+            background: #aaf1fa;
+            color: #030000;
+            border: 2px solid #a3aeff;
+            padding: 12px 24px;
+            border-radius: 0; /* Sharp edges */
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .btn:hover {
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.5);
+            transform: translate(-2px, -2px);
+        }
+
+        .btn-primary {
+            background: #f5a6f3;
+            border-color: #a3aeff;
+        }
+
+        .btn-primary:hover {
+            background: #a3aeff;
+            color: #f5a6f3;
+        }
+
+        .btn-secondary {
+            background: #a6f5bd;
+            border-color: #a3aeff;
+        }
+
+        .btn-secondary:hover {
+            background: #a3aeff;
+            color: #a6f5bd;
+        }
+
+        .form-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 0; /* Sharp edges */
+            border: 1px solid #c3e6cb;
+            margin: 20px 0;
+            display: none;
+        }
+
+        /* Join Section */
+        .join-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff8b0 0%, #fffbc7 100%);
+            border-top: 2px solid #a3aeff;
+            border-bottom: 2px solid #a3aeff;
+        }
+
+        .join-section h2 {
+            color: #a3aeff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #aaf1fa;
+            border-top: 2px solid #a3aeff;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            box-shadow: 0 -2px 4px rgba(163, 174, 255, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: #a3aeff;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #030000;
+            transition: color 0.3s ease;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #a3aeff;
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #a3aeff;
+            color: #fffbc7;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 0; /* Sharp edges */
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .social-links a:hover {
+            background: #fffbc7;
+            color: #a3aeff;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.5);
+            transform: translate(-2px, -2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/join">Join as Tailor</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>Questions? Feedback? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            contact@tailors.lk
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +94 75 824 4216
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            <a href="https://wa.me/94758244216" target="_blank">Chat with us</a>
+                        </div>
+                    </div>
+                </div>
+
+                      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form id="contact-form" 
+              action="https://docs.google.com/forms/d/e/1FAIpQLSd8WoqTqlQY1vE-ShE0Ag1zux_Dxezm2MYnwUvcn0bZx-gFxg/formResponse" 
+              method="POST" 
+              target="hidden_iframe" 
+              onsubmit="onFormSubmit()">
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <!-- Note: The name attribute should match the entry ID from your Google Form -->
+            <input type="text" id="full-name" name="entry.716147403" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <!-- Note: The name attribute should match the entry ID from your Google Form -->
+            <input type="email" id="email" name="entry.394209006" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <!-- Note: The name attribute should match the entry ID from your Google Form -->
+            <input type="tel" id="phone" name="entry.1271862169">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <!-- Note: The name attribute should match the entry ID from your Google Form -->
+            <textarea id="message" name="entry.398718089" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div id="form-success" class="form-success">
+          <h3>Message Sent!</h3>
+          <p>Thank you for contacting us. We'll get back to you soon.</p>
+          <a href="https://wa.me/94758244216" class="btn" target="_blank">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Hidden iframe for Google Form submission -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormSubmit()"></iframe>
+
+    <section class="join-section">
+        <div class="container">
+            <h2>Join the Directory</h2>
+            <p>Expand your business and reach new customers</p>
+            <a href="https://register.tailors.lk" class="btn btn-secondary">Join as a Tailor</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="static/logo.png" alt="Tailors.lk Logo" class="footer-logo">
+                    <p>Connecting Sri Lanka's tailoring community since 2024</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/Tailors.lk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@Tailors.lk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/Tailorslk" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/Tailors.lk.find" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormSubmit()"></iframe>
+
+    <script>
+        function onFormSubmit() {
+            // Hide the form
+            document.getElementById('contact-form').style.display = 'none';
+            // Show the success message
+            document.getElementById('form-success').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
