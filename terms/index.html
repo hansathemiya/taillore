@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Tailors.lk</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #fffbc7;
+            color: #030000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Paper Print Aesthetic */
+        .card {
+            background: #aaf1fa;
+            border: 1px solid #a3aeff;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.3);
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 0; /* Sharp edges */
+        }
+
+        /* Header & Navbar */
+        header {
+            background: #aaf1fa;
+            border-bottom: 2px solid #a3aeff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(163, 174, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #030000;
+            font-weight: 500;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.5);
+        }
+
+        /* Terms Content */
+        .terms-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terms-header h1 {
+            font-size: 3rem;
+            color: #a3aeff;
+            margin-bottom: 20px;
+        }
+
+        .terms-header p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms-content h2 {
+            color: #a3aeff;
+            margin: 30px 0 15px 0;
+            font-size: 1.8rem;
+        }
+
+        .terms-content h3 {
+            color: #a3aeff;
+            margin: 25px 0 10px 0;
+            font-size: 1.4rem;
+        }
+
+        .terms-content p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .terms-content ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .terms-content li {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background: #f5a6f3;
+            padding: 2px 5px;
+            border-radius: 0;
+        }
+
+        /* Join Section */
+        .join-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff8b0 0%, #fffbc7 100%);
+            border-top: 2px solid #a3aeff;
+            border-bottom: 2px solid #a3aeff;
+        }
+
+        .join-section h2 {
+            color: #a3aeff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .btn {
+            background: #aaf1fa;
+            color: #030000;
+            border: 2px solid #a3aeff;
+            padding: 12px 24px;
+            border-radius: 0; /* Sharp edges */
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .btn:hover {
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.5);
+            transform: translate(-2px, -2px);
+        }
+
+        .btn-primary {
+            background: #f5a6f3;
+            border-color: #a3aeff;
+        }
+
+        .btn-primary:hover {
+            background: #a3aeff;
+            color: #f5a6f3;
+        }
+
+        .btn-secondary {
+            background: #a6f5bd;
+            border-color: #a3aeff;
+        }
+
+        .btn-secondary:hover {
+            background: #a3aeff;
+            color: #a6f5bd;
+        }
+
+        /* Footer */
+        footer {
+            background: #aaf1fa;
+            border-top: 2px solid #a3aeff;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+            box-shadow: 0 -2px 4px rgba(163, 174, 255, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            color: #a3aeff;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #030000;
+            transition: color 0.3s ease;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #a3aeff;
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #a3aeff;
+            color: #fffbc7;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 0; /* Sharp edges */
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.3);
+        }
+
+        .social-links a:hover {
+            background: #fffbc7;
+            color: #a3aeff;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.5);
+            transform: translate(-2px, -2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .terms-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <img src="static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/join">Join as Tailor</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="terms-header">
+                <h1>Terms of Service</h1>
+                <p>Effective Date: September 1, 2025</p>
+            </div>
+
+            <div class="terms-content">
+                <p>Welcome to Tailors.lk ("the Service", "we", "us", or "our"). These Terms of Service ("Terms") govern your use of the Tailors.lk website and directory service. By accessing or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the Service.</p>
+
+                <h2>1. Description of Service</h2>
+                <p>Tailors.lk provides an online directory platform that connects customers ("Users") with tailors ("Tailors") in Sri Lanka. We offer a searchable database of tailors and their services to facilitate connections between customers and service providers.</p>
+
+                <h2>2. Account Registration and Use</h2>
+                <p><strong>For Tailors:</strong> Tailors may register for listings on our platform. You agree to provide accurate, current, and complete information during registration and to update such information as necessary. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+                <p><strong>For Users:</strong> Users can access the directory without registration to search for tailors. No account is required for basic browsing.</p>
+
+                <h2>3. User Content and Conduct</h2>
+                <p>By using the Service, you agree not to:</p>
+                <ul>
+                    <li>Provide false or misleading information.</li>
+                    <li>Violate any applicable laws or regulations.</li>
+                    <li>Infringe upon the rights of others.</li>
+                    <li>Post or transmit any harmful, offensive, or inappropriate content.</li>
+                    <li>Use the Service for any commercial purpose other than as intended by Tailors.lk.</li>
+                    <li>Attempt to gain unauthorized access to the Service or its related systems.</li>
+                </ul>
+
+                <h2>4. Tailor Listings and Information</h2>
+                <p>Tailors are responsible for the accuracy and completeness of the information provided in their listings, including business name, location, services offered, and contact details. Tailors agree to keep their listings up-to-date. Tailors.lk reserves the right to remove or modify listings that are inaccurate, incomplete, or violate these Terms.</p>
+
+                <h2>5. No Endorsement</h2>
+                <p>Tailors.lk provides the directory as a platform to connect users and tailors. We do not endorse any specific tailor listed on the platform. The quality of service, accuracy of information, and conduct of any tailor is solely the responsibility of that tailor. Users are advised to independently verify the credentials and quality of service of any tailor before engaging them.</p>
+
+                <h2>6. Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, Tailors.lk shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any unauthorized access, use or alteration of your transmissions or content.</p>
+
+                <h2>7. Disclaimer of Warranties</h2>
+                <p>The Service is provided "as is" and "as available" without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+
+                <h2>8. Changes to the Service</h2>
+                <p>We reserve the right to modify or discontinue the Service (or any part thereof) at any time with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+
+                <h2>9. Changes to Terms</h2>
+                <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page. You are advised to review these Terms periodically. Your continued use of the Service after any changes constitutes acceptance of the updated Terms.</p>
+
+                <h2>10. Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of Sri Lanka, without regard to its conflict of law provisions.</p>
+
+                <h2>11. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <ul>
+                    <li>By email: contact@tailors.lk</li>
+                    <li>By phone: +94 75 824 4216</li>
+                    <li>By WhatsApp: <a href="https://wa.me/94758244216" target="_blank">https://wa.me/94758244216</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="join-section">
+        <div class="container">
+            <h2>Join the Directory</h2>
+            <p>Expand your business and reach new customers</p>
+            <a href="https://register.tailors.lk" class="btn btn-secondary">Join as a Tailor</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="/../static/logo.png" alt="Tailors.lk Logo" class="footer-logo">
+                    <p>Connecting Sri Lanka's tailoring community since 2024</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/Tailors.lk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@Tailors.lk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/Tailorslk" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/Tailors.lk.find" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
