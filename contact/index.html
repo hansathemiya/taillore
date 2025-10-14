@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Tailors.lk</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -332,7 +333,7 @@
     <header>
         <div class="container">
             <nav>
-                <img src="static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
+                <img src="/static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
                 <div class="nav-links">
                     <a href="/">Home</a>
                     <a href="/about">About</a>
@@ -376,44 +377,40 @@
                     </div>
                 </div>
 
-                      <div class="contact-form">
-        <h2>Send a Message</h2>
-        <form id="contact-form" 
-              action="https://docs.google.com/forms/d/e/1FAIpQLSd8WoqTqlQY1vE-ShE0Ag1zux_Dxezm2MYnwUvcn0bZx-gFxg/formResponse" 
-              method="POST" 
-              target="hidden_iframe" 
-              onsubmit="onFormSubmit()">
-          <div class="form-group">
-            <label for="full-name">Full Name *</label>
-            <!-- Note: The name attribute should match the entry ID from your Google Form -->
-            <input type="text" id="full-name" name="entry.716147403" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <!-- Note: The name attribute should match the entry ID from your Google Form -->
-            <input type="email" id="email" name="entry.394209006" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <!-- Note: The name attribute should match the entry ID from your Google Form -->
-            <input type="tel" id="phone" name="entry.1271862169">
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <!-- Note: The name attribute should match the entry ID from your Google Form -->
-            <textarea id="message" name="entry.398718089" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-        <div id="form-success" class="form-success">
-          <h3>Message Sent!</h3>
-          <p>Thank you for contacting us. We'll get back to you soon.</p>
-          <a href="https://wa.me/94758244216" class="btn" target="_blank">Chat on WhatsApp</a>
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <form id="contact-form" 
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSd8WoqTqlQY1vE-ShE0Ag1zux_Dxezm2MYnwUvcn0bZx-gFxg/formResponse" 
+                          method="POST" 
+                          target="hidden_iframe" 
+                          onsubmit="onFormSubmit()">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="entry.716147403" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="entry.394209006" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="entry.1271862169">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="entry.398718089" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for contacting us. We'll get back to you soon.</p>
+                        <a href="https://wa.me/94758244216" class="btn" target="_blank">Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Hidden iframe for Google Form submission -->
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormSubmit()"></iframe>
+    </div>
 
     <section class="join-section">
         <div class="container">
@@ -427,7 +424,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="static/logo.png" alt="Tailors.lk Logo" class="footer-logo">
+                    <img src="/static/logo.png" alt="Tailors.lk Logo" class="footer-logo">
                     <p>Connecting Sri Lanka's tailoring community since 2024</p>
                 </div>
                 
