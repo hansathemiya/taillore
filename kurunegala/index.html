@@ -101,6 +101,35 @@
             color: #333;
         }
 
+        /* Search Section */
+        .search-section {
+            padding: 40px 0;
+            text-align: center;
+            background: #aaf1fa;
+            border-bottom: 1px solid #a3aeff;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #a3aeff;
+            border-radius: 0;
+            font-family: inherit;
+            font-size: 1.1rem;
+            background: #fffbc7;
+        }
+
+        .search-input:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px rgba(163, 174, 255, 0.3);
+        }
+
         /* Tailors Container */
         .tailors-container {
             margin: 40px 0;
@@ -347,6 +376,20 @@
         </div>
     </section>
 
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    class="search-input" 
+                    placeholder="Search for tailors in Kurunegala by name, service, or area..." 
+                    oninput="filterTailors()"
+                >
+            </div>
+        </div>
+    </section>
+
     <div class="container">
         <div class="tailors-container" id="tailors-container">
             <!-- Tailor strips will be loaded here -->
@@ -464,6 +507,54 @@
             container.innerHTML = '';
             
             tailorsList.forEach(tailor => {
+                const strip = document.createElement('div');
+                strip.className = 'tailor-strip strip';
+                strip.innerHTML = `
+                    <div class="tailor-info">
+                        <h3 class="tailor-name">${tailor.name}</h3>
+                        <p class="tailor-area">${tailor.area}</p>
+                        <div class="tailor-services">
+                            <strong>Services:</strong> ${tailor.services.join(', ')}
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="https://wa.me/${tailor.phone}" class="btn btn-contact" target="_blank">Contact Tailor</a>
+                        <a href="https://${tailor.profile_url}" class="btn btn-view" target="_blank">View Tailor</a>
+                    </div>
+                `;
+                container.appendChild(strip);
+            });
+        }
+
+        function filterTailors() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const container = document.getElementById('tailors-container');
+            
+            if (!searchTerm) {
+                // If search is empty, show all Kurunegala tailors
+                renderTailors(tailors);
+                return;
+            }
+            
+            const filtered = tailors.filter(tailor => 
+                tailor.name.toLowerCase().includes(searchTerm) ||
+                tailor.area.toLowerCase().includes(searchTerm) ||
+                tailor.services.some(service => service.toLowerCase().includes(searchTerm))
+            );
+            
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>No tailors found matching "${searchTerm}"</h3>
+                        <p>Try searching for a different name, service, or area.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = '';
+            
+            filtered.forEach(tailor => {
                 const strip = document.createElement('div');
                 strip.className = 'tailor-strip strip';
                 strip.innerHTML = `
