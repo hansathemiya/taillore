@@ -76,6 +76,50 @@
             box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.5);
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #030000;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: #aaf1fa;
+            border-bottom: 2px solid #a3aeff;
+            padding: 20px;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .mobile-menu a {
+            display: block;
+            text-decoration: none;
+            color: #030000;
+            padding: 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: #a3aeff;
+            color: #fffbc7;
+            box-shadow: 2px 2px 0px rgba(163, 174, 255, 0.5);
+        }
+
         /* About Content */
         .about-header {
             text-align: center;
@@ -274,8 +318,11 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                flex-direction: column;
-                gap: 10px;
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
             }
             
             .about-header h1 {
@@ -299,11 +346,24 @@
                 <img src="/static/wordmark.png" alt="Tailors.lk – Local Tailoring Directory" class="logo">
                 <div class="nav-links">
                     <a href="/">Home</a>
+                    <a href="/pricing">Pricing</a> <!-- Added Pricing link -->
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
                     <a href="/join">Join as Tailor</a>
                 </div>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="/">Home</a>
+                <a href="/pricing">Pricing</a> <!-- Added Pricing link -->
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/join">Join as Tailor</a>
+            </div>
         </div>
     </header>
 
@@ -361,7 +421,7 @@
         </div>
     </section>
 
-   <footer id="contact">
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -386,6 +446,7 @@
                     <ul class="footer-links">
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/contact">Contact</a></li>
+                        <li><a href="/pricing">Pricing</a></li> <!-- Added Pricing link -->
                         <li><a href="/privacy">Privacy Policy</a></li>
                         <li><a href="/terms">Terms of Service</a></li>
                     </ul>
@@ -403,5 +464,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
