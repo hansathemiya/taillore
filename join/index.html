@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Tailors.lk - Register as a Tailor</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #fffbc7;
+            color: #030000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #aaf1fa;
+            border: 1px solid #632220;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.3);
+            border-radius: 0; /* Sharp edges */
+            padding: 40px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h1 {
+            color: #632220;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #030000;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #632220;
+            border-radius: 0; /* Sharp edges */
+            font-family: inherit;
+            font-size: 1rem;
+            background: #fffbc7;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.3);
+        }
+
+        .btn {
+            background: #aaf1fa;
+            color: #030000;
+            border: 2px solid #632220;
+            padding: 12px 24px;
+            border-radius: 0; /* Sharp edges */
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 2px 2px 0px rgba(99, 34, 32, 0.3);
+        }
+
+        .btn:hover {
+            background: #632220;
+            color: #aaf1fa;
+            box-shadow: 4px 4px 0px rgba(99, 34, 32, 0.5);
+            transform: translate(-2px, -2px);
+        }
+
+        .btn-primary {
+            background: #f5a6f3;
+            border-color: #632220;
+        }
+
+        .btn-primary:hover {
+            background: #632220;
+            color: #f5a6f3;
+        }
+
+        .required {
+            color: #632220;
+        }
+
+        .form-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 0; /* Sharp edges */
+            border: 1px solid #c3e6cb;
+            margin: 20px 0;
+            display: none;
+        }
+
+        /* Styled Checkbox Group */
+        .checkbox-group {
+            background: white;
+            padding: 15px;
+            border: 1px solid #632220;
+            border-radius: 0;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #632220;
+            border-radius: 0;
+            margin-right: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            transition: all 0.2s ease;
+        }
+
+        .custom-checkbox.checked {
+            background: #632220;
+        }
+
+        .custom-checkbox.checked::after {
+            content: "✓";
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .checkbox-label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .other-service-container {
+            margin-top: 10px;
+            padding-left: 30px;
+        }
+
+        .other-service-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #632220;
+            border-radius: 0;
+            font-family: inherit;
+            background: #fffbc7;
+        }
+
+        /* Hidden iframe for Google Form submission */
+        #hidden_iframe {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Join Tailors.lk</h1>
+            <p>Register your tailoring business and reach new customers</p>
+        </div>
+
+        <form id="tailor-registration-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeQRwofFdTJizP8h2qDSjCkfkwQUm5sY2PVY0OxiCVWPBCe5Q/formResponse" method="POST" target="hidden_iframe">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="entry.130327913" required>
+            </div>
+
+            <!-- Business Name Field -->
+            <div class="form-group">
+                <label for="business-name">Business or Brand Name <span class="required">*</span></label>
+                <input type="text" id="business-name" name="entry.70566231" required>
+            </div>
+
+            <!-- Location/Address Field -->
+            <div class="form-group">
+                <label for="location">Location/Address <span class="required">*</span></label>
+                <input type="text" id="location" name="entry.2136965479" required>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="entry.496092124" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="entry.958771356" required>
+            </div>
+
+            <!-- Services Field (Styled Checkboxes) -->
+            <div class="form-group">
+                <label>Select Services Offered (Check all that apply):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Custom made garments">
+                        </div>
+                        <label class="checkbox-label">Custom made garments</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Ready made garments">
+                        </div>
+                        <label class="checkbox-label">Ready made garments</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Kurta Stitching">
+                        </div>
+                        <label class="checkbox-label">Kurta Stitching</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Western Wear">
+                        </div>
+                        <label class="checkbox-label">Western Wear</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Custom Design">
+                        </div>
+                        <label class="checkbox-label">Custom Design</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Saree Stitching">
+                        </div>
+                        <label class="checkbox-label">Saree Stitching</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Alterations">
+                        </div>
+                        <label class="checkbox-label">Alterations</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="Traditional wear">
+                        </div>
+                        <label class="checkbox-label">Traditional wear</label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <div class="custom-checkbox" onclick="toggleCheckbox(this)">
+                            <input type="checkbox" name="entry.189478647" value="__other_option__" id="other-service-checkbox">
+                        </div>
+                        <label class="checkbox-label">Other (please specify below)</label>
+                    </div>
+                    
+                    <div class="other-service-container" id="other-service-container" style="display: none;">
+                        <input type="text" id="other-service-input" name="entry.189478647.other_option_response" class="other-service-input" placeholder="Specify other services">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Register Now</button>
+        </form>
+
+        <div id="form-success" class="form-success">
+            <h3>Registration Successful!</h3>
+            <p>Your registration request has been sent successfully. We'll review your application and get back to you soon.</p>
+            <p>Have questions? Contact us on WhatsApp for immediate assistance.</p>
+            <a href="https://wa.me/94758244216" class="btn" target="_blank">Contact Us on WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onFormSubmit()"></iframe>
+
+    <script>
+        // Handle form submission to prevent redirect
+        document.getElementById('tailor-registration-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Validate required fields
+            const requiredFields = ['name', 'business-name', 'location', 'phone', 'email'];
+            let isValid = true;
+            
+            for (const fieldId of requiredFields) {
+                const field = document.getElementById(fieldId);
+                if (!field.value.trim()) {
+                    alert(`Please fill in the ${field.previousElementSibling.textContent.replace('*', '').trim()} field.`);
+                    isValid = false;
+                    field.focus();
+                    break;
+                }
+            }
+            
+            if (isValid) {
+                // Submit the form to the hidden iframe
+                this.submit();
+            }
+        });
+
+        // Function called when the hidden iframe loads (after form submission)
+        function onFormSubmit() {
+            // Hide the form
+            document.getElementById('tailor-registration-form').style.display = 'none';
+            // Show the success message
+            document.getElementById('form-success').style.display = 'block';
+        }
+
+        // Toggle checkbox state
+        function toggleCheckbox(element) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            
+            if (checkbox.checked) {
+                element.classList.add('checked');
+            } else {
+                element.classList.remove('checked');
+            }
+            
+            // Handle "Other" service
+            if (checkbox.id === 'other-service-checkbox') {
+                const otherContainer = document.getElementById('other-service-container');
+                if (checkbox.checked) {
+                    otherContainer.style.display = 'block';
+                } else {
+                    otherContainer.style.display = 'none';
+                    document.getElementById('other-service-input').value = '';
+                }
+            }
+        }
+
+        // Initialize checkboxes
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.custom-checkbox');
+            checkboxes.forEach(function(checkbox) {
+                const input = checkbox.querySelector('input[type="checkbox"]');
+                if (input.checked) {
+                    checkbox.classList.add('checked');
+                }
+                
+                // Add click event listener for accessibility
+                checkbox.addEventListener('keydown', function(e) {
+                    if (e.key === ' ' || e.key === 'Enter') {
+                        e.preventDefault();
+                        toggleCheckbox(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
