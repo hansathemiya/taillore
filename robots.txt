@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tailors.lk/sitemap.xml
-
-# Disallow crawling of admin or sensitive paths (if any)
-Disallow: /admin/
-Disallow: /cgi-bin/
