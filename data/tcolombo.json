@@ -173,7 +173,7 @@
         "tailors.lk_-_aluthkade_shop.jpg",
         "tailors.lk_-_aluthkade_work.jpg"
       ],
-      "featured": false,
+      "featured": true,
       "verified": false,
       "join_date": "2026-02-18"
     },
@@ -295,7 +295,7 @@
         "tailors.lk_-_aluthkade_east_shop.jpg",
         "tailors.lk_-_aluthkade_east_work.jpg"
       ],
-      "featured": false,
+      "featured": true,
       "verified": false,
       "join_date": "2026-02-18"
     },
@@ -415,7 +415,7 @@
         "tailors.lk_-_aluthkade_west_work.jpg"
       ],
       "featured": false,
-      "verified": false,
+      "verified": true,
       "join_date": "2026-02-18"
     },
     {
@@ -995,8 +995,8 @@
         "tailors.lk_-_bambalapitiya_shop.jpg",
         "tailors.lk_-_bambalapitiya_work.jpg"
       ],
-      "featured": false,
-      "verified": false,
+      "featured": true,
+      "verified": true,
       "join_date": "2026-02-18"
     },
     {
@@ -1110,8 +1110,8 @@
         "tailors.lk_-_barnes_place_shop.jpg",
         "tailors.lk_-_barnes_place_work.jpg"
       ],
-      "featured": false,
-      "verified": false,
+      "featured": true,
+      "verified": true,
       "join_date": "2026-02-18"
     },
     {
@@ -14076,7 +14076,7 @@
         "tailors.lk_-_pettah_shop.jpg",
         "tailors.lk_-_pettah_work.jpg"
       ],
-      "featured": false,
+      "featured": true,
       "verified": false,
       "join_date": "2026-02-18"
     },
@@ -14200,7 +14200,7 @@
         "tailors.lk_-_piliyandala_work.jpg"
       ],
       "featured": false,
-      "verified": false,
+      "verified": true,
       "join_date": "2026-02-18"
     },
     {
