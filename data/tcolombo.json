@@ -13904,28 +13904,29 @@
     },
     {
       "id": 235,
-      "name": "Tailors.lk - Park Road",
-      "area": "Park Road",
-      "city": "Colombo",
+      "name": "N² fashion studio",
+      "area": "Padanichoor",
+      "city": "Vavuniya",
       "services": [
-        "Saree Fitting",
-        "Party Wear"
+        "Kurta Stitching",
+        "Saree Stitchingr",
+        "Custom Design"
       ],
-      "phone": "94758244216",
-      "whatsapp": "94758244216",
+      "phone": "94776181362",
+      "whatsapp": "94776181362",
       "profile_url": "mystore.tailors.lk",
-      "email": "tailorslkparkroad@tailors.lk",
+      "email": "null@tailors.lk",
       "rating": 5.0,
       "review_count": 0,
       "experience": "intermediate",
-      "experience_years": 13,
+      "experience_years": 1,
       "price_range": "moderate",
       "availability": "week",
       "description": "Professional tailoring services in Park Road specializing in Ethnic Wear, Bridal Couture. Quality craftsmanship with attention to detail.",
       "specializations": [
-        "Ethnic Wear",
-        "Bridal Couture",
-        "Party Wear"
+        "Kurtha Stitching",
+        "Custom Design",
+        "Saree Stitching"
       ],
       "fabric_options": [
         "Silk",
@@ -13937,9 +13938,10 @@
       "turnaround_time": "12 days",
       "languages": [
         "Tamil",
-        "English"
+        "English",
+        "Sinhala"
       ],
-      "address": "123 Park Road Road, Park Road, Colombo",
+      "address": "No 101/1 , 2nd lane, Paddanichoor, Vavuniya",
       "latitude": 6.9271,
       "longitude": 79.8612,
       "opening_hours": {
