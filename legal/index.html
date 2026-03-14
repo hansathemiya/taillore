@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <title>Legal Policies & Platform Terms | Tailors.lk</title>
-    <meta name="description" content="Legal policies, platform role, disclaimers, compliance and governance for Tailors.lk – Sri Lanka's tailoring marketplace." />
-    <meta name="keywords" content="legal policies tailors.lk, platform terms Sri Lanka, tailoring marketplace rules, disclaimers, compliance, governance" />
+    <meta name="description" content="Legal policies, platform role, disclaimers, compliance and governance for Tailors.lk – Sri Lanka's tailoring marketplace. Includes Tender Guidelines, Partner Terms, and Tailor Black Governance." />
+    <meta name="keywords" content="legal policies tailors.lk, platform terms Sri Lanka, tailoring marketplace rules, disclaimers, compliance, governance, tender guidelines, partner kit, tailors lk policies" />
     <!-- Updated favicon -->
     <link rel="icon" href="https://data.tailors.lk/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://data.tailors.lk/ajax/libs/fontawesome/6.0.0/css/all.min.css" />
     <script src="https://t.contentsquare.net/uxa/e167583c8a668.js"></script>
     <style>
+        /* RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --teal: #1f4e5f;
             --teal-dark: #0d3645;
@@ -25,44 +32,52 @@
             --text: #1a2a33;
             --text-light: #6b7b83;
             --border: rgba(31, 78, 95, 0.12);
-            --shadow: 0 8px 30px rgba(31, 78, 95, 0.08);
-            --shadow-hover: 0 12px 40px rgba(31, 78, 95, 0.15);
-            --radius: 14px;
-            --radius-sm: 10px;
-            --radius-xs: 6px;
-            --transition: all 0.3s ease;
+            --shadow: 0 4px 20px rgba(31, 78, 95, 0.08);
+            --shadow-hover: 0 8px 30px rgba(31, 78, 95, 0.12);
+            --radius: 16px;
+            --radius-sm: 12px;
+            --radius-xs: 8px;
+            --transition: all 0.2s ease;
             --success: #10b981;
             --error: #ef4444;
             --warning: #f59e0b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         html {
             scroll-behavior: smooth;
-            font-size: 15px;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 15px;
+            }
         }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
             background: var(--bg);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 16px;
         }
 
-        /* Header */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+
+        /* HEADER - MOBILE OPTIMIZED */
         header {
             position: sticky;
             top: 0;
@@ -70,71 +85,61 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
-            padding: 14px 0;
+            padding: 12px 0;
         }
 
         .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 12px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--teal);
             text-decoration: none;
+            flex-shrink: 0;
         }
 
         .logo img {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             object-fit: contain;
         }
 
+        @media (min-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+            }
+            .logo img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
         .nav-links {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 6px 10px;
-            border-radius: var(--radius-xs);
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            background: rgba(31, 78, 95, 0.06);
-            color: var(--teal);
+            display: none;
         }
 
         .nav-cta {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .nav-cta .btn {
-            margin-left: 0;
+            display: none;
         }
 
         .hamburger {
-            display: none;
+            display: flex;
             flex-direction: column;
             gap: 4px;
             background: none;
             border: none;
             cursor: pointer;
             padding: 8px;
+            margin-left: auto;
+            flex-shrink: 0;
         }
 
         .hamburger span {
@@ -142,12 +147,60 @@
             height: 2px;
             background: var(--teal);
             transition: var(--transition);
+            border-radius: 2px;
         }
 
-        /* Mobile Menu */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-links {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+            }
+
+            .nav-links a {
+                color: var(--text);
+                text-decoration: none;
+                font-weight: 500;
+                padding: 6px 10px;
+                border-radius: var(--radius-xs);
+                transition: var(--transition);
+                font-size: 0.95rem;
+                white-space: nowrap;
+            }
+
+            .nav-links a:hover {
+                background: rgba(31, 78, 95, 0.06);
+                color: var(--teal);
+            }
+
+            .nav-cta {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
+
+        /* MOBILE MENU */
         .mobile-menu {
             position: fixed;
-            top: 62px;
+            top: 60px;
             left: 0;
             right: 0;
             background: var(--card-bg);
@@ -156,8 +209,10 @@
             border-top: 1px solid var(--border);
             display: none;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             z-index: 999;
+            max-height: calc(100vh - 60px);
+            overflow-y: auto;
         }
 
         .mobile-menu.active {
@@ -165,33 +220,52 @@
         }
 
         .mobile-menu a {
-            padding: 10px 14px;
+            padding: 12px 16px;
             border-radius: var(--radius-xs);
             color: var(--text);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
         }
 
         .mobile-menu a:hover {
             background: rgba(31, 78, 95, 0.06);
         }
 
-        /* Buttons */
+        .mobile-menu .btn {
+            margin-top: 8px;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        /* BUTTONS - MOBILE FRIENDLY */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
-            padding: 10px 20px;
+            padding: 10px 16px;
             border-radius: var(--radius-sm);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: var(--transition);
             border: 2px solid transparent;
             text-decoration: none;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
         }
 
         .btn-primary {
@@ -201,8 +275,7 @@
 
         .btn-primary:hover {
             background: var(--gold-light);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(185, 145, 95, 0.25);
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
@@ -212,7 +285,7 @@
 
         .btn-secondary:hover {
             background: var(--teal-light);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         .btn-outline {
@@ -226,7 +299,7 @@
         }
 
         .btn-sm {
-            padding: 6px 14px;
+            padding: 6px 12px;
             font-size: 0.85rem;
         }
 
@@ -240,79 +313,132 @@
             background: var(--teal);
         }
 
-        /* Header CTA Buttons */
+        .btn-lg {
+            padding: 12px 24px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .btn-lg {
+                width: auto;
+            }
+        }
+
         .header-cta {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
         }
 
-        /* Legal Page Specific Styles */
+        /* LEGAL PAGE - MOBILE FIRST */
         .legal-container {
+            width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 30px 16px;
         }
 
-        /* Hero Section */
+        @media (min-width: 768px) {
+            .legal-container {
+                padding: 60px 24px;
+            }
+        }
+
+        /* HERO SECTION - MOBILE OPTIMIZED */
         .legal-hero {
             text-align: center;
-            margin-bottom: 60px;
-            padding: 50px 20px;
+            margin-bottom: 30px;
+            padding: 30px 16px;
             background: linear-gradient(135deg, rgba(31, 78, 95, 0.03) 0%, rgba(185, 145, 95, 0.03) 100%);
             border-radius: var(--radius);
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
         }
 
-        .legal-hero-content {
-            position: relative;
-            z-index: 2;
+        @media (min-width: 768px) {
+            .legal-hero {
+                padding: 50px 30px;
+                margin-bottom: 50px;
+            }
         }
 
         .legal-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
             color: var(--teal);
             font-weight: 700;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .legal-hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
             color: var(--text-light);
             font-weight: 500;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
         }
 
         .hero-description {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 35px;
-            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0 auto 25px;
+            line-height: 1.6;
             color: var(--text);
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .hero-description {
+                font-size: 1.1rem;
+                margin-bottom: 35px;
+                max-width: 800px;
+            }
         }
 
         .hero-cta {
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            gap: 12px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
-        /* Section Styles */
+        @media (min-width: 640px) {
+            .hero-cta {
+                flex-direction: row;
+                gap: 16px;
+            }
+        }
+
+        /* SECTION STYLES - MOBILE OPTIMIZED */
         .legal-section {
-            margin-bottom: 50px;
-            padding: 35px;
+            margin-bottom: 30px;
+            padding: 24px 16px;
             background: var(--card-bg);
             border-radius: var(--radius);
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
             transition: var(--transition);
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section {
+                margin-bottom: 40px;
+                padding: 30px;
+            }
         }
 
         .legal-section:hover {
@@ -321,52 +447,354 @@
 
         .legal-section h2 {
             color: var(--teal);
-            font-size: 1.6rem;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
             border-bottom: 2px solid rgba(31, 78, 95, 0.1);
             font-weight: 600;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+                padding-bottom: 15px;
+            }
         }
 
         .legal-section h3 {
             color: var(--teal-light);
-            font-size: 1.3rem;
-            margin: 30px 0 18px 0;
+            font-size: 1.2rem;
+            margin: 20px 0 12px;
             font-weight: 600;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section h3 {
+                font-size: 1.3rem;
+                margin: 25px 0 15px;
+            }
         }
 
         .legal-section h4 {
             color: var(--teal);
-            font-size: 1.1rem;
-            margin: 25px 0 15px 0;
+            font-size: 1rem;
+            margin: 16px 0 10px;
             font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section h4 {
+                font-size: 1.1rem;
+                margin: 20px 0 12px;
+            }
         }
 
         .legal-section p {
             color: var(--text);
-            line-height: 1.7;
-            margin-bottom: 18px;
-            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section p {
+                font-size: 1rem;
+                margin-bottom: 16px;
+            }
         }
 
         .legal-section ul, .legal-section ol {
-            margin: 20px 0 20px 25px;
+            margin: 12px 0 16px 20px;
             color: var(--text);
         }
 
-        .legal-section li {
-            margin-bottom: 12px;
-            line-height: 1.6;
-            padding-left: 5px;
+        @media (min-width: 768px) {
+            .legal-section ul, .legal-section ol {
+                margin: 16px 0 20px 25px;
+            }
         }
 
-        /* Legal Note */
+        .legal-section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            padding-left: 4px;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .legal-section li {
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
+        }
+
+        /* CARD GRID FOR TIERS - MOBILE OPTIMIZED (REPLACES TABLE) */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 640px) {
+            .tier-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .tier-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .tier-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold-light);
+        }
+
+        .tier-popular {
+            border: 2px solid var(--gold);
+            background: linear-gradient(to bottom, var(--bg), rgba(185, 145, 95, 0.05));
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .tier-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .tier-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .tier-price small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .tier-features {
+            list-style: none;
+            margin: 16px 0 0 0 !important;
+            padding: 0;
+        }
+
+        .tier-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            padding-left: 0;
+            font-size: 0.9rem;
+        }
+
+        .tier-features i {
+            color: var(--gold);
+            width: 16px;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .tier-commission {
+            text-align: center;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border);
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        /* BADGE STYLES */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .badge-verified {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .badge-featured {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .badge-tailor-black {
+            background: rgba(31, 78, 95, 0.1);
+            color: var(--teal);
+            border: 1px solid rgba(31, 78, 95, 0.2);
+        }
+
+        /* TIMELINE CARD (REPLACES DATE TABLE) */
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 640px) {
+            .timeline-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .timeline-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .timeline-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .timeline-milestone {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .timeline-date {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* CONTACT GRID */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 640px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .contact-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(31, 78, 95, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .contact-type {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 2px;
+        }
+
+        .contact-email {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--teal);
+            text-decoration: none;
+            word-break: break-word;
+            display: inline-block;
+        }
+
+        .contact-email:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        /* LEGAL NOTE */
         .legal-note {
             background: rgba(31, 78, 95, 0.05);
             border-left: 4px solid var(--gold);
-            padding: 22px;
+            padding: 16px;
             border-radius: var(--radius-sm);
-            margin: 30px 0;
+            margin: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+            .legal-note {
+                padding: 20px;
+                margin: 25px 0;
+            }
         }
 
         .legal-note p {
@@ -375,62 +803,67 @@
             font-weight: 500;
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 10px;
+            font-size: 0.95rem;
         }
 
         .legal-note i {
             color: var(--gold);
-            margin-top: 4px;
+            margin-top: 3px;
             flex-shrink: 0;
         }
 
-        /* CTA Section */
+        /* CTA SECTION */
         .cta-section {
             text-align: center;
             background: linear-gradient(135deg, rgba(31, 78, 95, 0.05) 0%, rgba(185, 145, 95, 0.05) 100%);
-            border: 1px solid rgba(31, 78, 95, 0.1);
         }
 
         .cta-content h2 {
             border: none;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0 10px;
         }
 
-        /* SEO Content */
-        .seo-content {
-            margin-bottom: 30px;
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+                gap: 16px;
+            }
         }
 
-        .seo-content p {
-            margin-bottom: 20px;
-            line-height: 1.7;
-            color: var(--text);
-        }
-
-        /* Internal Links */
+        /* INTERNAL LINKS */
         .internal-links {
             display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 10px;
             margin-top: 30px;
-            padding-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid var(--border);
         }
 
+        @media (min-width: 640px) {
+            .internal-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+        }
+
         .internal-link {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
@@ -438,15 +871,23 @@
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
+            font-size: 0.95rem;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .internal-link {
+                width: auto;
+            }
         }
 
         .internal-link:hover {
             background: rgba(31, 78, 95, 0.05);
             border-color: var(--teal);
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
-        /* Footer */
+        /* FOOTER - MOBILE OPTIMIZED */
         footer {
             background: var(--teal-dark);
             color: white;
@@ -456,15 +897,27 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 16px;
             margin-bottom: 30px;
+        }
+
+        @media (min-width: 640px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
         }
 
         .footer-section h4 {
             color: var(--gold-light);
-            margin-bottom: 12px;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
@@ -482,41 +935,42 @@
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             padding: 2px 0;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             line-height: 1.3;
         }
 
         .footer-links a:hover {
             color: var(--gold-light);
-            padding-left: 3px;
+            padding-left: 2px;
         }
 
         .footer-links i {
-            width: 14px;
+            width: 12px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .social-links {
             display: flex;
-            gap: 12px;
-            margin-top: 16px;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
         }
 
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: white;
             text-decoration: none;
             transition: var(--transition);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .social-links a:hover {
@@ -524,59 +978,107 @@
             transform: translateY(-2px);
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
+        .contact-info {
+            margin-top: 16px;
+            padding-top: 12px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.8rem;
         }
 
-        /* Newsletter */
+        .contact-info h4 {
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+            font-size: 0.75rem;
+        }
+
+        .contact-info-item i {
+            width: 14px;
+            margin-top: 2px;
+            margin-right: 8px;
+            color: var(--gold-light);
+            flex-shrink: 0;
+            font-size: 0.7rem;
+        }
+
+        .contact-info-item a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--gold-light);
+        }
+
+        /* NEWSLETTER */
         .newsletter {
             background: rgba(255, 255, 255, 0.05);
             border-radius: var(--radius-sm);
-            padding: 20px;
+            padding: 20px 16px;
             margin: 30px 0;
             text-align: center;
         }
 
         .newsletter h4 {
             color: var(--gold-light);
-            margin-bottom: 8px;
-            font-size: 1rem;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
         }
 
         .newsletter p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 16px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .newsletter-form {
             display: flex;
-            gap: 8px;
+            flex-direction: column;
+            gap: 10px;
             max-width: 500px;
             margin: 0 auto;
         }
 
+        @media (min-width: 640px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+
         .newsletter-input {
             flex: 1;
-            padding: 10px 14px;
+            padding: 12px 14px;
             border-radius: var(--radius-sm);
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.1);
             color: white;
             font-family: inherit;
             font-size: 0.9rem;
+            width: 100%;
         }
 
         .newsletter-input::placeholder {
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* Newsletter Messages */
+        .newsletter .btn {
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .newsletter .btn {
+                width: auto;
+            }
+        }
+
         .newsletter-message {
             margin-top: 12px;
             padding: 10px 14px;
@@ -584,7 +1086,6 @@
             font-size: 0.85rem;
             text-align: center;
             display: none;
-            animation: fadeIn 0.3s ease;
         }
 
         .newsletter-success {
@@ -599,13 +1100,16 @@
             border: 1px solid rgba(239, 68, 68, 0.2);
         }
 
-        .newsletter-warning {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--warning);
-            border: 1px solid rgba(245, 158, 11, 0.2);
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.7rem;
+            line-height: 1.4;
         }
 
-        /* Loading State */
+        /* LOADING STATE */
         .btn-loading {
             position: relative;
             color: transparent !important;
@@ -626,49 +1130,7 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Contact Info in Footer */
-        .contact-info {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-info h4 {
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        .contact-info-item i {
-            width: 16px;
-            margin-top: 2px;
-            margin-right: 10px;
-            color: var(--gold-light);
-            flex-shrink: 0;
-        }
-
-        .contact-info-item a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .contact-info-item a:hover {
-            color: var(--gold-light);
-        }
-
-        .contact-info-item span {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Animations */
+        /* ANIMATIONS */
         .fade-in {
             animation: fadeIn 0.5s ease;
         }
@@ -676,7 +1138,7 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -684,114 +1146,41 @@
             }
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-            }
+        /* HORIZONTAL SCROLL ONLY FOR SMALL SCREENS IF ABSOLUTELY NECESSARY */
+        .scrollable-x {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px -16px;
+            padding: 0 16px;
         }
 
-        @media (max-width: 768px) {
-            .nav-links, .nav-cta {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .header-cta {
-                display: none;
-            }
-
-            .legal-container {
-                padding: 40px 15px;
-            }
-
-            .legal-hero {
-                padding: 30px 15px;
-            }
-
-            .legal-hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .legal-section {
-                padding: 25px;
-            }
-
-            .legal-section h2 {
-                font-size: 1.4rem;
-            }
-
-            .legal-section h3 {
-                font-size: 1.2rem;
-            }
-
-            .legal-section h4 {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .internal-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .internal-link {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
+        .scrollable-x table {
+            min-width: 500px;
         }
 
-        @media (max-width: 480px) {
-            .legal-hero h1 {
-                font-size: 1.8rem;
-            }
+        /* UTILITY CLASSES */
+        .text-center {
+            text-align: center;
+        }
 
-            .legal-section {
-                padding: 20px;
-            }
+        .mt-2 {
+            margin-top: 8px;
+        }
 
-            .legal-section h2 {
-                font-size: 1.3rem;
-            }
+        .mt-4 {
+            margin-top: 16px;
+        }
 
-            .legal-section h3 {
-                font-size: 1.1rem;
-            }
+        .mb-2 {
+            margin-bottom: 8px;
+        }
 
-            .legal-note {
-                padding: 18px;
-            }
+        .mb-4 {
+            margin-bottom: 16px;
+        }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
+        .w-100 {
+            width: 100%;
         }
     </style>
 </head>
@@ -810,6 +1199,7 @@
                 <a href="/learn">Learn</a>
                 <a href="/about">About</a>
                 <a href="/for-businesses">For Businesses</a>
+                <a href="/tenders">Tenders</a>
                 <a href="/contact">Contact</a>
             </nav>
 
@@ -841,12 +1231,13 @@
             <a href="/learn">Learn</a>
             <a href="/about">About</a>
             <a href="/for-businesses">For Businesses</a>
+            <a href="/tenders">Tenders</a>
             <a href="/contact">Contact</a>
-            <a href="tel:+94758244216" class="btn btn-call" style="margin-top: 10px;">
+            <a href="tel:+94758244216" class="btn btn-call" style="margin-top: 10px; width: 100%;">
                 <i class="fas fa-phone"></i>
                 Call Us
             </a>
-            <a href="https://tailors.lk/register" class="btn btn-primary" style="margin-top: 10px;">
+            <a href="https://tailors.lk/register" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
                 Join as Tailor
             </a>
         </div>
@@ -859,15 +1250,15 @@
             <div class="legal-hero-content">
                 <h1>Legal & Platform Policies</h1>
                 <p class="hero-subtitle">Tailors.lk operates as a digital marketplace connecting customers, tailors, brands and partners across Sri Lanka.</p>
-                <p class="hero-description">This page explains our legal framework, responsibilities, limitations and platform rules governing the use of Tailors.lk as Sri Lanka's premier tailoring marketplace.</p>
+                <p class="hero-description">This page explains our legal framework, responsibilities, limitations and platform rules governing the use of Tailors.lk as Sri Lanka's premier tailoring marketplace. Including Tender Guidelines, Partner Terms, and Tailor Black Governance.</p>
                 <div class="hero-cta">
-                    <a href="/terms" class="btn btn-primary">
+                    <a href="/terms" class="btn btn-primary btn-lg">
                         <i class="fas fa-file-contract"></i>
                         View Terms
                     </a>
-                    <a href="/contact" class="btn btn-secondary">
+                    <a href="/contact" class="btn btn-secondary btn-lg">
                         <i class="fas fa-balance-scale"></i>
-                        Contact Legal Team
+                        Contact Legal
                     </a>
                 </div>
             </div>
@@ -878,243 +1269,459 @@
             <h2>Platform Introduction</h2>
             <p>Tailors.lk is a technology and discovery platform that connects customers with professional tailors, brands, and service providers across Sri Lanka. Our platform operates as a digital marketplace facilitating connections, communication, and service discovery.</p>
             <p>We provide digital infrastructure for listings, lead routing, communication tools, and platform features that enhance the tailoring experience. Our role is to facilitate connections while maintaining a secure, reliable platform for all users.</p>
+            
+            <h3>By The Numbers</h3>
+            <ul>
+                <li><strong>300+</strong> Verified Partners</li>
+                <li><strong>9</strong> Cities Across Sri Lanka</li>
+                <li><strong>Rs. 45M+</strong> Revenue Generated for Partners</li>
+                <li><strong>Rs. 15,000-75,000/month</strong> Average Instructor Earnings</li>
+            </ul>
+
             <div class="legal-note">
-                <p><i class="fas fa-info-circle"></i><strong>Important:</strong> Tailors.lk does not directly stitch, manufacture, or deliver tailoring services unless explicitly stated in specific partnership arrangements. We are a discovery and connection platform.</p>
+                <p><i class="fas fa-info-circle"></i><strong>Important:</strong> Tailors.lk does not directly stitch, manufacture, or deliver tailoring services unless explicitly stated in specific partnership arrangements. We are a discovery and connection platform. For Tender & Buyout Campaigns, Tailors.lk acts as the principal facilitator, managing the tender award, contract, and security deposit process as an agent for the partner.</p>
             </div>
         </section>
 
-        <!-- SECTION: Platform Role & Disclaimer -->
+        <!-- TENDER & BUYOUT CAMPAIGN MODEL -->
         <section class="legal-section fade-in">
-            <h2>Platform Role & Disclaimer</h2>
-            <p>Understanding our platform role is essential for all users:</p>
+            <h2>Tender & Buyout Campaign Model</h2>
+            <p>Tailors.lk offers exclusive B2B order opportunities through our annual tender system and private tender requests. These are binding commercial arrangements governed by separate tender guidelines and agreements.</p>
+
+            <h3>Annual Tender Cycle</h3>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Tenders Open</div>
+                    <div class="timeline-date">May 10th</div>
+                    <div class="timeline-desc">10:00 AM IST</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Bidding Closes</div>
+                    <div class="timeline-date">May 20th</div>
+                    <div class="timeline-desc">11:59 PM IST</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Awards Announced</div>
+                    <div class="timeline-date">May 21st</div>
+                    <div class="timeline-desc">Winners notified</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Deposit Due</div>
+                    <div class="timeline-date">June 1st</div>
+                    <div class="timeline-desc">Winners only</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Contract Start</div>
+                    <div class="timeline-date">June 1st</div>
+                    <div class="timeline-desc">Upon deposit clear</div>
+                </div>
+            </div>
+
+            <h3>Financial Terms</h3>
             <ul>
-                <li><strong>Tailors.lk is a Discovery Platform:</strong> We connect customers with independent tailors and brands but do not provide tailoring services directly.</li>
-                <li><strong>Service Provider Independence:</strong> All tailoring services are executed by independent tailors, brands, or service providers listed on our platform.</li>
-                <li><strong>Quality Responsibility:</strong> Service quality, pricing, delivery timelines, and workmanship belong to the service provider, not Tailors.lk.</li>
-                <li><strong>Communication Facilitation:</strong> We provide tools for communication but are not party to agreements between users and service providers.</li>
-                <li><strong>Promotion Only:</strong> Our platform provides discovery, communication facilitation, and promotional services for the tailoring community.</li>
+                <li><strong>Entry Fee:</strong> Minimum LKR 5,000 per tender bid <span class="status-badge badge-verified">Non-refundable</span></li>
+                <li><strong>License Bid:</strong> Annual license fee (LKR 50,000 to 500,000+ depending on category)</li>
+                <li><strong>Security Deposit:</strong> Refundable deposit (10-20x entry fee, e.g., LKR 75,000-100,000)</li>
+                <li><strong>Commission:</strong> <span class="status-badge badge-featured">0% on tender orders</span></li>
             </ul>
-            <p>By using Tailors.lk, you acknowledge and accept that we are a platform connecting independent service providers with customers.</p>
+
+            <h3>Revocation Triggers</h3>
+            <p>A tender may be revoked immediately for:</p>
+            <ul>
+                <li><strong>Quality Failure:</strong> Multiple complaints, substandard materials</li>
+                <li><strong>Delivery Failure:</strong> Missing deadlines, >20% volume unable to fulfill</li>
+                <li><strong>Ethical Breach:</strong> Fraudulent documentation, unauthorized subcontracting</li>
+                <li><strong>Client Solicitation:</strong> Direct contact with tender-sourced clients</li>
+                <li><strong>Non-Cooperation:</strong> Failure to respond within 48 hours</li>
+            </ul>
+
+            <h3>Re-award Process</h3>
+            <p>If revoked, tender may be offered to 2nd Highest Bidder (48 hours to accept). Original winner barred from bidding for 12 months.</p>
+
+            <h3>Private Tenders</h3>
+            <p>Year-round opportunities for niche or urgent orders. Same rules apply: Entry Fee, License Bid, Deposit, Performance Expectations, and Reporting.</p>
         </section>
 
-        <!-- SECTION: User Responsibilities -->
+        <!-- PARTNER TIERED ACCESS PACKAGES - CARD BASED (NO TABLE) -->
+        <section class="legal-section fade-in">
+            <h2>Partner Tiered Access Packages</h2>
+            <p>Choose your growth tier. Get direct access to VERIFIED ORDER SALES (not just leads). All prices are starting rates and may vary based on location, capacity, and customization.</p>
+
+            <div class="tier-grid">
+                <!-- Starter Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">STARTER</div>
+                    <div class="tier-price">Rs. 5,000<small>/yr +</small></div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> 5-10 Orders/month</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                        <li><i class="fas fa-check"></i> Standard Profile</li>
+                        <li><i class="fas fa-check"></i> General Orders</li>
+                    </ul>
+                    <div class="tier-commission">10% Commission</div>
+                </div>
+
+                <!-- Growth Tier (Popular) -->
+                <div class="tier-card tier-popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="tier-name">GROWTH</div>
+                    <div class="tier-price">Rs. 15,000<small>/yr +</small></div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> 20-40 Orders/month</li>
+                        <li><i class="fas fa-check"></i> WhatsApp Support</li>
+                        <li><i class="fas fa-check"></i> Premium Profile</li>
+                        <li><i class="fas fa-check"></i> Regional Special</li>
+                    </ul>
+                    <div class="tier-commission">7% Commission</div>
+                </div>
+
+                <!-- Professional Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">PROFESSIONAL</div>
+                    <div class="tier-price">Rs. 35,000<small>/yr +</small></div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> 60-100 Orders/month</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> Subdomain (Website)</li>
+                        <li><i class="fas fa-check"></i> Tender Priority</li>
+                    </ul>
+                    <div class="tier-commission">5% Commission</div>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="tier-card">
+                    <div class="tier-name">ENTERPRISE</div>
+                    <div class="tier-price">Custom<small> +</small></div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-check"></i> Unlimited Orders</li>
+                        <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                        <li><i class="fas fa-check"></i> Custom Domain</li>
+                        <li><i class="fas fa-check"></i> Exclusive Tenders</li>
+                    </ul>
+                    <div class="tier-commission">0% on Tenders*</div>
+                </div>
+            </div>
+
+            <h3>Profile URL Options</h3>
+            <ul>
+                <li><strong>Custom Profile URL:</strong> Rs. 1,500/year - tailors.lk/t/yourname</li>
+                <li><strong>Premium Profile URL:</strong> Rs. 2,500/year - tailors.lk/yourname (+25% visibility)</li>
+                <li><strong>Branded Subdomain:</strong> Rs. 3,500/year - yourname.tailors.lk (full website)</li>
+            </ul>
+
+            <h3>Trust Badges</h3>
+            <ul>
+                <li><span class="status-badge badge-verified">VERIFIED</span> Rs. 1,200/month or Rs. 10,000/year - Unannounced audit, +40% visibility (10-15 slots/month)</li>
+                <li><span class="status-badge badge-featured">FEATURED</span> Rs. 500/month or Rs. 5,000/year - Priority placement</li>
+                <li><span class="status-badge badge-tailor-black">TAILOR BLACK</span> By Invitation Only - Highest ranking, exclusive campaigns</li>
+            </ul>
+
+            <div class="legal-note">
+                <p><i class="fas fa-check-circle"></i><strong>All Packages Include:</strong> Dashboard Access, WhatsApp Integration, Basic Analytics, Customer Review System.</p>
+            </div>
+        </section>
+
+        <!-- TAILOR BLACK GOVERNANCE -->
+        <section class="legal-section fade-in">
+            <h2>Tailor Black Governance Privilege</h2>
+            
+            <h3>Exclusive Opposition Right</h3>
+            <p>Only partners holding <span class="status-badge badge-tailor-black">TAILOR BLACK</span> status possess the privilege to formally oppose a tender award.</p>
+            
+            <h4>Valid Grounds:</h4>
+            <ul>
+                <li>Proven capacity misrepresentation by winner</li>
+                <li>Documented quality failures on prior platform work</li>
+                <li>Ethical breaches (fraud, harassment, etc.)</li>
+                <li>Conflict of interest</li>
+            </ul>
+
+            <h4>Invalid Grounds:</h4>
+            <ul>
+                <li>Disagreement with bid amount</li>
+                <li>Personal rivalry or preference</li>
+                <li>Speculation without evidence</li>
+            </ul>
+
+            <h3>Review Process</h3>
+            <ol>
+                <li><strong>SUBMISSION:</strong> Submit opposition with evidence to black@tailors.lk</li>
+                <li><strong>PRELIMINARY REVIEW:</strong> 3 business days validity check</li>
+                <li><strong>INVESTIGATION:</strong> 7-10 business days if valid</li>
+                <li><strong>DECISION:</strong> Upheld (re-evaluated) or Dismissed</li>
+                <li><strong>CONFIDENTIALITY:</strong> Details kept confidential, no retaliation</li>
+            </ol>
+
+            <div class="legal-note">
+                <p><i class="fas fa-exclamation-triangle"></i><strong>Warning:</strong> Abuse of this privilege may result in Tailor Black status review. This status cannot be bought—it is earned through consistent excellence and invitation-only review.</p>
+            </div>
+        </section>
+
+        <!-- REVENUE REPORTING -->
+        <section class="legal-section fade-in">
+            <h2>Revenue Reporting & Growth Insights</h2>
+            
+            <p>All tender partners must submit quarterly revenue data. This unlocks:</p>
+            <ul>
+                <li>Peer benchmarking (anonymized)</li>
+                <li>Automatic renewal consideration</li>
+                <li>Custom growth insights</li>
+                <li>Priority for Tailors.lk Learn instructor roles</li>
+            </ul>
+
+            <h3>Data Required</h3>
+            <ul>
+                <li>Gross revenue from tender orders</li>
+                <li>Material costs (optional)</li>
+                <li>Delivery completion rate</li>
+                <li>Customer satisfaction score (1-5)</li>
+            </ul>
+
+            <p><strong>Important:</strong> Failure to report for 2+ consecutive quarters may trigger tender review or non-renewal. All data is encrypted and confidential.</p>
+        </section>
+
+        <!-- BRAND ATTRIBUTION & CLIENT PROTECTION -->
+        <section class="legal-section fade-in">
+            <h2>Brand Attribution & Client Protection</h2>
+            
+            <h3>Mandatory Brand Attribution</h3>
+            <p>All tender documents MUST display:</p>
+            <ul>
+                <li>"Fulfilled by [Partner Name] via Tailors.lk"</li>
+                <li>Tailors.lk logo on official documents</li>
+                <li>Platform order reference numbers</li>
+                <li>Customer service routed through platform channels</li>
+            </ul>
+
+            <h3>Client Solicitation Restriction</h3>
+            <p>For contract duration + 12 months after completion, partners agree NOT to:</p>
+            <ul>
+                <li>Directly solicit tender-sourced clients for work outside platform</li>
+                <li>Offer "private deals" to bypass platform</li>
+                <li>Build independent client databases from tender orders</li>
+            </ul>
+
+            <h3>Violation Consequences</h3>
+            <ul>
+                <li>Immediate tender revocation</li>
+                <li>Forfeiture of Security Deposit</li>
+                <li>Account suspension or termination</li>
+                <li>Legal action for breach of contract</li>
+            </ul>
+        </section>
+
+        <!-- PLATFORM ROLE & DISCLAIMER -->
+        <section class="legal-section fade-in">
+            <h2>Platform Role & Disclaimer</h2>
+            <ul>
+                <li><strong>Discovery Platform:</strong> We connect customers with independent tailors but do not provide tailoring services directly.</li>
+                <li><strong>Service Provider Independence:</strong> All services executed by independent tailors.</li>
+                <li><strong>Quality Responsibility:</strong> Service quality belongs to the service provider, not Tailors.lk.</li>
+                <li><strong>Tender Facilitation:</strong> For Tender & Buyout Campaigns, Tailors.lk acts as principal facilitator managing awards, contracts, and security deposits.</li>
+            </ul>
+        </section>
+
+        <!-- USER RESPONSIBILITIES -->
         <section class="legal-section fade-in">
             <h2>User Responsibilities</h2>
             
             <h3>For Customers</h3>
             <ul>
-                <li>Provide accurate measurements and specifications for tailoring work</li>
-                <li>Communicate clearly and professionally with service providers</li>
-                <li>Review service agreements, pricing, and terms before making payments</li>
-                <li>Respect tailor policies, timelines, and professional requirements</li>
-                <li>Provide constructive feedback and maintain professional relationships</li>
-                <li>Report any concerns or issues through proper platform channels</li>
+                <li>Provide accurate measurements and specifications</li>
+                <li>Communicate clearly and professionally</li>
+                <li>Review service agreements before payment</li>
+                <li>Respect tailor policies and timelines</li>
+                <li>Report concerns through proper channels</li>
             </ul>
 
             <h3>For Tailors & Brands</h3>
             <ul>
-                <li>Maintain accurate, current, and honest business listings</li>
-                <li>Follow all applicable Sri Lankan laws and regulations</li>
-                <li>Deliver quality services as promised in listings and agreements</li>
-                <li>Keep profile information, pricing, and availability updated regularly</li>
-                <li>Communicate professionally and respond to inquiries promptly</li>
-                <li>Respect customer privacy and protect personal information</li>
-                <li>Adhere to industry standards and best practices</li>
+                <li>Maintain accurate, honest business listings</li>
+                <li>Follow all applicable Sri Lankan laws</li>
+                <li>Deliver quality services as promised</li>
+                <li>Communicate professionally and respond promptly</li>
+                <li><strong>For Tender Partners:</strong> Submit quarterly reports, maintain brand attribution, adhere to client solicitation restrictions</li>
             </ul>
         </section>
 
-        <!-- SECTION: Listings, Verification & Featured Status -->
+        <!-- LISTINGS, VERIFICATION & FEATURED STATUS -->
         <section class="legal-section fade-in">
             <h2>Listings, Verification & Featured Status</h2>
             
-            <h3>Listing Approval & Verification</h3>
+            <h3>Verification Process</h3>
             <ul>
-                <li><strong>Registration Does Not Guarantee Approval:</strong> Submitting a registration does not automatically result in platform listing</li>
-                <li><strong>Verification Process:</strong> Tailors.lk reviews and verifies all listings before activation</li>
-                <li><strong>Quality Standards:</strong> Listings must meet our quality, compliance, and professional standards</li>
-                <li><strong>Suspension & Removal:</strong> We reserve the right to suspend or remove listings that violate policies or quality standards</li>
+                <li><strong>Registration Does Not Guarantee Approval</strong></li>
+                <li><strong>Unannounced shop visits</strong> assessing craftsmanship, hygiene, customer service</li>
+                <li><strong>Monthly Verification Cap:</strong> 10-15 slots/month across Sri Lanka</li>
             </ul>
 
-            <h3>Featured Status & Promotion</h3>
+            <h3>Verification Badge</h3>
             <ul>
-                <li><strong>Featured Placements:</strong> May involve subscription models, promotional campaigns, or tender opportunities</li>
-                <li><strong>Verification Factors:</strong> Includes compliance history, quality ratings, performance metrics, and user feedback</li>
-                <li><strong>Visibility Control:</strong> Tailors.lk controls promotional visibility and placement algorithms</li>
-                <li><strong>Performance Monitoring:</strong> Featured status may be adjusted based on performance and compliance</li>
+                <li><strong>Cost:</strong> Rs. 1,200/month or Rs. 10,000/year</li>
+                <li><strong>Benefits:</strong> Unannounced audit, +40% visibility, Golden Badge nomination</li>
+                <li><strong>Limited Slots:</strong> 10-15/month</li>
             </ul>
-
-            <div class="legal-note">
-                <p><i class="fas fa-exclamation-triangle"></i><strong>Note:</strong> Featured placements are promotional opportunities and do not imply endorsement or guarantee of service quality. Customers should exercise their own judgment when selecting service providers.</p>
-            </div>
         </section>
 
-        <!-- SECTION: Payments, Campaigns & Commercial Terms -->
+        <!-- PAYMENTS, CAMPAIGNS & COMMERCIAL TERMS -->
         <section class="legal-section fade-in">
             <h2>Payments, Campaigns & Commercial Terms</h2>
             
-            <p>Our platform utilizes various commercial models to support operations and growth:</p>
-            
             <h3>Commercial Structures</h3>
             <ul>
-                <li><strong>Service Models:</strong> May include commission-based, subscription, or campaign-based revenue models</li>
-                <li><strong>Evolution of Structures:</strong> Commercial terms may evolve as the platform grows and adapts to market needs</li>
-                <li><strong>Premium Services:</strong> Enhanced listings, featured placements, and lead routing may involve premium access</li>
-                <li><strong>Transparent Communication:</strong> Any applicable fees or commercial terms will be communicated clearly</li>
+                <li><strong>Tiered Access Packages:</strong> Starter (Rs. 5,000/yr), Growth (Rs. 15,000/yr), Professional (Rs. 35,000/yr), Enterprise (Custom)</li>
+                <li><strong>Commission Rates:</strong> 10% (Starter), 7% (Growth), 5% (Professional), 0% on Tenders (Enterprise)</li>
+                <li><strong>Tender Financial Terms:</strong> Entry Fee (min. Rs. 5,000 non-refundable), License Bid, Security Deposit</li>
             </ul>
 
             <h3>Dispute Resolution</h3>
             <ul>
-                <li><strong>Provider Responsibility:</strong> Service providers are primarily responsible for service delivery and customer satisfaction</li>
-                <li><strong>Platform Role:</strong> Tailors.lk may facilitate dispute resolution but is not responsible unless explicitly stated</li>
-                <li><strong>Escalation Process:</strong> Users should follow proper channels for issue resolution and escalation</li>
+                <li><strong>Provider Responsibility:</strong> Service providers primarily responsible</li>
+                <li><strong>Platform Role:</strong> Tailors.lk may facilitate dispute resolution</li>
+                <li><strong>Tender Disputes:</strong> Platform intervention may result in refunds deducted from Security Deposit</li>
             </ul>
-
-            <p>All commercial arrangements will be clearly communicated to relevant parties before implementation.</p>
         </section>
 
-        <!-- SECTION: Intellectual Property -->
+        <!-- INTELLECTUAL PROPERTY -->
         <section class="legal-section fade-in">
             <h2>Intellectual Property</h2>
             
             <h3>Platform Ownership</h3>
             <ul>
-                <li><strong>Tailors.lk Intellectual Property:</strong> We own all branding, user interface, codebase, and original content</li>
-                <li><strong>Trademark Protection:</strong> The Tailors.lk name, logo, and branding are protected trademarks</li>
-                <li><strong>Content Rights:</strong> Platform design, structure, and functionality are proprietary</li>
+                <li><strong>Tailors.lk IP:</strong> Branding, user interface, codebase, original content</li>
+                <li><strong>Subdomains:</strong> name.tailors.lk remain property of Tailors.lk; license to use while active</li>
             </ul>
 
             <h3>User Content Rights</h3>
             <ul>
-                <li><strong>Display License:</strong> Users grant Tailors.lk rights to display submitted content on our platform</li>
-                <li><strong>Content Responsibility:</strong> Users retain responsibility for content they submit</li>
-                <li><strong>Prohibited Actions:</strong> Copying, scraping, or mirroring platform content without consent is prohibited</li>
-                <li><strong>Third-Party Content:</strong> Users must respect third-party intellectual property rights</li>
+                <li>Users grant Tailors.lk license to display submitted content</li>
+                <li>Copying, scraping, or mirroring platform content prohibited</li>
             </ul>
-
-            <p>Any unauthorized use of Tailors.lk intellectual property may result in legal action and platform access termination.</p>
         </section>
 
-        <!-- SECTION: Data, Privacy & Cookies -->
+        <!-- DATA, PRIVACY & COOKIES -->
         <section class="legal-section fade-in">
             <h2>Data, Privacy & Cookies</h2>
             
-            <p>We take data protection seriously and operate in compliance with applicable regulations:</p>
-            
-            <h3>Data Collection & Usage</h3>
+            <h3>Data Collection</h3>
             <ul>
-                <li><strong>Platform Functionality:</strong> Data is collected to enable platform features and services</li>
-                <li><strong>User Experience:</strong> Information helps improve user experience and service quality</li>
-                <li><strong>Analytics & Improvement:</strong> Usage data supports platform optimization and development</li>
-                <li><strong>Security Purposes:</strong> Data collection includes security monitoring and fraud prevention</li>
+                <li><strong>Verification Data:</strong> Business registration, capacity documentation, shop visit records</li>
+                <li><strong>Tender Data:</strong> Bid amounts (confidential), revenue reports, performance metrics</li>
+                <li><strong>Usage Data:</strong> Platform optimization and development</li>
             </ul>
 
-            <h3>Technology Usage</h3>
-            <ul>
-                <li><strong>Cookies:</strong> Used to enhance user experience, maintain sessions, and analyze platform usage</li>
-                <li><strong>Tracking Technologies:</strong> Employed for analytics, performance monitoring, and feature optimization</li>
-                <li><strong>Third-Party Services:</strong> May use external services for functionality and analytics</li>
-            </ul>
-
-            <h3>Policy References</h3>
-            <p>For detailed information about our data practices, please review our comprehensive policies:</p>
-            <ul>
-                <li><a href="/privacy" style="color: var(--teal); font-weight: 500; text-decoration: underline;">Privacy Policy</a> – Detailed data collection, usage, and protection information</li>
-                <li><a href="/cookies" style="color: var(--teal); font-weight: 500; text-decoration: underline;">Cookies Policy</a> – Information about cookies and tracking technologies</li>
-            </ul>
+            <p>For detailed information: <a href="/privacy" style="color: var(--teal);">Privacy Policy</a> | <a href="/cookies" style="color: var(--teal);">Cookies Policy</a></p>
         </section>
 
-        <!-- SECTION: Limitation of Liability -->
+        <!-- LIMITATION OF LIABILITY -->
         <section class="legal-section fade-in">
             <h2>Limitation of Liability</h2>
             
-            <p>Understanding our liability limitations is essential for platform use:</p>
-            
             <ul>
-                <li><strong>Service Execution:</strong> Tailors.lk is not liable for service execution, quality, or delivery by listed providers</li>
-                <li><strong>User Interactions:</strong> We are not responsible for losses, delays, or damages resulting from user interactions</li>
-                <li><strong>Platform Availability:</strong> The platform is provided "as is" without warranties of uninterrupted access</li>
-                <li><strong>Service Provider Risk:</strong> Users engage service providers at their own risk and discretion</li>
-                <li><strong>Information Accuracy:</strong> While we verify information, we cannot guarantee absolute accuracy of all listings</li>
-                <li><strong>Third-Party Services:</strong> Not responsible for external services, websites, or tools linked from our platform</li>
+                <li>Not liable for service execution, quality, or delivery by listed providers</li>
+                <li>Not responsible for user interactions or losses</li>
+                <li>Platform provided "as is" without warranties</li>
+                <li><strong>Tender Outcomes:</strong> Not liable for losses related to tender awards, revocations, or governance rights</li>
+                <li><strong>Maximum Liability:</strong> Limited to fees paid in preceding 6 months</li>
             </ul>
-
-            <div class="legal-note">
-                <p><i class="fas fa-shield-alt"></i><strong>Important:</strong> Users should conduct their own due diligence when selecting and engaging with service providers on our platform. Tailors.lk facilitates connections but does not guarantee outcomes.</p>
-            </div>
         </section>
 
-        <!-- SECTION: Account Termination & Access Control -->
+        <!-- ACCOUNT TERMINATION -->
         <section class="legal-section fade-in">
             <h2>Account Termination & Access Control</h2>
             
-            <p>We maintain platform integrity through access control measures:</p>
-            
             <h3>Termination Grounds</h3>
             <ul>
-                <li><strong>Policy Violations:</strong> Accounts may be suspended for policy violations or abusive behavior</li>
-                <li><strong>Fraudulent Activity:</strong> Any fraudulent, deceptive, or misleading practices may result in termination</li>
-                <li><strong>Quality Breaches:</strong> Consistent quality issues or customer complaints may lead to access removal</li>
-                <li><strong>Spam & Misrepresentation:</strong> Spamming users or misrepresenting services is prohibited</li>
-                <li><strong>Legal Compliance:</strong> Violation of applicable laws or regulations may result in account suspension</li>
+                <li>Policy violations or abusive behavior</li>
+                <li>Fraudulent, deceptive, or misleading practices</li>
+                <li>Consistent quality issues or complaints</li>
+                <li>Tender revocation triggers (12-month suspension)</li>
+                <li>Direct solicitation of tender-sourced clients</li>
             </ul>
 
-            <h3>Platform Authority</h3>
-            <ul>
-                <li><strong>Discretionary Control:</strong> Tailors.lk may remove access without obligation or prior notice</li>
-                <li><strong>Appeal Process:</strong> Suspended accounts may request review through proper channels</li>
-                <li><strong>Content Removal:</strong> We reserve the right to remove content that violates policies or standards</li>
-                <li><strong>System Monitoring:</strong> Platform usage may be monitored for compliance and security purposes</li>
-            </ul>
+            <h3>Appeal Process</h3>
+            <p>Suspended accounts may request review within 7 days.</p>
         </section>
 
-        <!-- SECTION: Governing Law -->
+        <!-- GOVERNING LAW -->
         <section class="legal-section fade-in">
             <h2>Governing Law</h2>
-            
-            <p>All platform usage and legal matters are governed by:</p>
-            
-            <ul>
-                <li><strong>Applicable Law:</strong> Governed by the laws of Sri Lanka without regard to conflict of law principles</li>
-                <li><strong>Jurisdiction:</strong> Legal matters fall under the jurisdiction of courts within Sri Lanka</li>
-                <li><strong>Compliance:</strong> Platform operations comply with Sri Lankan regulations and requirements</li>
-                <li><strong>International Users:</strong> International users agree to Sri Lankan jurisdiction for platform-related matters</li>
-            </ul>
-
-            <p>By using Tailors.lk, you submit to the exclusive jurisdiction of Sri Lankan courts for any disputes arising from platform use.</p>
+            <p>Governed by the laws of Sri Lanka. Disputes subject to exclusive jurisdiction of Colombo Commercial High Court.</p>
         </section>
 
-        <!-- SECTION: Updates to Legal Terms -->
+        <!-- UPDATES TO LEGAL TERMS -->
         <section class="legal-section fade-in">
             <h2>Updates to Legal Terms</h2>
-            
-            <p>Our platform policies and terms may evolve over time:</p>
-            
             <ul>
-                <li><strong>Policy Updates:</strong> We may update policies, terms, and conditions without prior notice</li>
-                <li><strong>Continued Usage:</strong> Continued platform usage implies acceptance of updated terms</li>
-                <li><strong>Notification:</strong> Significant changes may be communicated through platform notifications</li>
-                <li><strong>Review Responsibility:</strong> Users are responsible for regularly reviewing current policies</li>
-                <li><strong>Historical Versions:</strong> Previous policy versions may be archived for reference</li>
+                <li>30 days notice for material changes</li>
+                <li>Continued usage implies acceptance</li>
+                <li>Current version: 1.0 | Effective: May 2025 | Next Review: May 2026</li>
             </ul>
-
-            <div class="legal-note">
-                <p><i class="fas fa-bell"></i><strong>Notice:</strong> It is your responsibility to check this page periodically for changes to our legal policies. Your continued use of Tailors.lk following any changes constitutes acceptance of those changes.</p>
-            </div>
         </section>
 
-        <!-- SEO CONTENT BLOCK -->
+        <!-- CONTACT INFORMATION -->
+        <section class="legal-section fade-in">
+            <h2>Contact Information for Partner Programs</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-gavel"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Tender Inquiries</div>
+                        <a href="mailto:tenders@tailors.lk" class="contact-email">tenders@tailors.lk</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Performance & Reporting</div>
+                        <a href="mailto:partners@tailors.lk" class="contact-email">partners@tailors.lk</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Verification</div>
+                        <a href="mailto:verify@tailors.lk" class="contact-email">verify@tailors.lk</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-crown"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Tailor Black</div>
+                        <a href="mailto:black@tailors.lk" class="contact-email">black@tailors.lk</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Learn Program</div>
+                        <a href="mailto:learn@tailors.lk" class="contact-email">learn@tailors.lk</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="contact-details">
+                        <div class="contact-type">Growth Services</div>
+                        <a href="mailto:services@tailors.lk" class="contact-email">services@tailors.lk</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center mt-4"><strong>Phone/WhatsApp:</strong> +94 75 824 4216 | Mon-Fri, 9AM-5PM IST</p>
+        </section>
+
+        <!-- SEO CONTENT -->
         <section class="legal-section fade-in">
             <h2>Tailors.lk: Sri Lanka's Premier Tailoring Platform</h2>
             <div class="seo-content">
-                <p>Tailors.lk serves as Sri Lanka's leading digital marketplace for tailoring services, connecting customers with professional tailors across the island. Our platform revolutionizes how Sri Lankans discover, connect with, and engage tailoring professionals for all their clothing needs.</p>
+                <p>Tailors.lk serves as Sri Lanka's leading digital marketplace for tailoring services, connecting customers with professional tailors across the island. From custom suits in Colombo to boutique tailoring services in Kandy and Galle, our marketplace brings together the best of Sri Lanka's tailoring talent in one accessible digital space.</p>
                 
-                <p>As a comprehensive tailoring platform in Sri Lanka, we support both traditional craftsmanship and modern tailoring techniques. From custom suits in Colombo to boutique tailoring services in Kandy and Galle, our marketplace brings together the best of Sri Lanka's tailoring talent in one accessible digital space.</p>
+                <p><strong>B2B Tender Marketplace:</strong> Exclusive bulk orders for verified fashion businesses through our annual tender system, with zero commission fees and exclusive territorial rights. Categories include corporate uniforms, event bulk orders, government contracts, and export-ready production runs.</p>
                 
-                <p>Our online tailoring services in Sri Lanka cater to diverse needs including bespoke tailoring, alterations, custom designs, and specialized clothing services. Whether you're looking for traditional Sri Lankan attire, contemporary fashion, or professional business wear, our platform connects you with verified tailors who understand both local styles and international standards.</p>
+                <p><strong>Partner Growth Tiers:</strong> From Starter (Rs. 5,000/yr) to Enterprise (custom), partners access verified order sales with commission rates from 10% to 0% on tenders.</p>
                 
-                <p>The tailor marketplace in Colombo and throughout Sri Lanka benefits from our digital infrastructure that enhances discovery, communication, and service coordination. We're committed to supporting Sri Lanka's tailoring industry while making professional services more accessible to customers nationwide through our innovative platform approach.</p>
-                
-                <p>Tailors.lk represents the future of tailoring services in Sri Lanka - combining traditional craftsmanship with modern digital convenience. Our platform supports the growth of Sri Lanka's tailoring industry while ensuring customers can easily find and connect with professional service providers for all their tailoring needs.</p>
+                <p><strong>Tailor Black Governance:</strong> Sri Lanka's first industry governance system where top partners can formally oppose tender awards based on documented evidence.</p>
             </div>
         </section>
 
@@ -1122,20 +1729,16 @@
         <section class="legal-section cta-section fade-in">
             <div class="cta-content">
                 <h2>Questions About Our Legal Policies?</h2>
-                <p>If you have questions about our legal framework, platform policies, or compliance matters, our team is available to assist you.</p>
+                <p>If you have questions about our legal framework, platform policies, tender guidelines, or compliance matters, our team is available to assist you.</p>
                 
                 <div class="cta-buttons">
                     <a href="/contact" class="btn btn-primary btn-lg">
                         <i class="fas fa-envelope"></i>
                         Contact Legal Team
                     </a>
-                    <a href="/careers" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-users"></i>
-                        Explore Careers
-                    </a>
-                    <a href="/partnerships" class="btn btn-outline btn-lg">
-                        <i class="fas fa-handshake"></i>
-                        Partnership Inquiries
+                    <a href="/tenders" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-gavel"></i>
+                        View Active Tenders
                     </a>
                 </div>
             </div>
@@ -1145,19 +1748,23 @@
         <div class="internal-links">
             <a href="/terms" class="internal-link">
                 <i class="fas fa-file-contract"></i>
-                Terms & Conditions
+                Terms
             </a>
             <a href="/privacy" class="internal-link">
                 <i class="fas fa-shield-alt"></i>
-                Privacy Policy
+                Privacy
             </a>
             <a href="/cookies" class="internal-link">
                 <i class="fas fa-cookie-bite"></i>
-                Cookies Policy
+                Cookies
             </a>
-            <a href="/contact" class="internal-link">
-                <i class="fas fa-headset"></i>
-                Contact Support
+            <a href="/policies" class="internal-link">
+                <i class="fas fa-file-alt"></i>
+                All Policies
+            </a>
+            <a href="/tenders" class="internal-link">
+                <i class="fas fa-gavel"></i>
+                Tenders
             </a>
         </div>
     </main>
@@ -1166,88 +1773,65 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <!-- Platform Section -->
                 <div>
                     <h4>Tailors.lk</h4>
-                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 16px; font-size: 0.85rem;">
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 12px; font-size: 0.75rem;">
                         Connecting Sri Lanka's tailoring community since 2024.
                     </p>
                     <div class="social-links">
                         <a href="https://facebook.com/Tailors.lk.find" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://instagram.com/Tailors.lk" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://x.com/Tailorslk" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://youtube.com/@tailorslk" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://linkedin.com/company/tailors-lk" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
-                <!-- For Users Section -->
                 <div>
                     <h4>For Users</h4>
                     <ul class="footer-links">
                         <li><a href="/services"><i class="fas fa-scissors"></i> Services</a></li>
                         <li><a href="/tailors"><i class="fas fa-list"></i> All Tailors</a></li>
-                        <li><a href="/fabrics"><i class="fas fa-tshirt"></i> Fabrics</a></li>
-                        <li><a href="/reviews"><i class="fas fa-star"></i> Reviews</a></li>
                         <li><a href="/learn"><i class="fas fa-graduation-cap"></i> Learn</a></li>
-                        <li><a href="/specials"><i class="fas fa-percentage"></i> Specials</a></li>
                     </ul>
                 </div>
                 
-                <!-- For Partners Section -->
                 <div>
                     <h4>For Partners</h4>
                     <ul class="footer-links">
                         <li><a href="/for-tailors"><i class="fas fa-user-tie"></i> For Tailors</a></li>
                         <li><a href="/for-businesses"><i class="fas fa-briefcase"></i> For Businesses</a></li>
-                        <li><a href="/for-brands"><i class="fas fa-tag"></i> For Brands</a></li>
-                        <li><a href="/community"><i class="fas fa-users"></i> Community</a></li>
-                        <li><a href="/tools"><i class="fas fa-tools"></i> Tools</a></li>
-                        <li><a href="/partnerships"><i class="fas fa-handshake"></i> Partnerships</a></li>
-                        <li><a href="/careers"><i class="fas fa-users"></i> Careers</a></li>
+                        <li><a href="/tenders"><i class="fas fa-gavel"></i> Tenders</a></li>
                         <li><a href="/register"><i class="fas fa-user-plus"></i> Register</a></li>
                     </ul>
                 </div>
                 
-                <!-- Quick Cities Section -->
                 <div>
-                    <h4>Find by City</h4>
+                    <h4>Quick Cities</h4>
                     <ul class="footer-links">
                         <li><a href="/colombo"><i class="fas fa-city"></i> Colombo</a></li>
                         <li><a href="/kandy"><i class="fas fa-mountain"></i> Kandy</a></li>
                         <li><a href="/galle"><i class="fas fa-umbrella-beach"></i> Galle</a></li>
-                        <li><a href="/jaffna"><i class="fas fa-landmark"></i> Jaffna</a></li>
-                        <li><a href="/trinco"><i class="fas fa-anchor"></i> Trincomalee</a></li>
-                        <li><a href="/ella"><i class="fas fa-hiking"></i> Ella</a></li>
                     </ul>
                 </div>
                 
-                <!-- Company Section -->
                 <div>
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
-                        <li><a href="/our-story"><i class="fas fa-book"></i> Our Story</a></li>
-                        <li><a href="/our-team"><i class="fas fa-users"></i> Our Team</a></li>
                         <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
                         <li><a href="/faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
                     </ul>
                 </div>
                 
-                <!-- Legal Section -->
                 <div>
                     <h4>Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="/terms"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
-                        <li><a href="/privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-                        <li><a href="/cookies"><i class="fas fa-cookie-bite"></i> Cookies Policy</a></li>
+                        <li><a href="/terms"><i class="fas fa-file-contract"></i> Terms</a></li>
+                        <li><a href="/privacy"><i class="fas fa-shield-alt"></i> Privacy</a></li>
                         <li><a href="/legal"><i class="fas fa-balance-scale"></i> Legal</a></li>
-                        <li><a href="/policies"><i class="fas fa-file-alt"></i> All Policies</a></li>
                     </ul>
                     
-                    <!-- Contact Info -->
                     <div class="contact-info">
-                        <h4>Contact Info</h4>
+                        <h4>Contact</h4>
                         <div class="contact-info-item">
                             <i class="fas fa-phone"></i>
                             <a href="tel:+94758244216">+94 75 824 4216</a>
@@ -1256,21 +1840,17 @@
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:team@tailors.lk">team@tailors.lk</a>
                         </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Colombo, Sri Lanka</span>
-                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Newsletter Signup -->
+            <!-- Newsletter -->
             <div class="newsletter">
                 <h4>Stay Updated</h4>
-                <p>Get the latest on tailoring trends, special offers, and new tailors</p>
+                <p>Get tender opportunities and tailoring trends</p>
                 <div class="newsletter-form">
-                    <input type="email" placeholder="Your email address" class="newsletter-input" id="footer-email" required>
-                    <button class="btn btn-primary btn-sm" id="footer-subscribe">
+                    <input type="email" placeholder="Your email" class="newsletter-input" id="footer-email" required>
+                    <button class="btn btn-primary" id="footer-subscribe">
                         <i class="fas fa-paper-plane"></i> Subscribe
                     </button>
                 </div>
@@ -1278,7 +1858,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; <span id="current-year"></span> Tailors.lk. All rights reserved. | Uplifting Sri Lanka's tailoring tradition</p>
+                <p>&copy; <span id="current-year"></span> Tailors.lk. All rights reserved. | Version 1.0 | Effective: May 2025</p>
             </div>
         </div>
     </footer>
@@ -1294,38 +1874,17 @@
         "publisher": {
             "@type": "Organization",
             "name": "Tailors.lk",
-            "description": "Sri Lanka's premier tailoring marketplace connecting customers with professional tailors",
             "url": "https://tailors.lk",
             "logo": "https://data.tailors.lk/logo.png",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Colombo",
-                "addressCountry": "Sri Lanka"
-            },
             "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+94758244216",
-                "contactType": "customer service",
-                "availableLanguage": ["English", "Sinhala", "Tamil"]
+                "contactType": "customer service"
             }
-        },
-        "about": {
-            "@type": "Thing",
-            "name": "Legal Policies",
-            "description": "Platform terms, disclaimers, user responsibilities and legal framework for Tailors.lk marketplace"
-        },
-        "mainEntity": {
-            "@type": "LegalService",
-            "name": "Tailors.lk Legal Policies",
-            "description": "Comprehensive legal framework and platform policies governing Tailors.lk operations",
-            "areaServed": "Sri Lanka",
-            "availableLanguage": ["English"]
         }
     }
     </script>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
+  <script>
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
@@ -1494,3 +2053,4 @@
     </script>
 </body>
 </html>
+ 
