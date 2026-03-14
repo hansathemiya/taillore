@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Terms and Conditions – Tailors.lk | Tailoring Platform Sri Lanka</title>
-    <meta name="description" content="Terms and Conditions for Tailors.lk - Sri Lanka's tailoring marketplace, franchise system, and digital services provider. Read our platform rules, commission systems, and partnership terms." />
-    <meta name="keywords" content="terms and conditions, tailor marketplace Sri Lanka, tailoring platform Sri Lanka, tailoring services agreement, franchise tailoring Sri Lanka, tailoring business partnership Sri Lanka" />
+    <meta name="description" content="Terms and Conditions for Tailors.lk - Sri Lanka's tailoring marketplace, franchise system, digital services, and B2B tender platform. Read our platform rules, commission systems, tender guidelines, and partnership terms." />
+    <meta name="keywords" content="terms and conditions, tailor marketplace Sri Lanka, tailoring platform Sri Lanka, tailoring services agreement, franchise tailoring Sri Lanka, tailoring business partnership Sri Lanka, B2B tender terms, Tailor Black governance" />
     <!-- Favicon -->
     <link rel="icon" href="https://data.tailors.lk/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://data.tailors.lk/ajax/libs/fontawesome/6.0.0/css/all.min.css" />
     <script src="https://t.contentsquare.net/uxa/e167583c8a668.js"></script>
     <style>
-        /* ALL EXISTING STYLES PRESERVED */
+        /* ALL EXISTING STYLES PRESERVED - Keeping your complete CSS */
         :root {
             --teal: #1f4e5f;
             --teal-dark: #0d3645;
@@ -355,6 +355,13 @@
             font-weight: 600;
         }
 
+        .terms-section h4 {
+            color: var(--teal-light);
+            font-size: 1.1rem;
+            margin: 20px 0 10px;
+            font-weight: 600;
+        }
+
         .terms-section p {
             margin-bottom: 15px;
             line-height: 1.6;
@@ -369,6 +376,184 @@
         .terms-section li {
             margin-bottom: 10px;
             color: var(--text);
+        }
+
+        /* New Table Styles for Tender Terms */
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .terms-table th {
+            background: rgba(31, 78, 95, 0.08);
+            color: var(--teal);
+            font-weight: 600;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid var(--teal);
+        }
+
+        .terms-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .terms-table tr:hover {
+            background: rgba(31, 78, 95, 0.02);
+        }
+
+        .terms-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Timeline Styles */
+        .timeline-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+            justify-content: space-between;
+        }
+
+        .timeline-item {
+            flex: 1;
+            min-width: 140px;
+            background: rgba(31, 78, 95, 0.03);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            padding: 15px 10px;
+            text-align: center;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-event {
+            font-weight: 600;
+            color: var(--teal);
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+
+        .timeline-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Package Cards */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, rgba(31, 78, 95, 0.03) 0%, rgba(185, 145, 95, 0.03) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .package-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: var(--teal);
+        }
+
+        .package-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .package-price small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 15px 0 0;
+            padding: 0;
+        }
+
+        .package-features li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .package-features i {
+            color: var(--gold);
+            width: 16px;
+        }
+
+        .package-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 3px 8px;
+            border-radius: var(--radius-xs);
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .badge-item {
+            flex: 1;
+            min-width: 150px;
+            background: rgba(31, 78, 95, 0.05);
+            border-radius: var(--radius-sm);
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .badge-title {
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 5px;
+        }
+
+        .badge-price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .badge-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 5px;
         }
 
         .definition-grid {
@@ -438,12 +623,21 @@
         .toc-list {
             list-style: none;
             margin: 0;
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-list {
+                columns: 1;
+            }
         }
 
         .toc-list li {
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
+            break-inside: avoid;
         }
 
         .toc-list li:before {
@@ -580,7 +774,7 @@
             font-size: 0.8rem;
         }
 
-        /* Responsive - PRESERVED */
+        /* Responsive - PRESERVED with additions */
         @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -589,6 +783,10 @@
             
             .terms-header h1 {
                 font-size: 2rem;
+            }
+            
+            .package-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -615,6 +813,27 @@
 
             .definition-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-grid {
+                flex-direction: column;
+            }
+            
+            .badge-container {
+                flex-direction: column;
+            }
+            
+            .terms-table {
+                font-size: 0.85rem;
+            }
+            
+            .terms-table th,
+            .terms-table td {
+                padding: 8px;
             }
 
             .footer-grid {
@@ -660,7 +879,7 @@
     </style>
 </head>
 <body>
-    <!-- Header - PRESERVED -->
+    <!-- Header - PRESERVED (Updated with Tenders link) -->
     <header>
         <div class="container nav-container">
             <a href="/" class="logo">
@@ -673,7 +892,7 @@
                 <a href="/tailors">Find Tailors</a>
                 <a href="/services">Services</a>
                 <a href="/learn">Learn</a>
-                <a href="/about">About</a>
+                <a href="/tenders">B2B Tenders</a>
                 <a href="/for-businesses">For Businesses</a>
                 <a href="/for-tailors">For Tailors</a>
                 <a href="/contact">Contact</a>
@@ -684,10 +903,6 @@
                     <a href="/tailors" class="btn btn-secondary btn-sm">
                         <i class="fas fa-search"></i>
                         Find Tailor
-                    </a>
-                    <a href="tel:+94758244216" class="btn-call">
-                        <i class="fas fa-phone"></i>
-                        Call Us
                     </a>
                 </div>
                 <a href="/register" class="btn btn-primary btn-sm">Join as Tailor</a>
@@ -705,22 +920,22 @@
             <a href="/tailors">Find Tailors</a>
             <a href="/services">Services</a>
             <a href="/learn">Learn</a>
-            <a href="/about">About</a>
+            <a href="/tenders">B2B Tenders</a>
             <a href="/for-businesses">For Businesses</a>
             <a href="/for-tailors">For Tailors</a>
             <a href="/contact">Contact</a>
             
             <!-- Mobile CTA Buttons -->
-            <div class="mobile-cta-buttons">
-                <a href="tel:+94758244216" class="btn btn-call">
+            <div style="margin-top: 10px;">
+                <a href="tel:+94758244216" class="btn btn-call" style="width: 100%; margin-bottom: 8px;">
                     <i class="fas fa-phone"></i>
                     Call Us: +94758244216
                 </a>
-                <a href="/register" class="btn btn-primary">
+                <a href="/register" class="btn btn-primary" style="width: 100%; margin-bottom: 8px;">
                     <i class="fas fa-user-plus"></i>
                     Join as Tailor
                 </a>
-                <a href="/tailors" class="btn btn-outline">
+                <a href="/tailors" class="btn btn-outline" style="width: 100%;">
                     <i class="fas fa-search"></i>
                     Find Tailor
                 </a>
@@ -728,51 +943,56 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT: TERMS & CONDITIONS -->
+    <!-- MAIN CONTENT: TERMS & CONDITIONS (UPDATED) -->
     <main class="terms-container">
         <div class="container">
             <div class="terms-header fade-in">
                 <h1>Terms and Conditions – Tailors.lk</h1>
-                <p class="last-updated">Last updated: <span class="effective-date">January 20, 2026</span></p>
+                <p class="last-updated">Last updated: <span class="effective-date">March 15, 2026</span></p>
                 <p style="max-width: 800px; margin: 0 auto; color: var(--text); font-size: 1.1rem;">
-                    These Terms govern your access to and use of Tailors.lk as a marketplace, service provider, digital agency, and franchise platform for tailoring services in Sri Lanka.
+                    These Terms govern your access to and use of Tailors.lk as a marketplace, service provider, digital agency, 
+                    <strong>B2B tender platform</strong>, and franchise system for tailoring services in Sri Lanka.
                 </p>
             </div>
 
             <div class="table-of-contents fade-in">
                 <h3>Table of Contents</h3>
                 <ul class="toc-list">
+                    <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#definitions">1. Definitions</a></li>
                     <li><a href="#user-accounts">2. User Accounts</a></li>
                     <li><a href="#tailor-listing">3. Tailor Listing Process</a></li>
                     <li><a href="#verified-featured">4. Verified & Featured Tailors</a></li>
                     <li><a href="#order-allocation">5. Order Allocation System</a></li>
                     <li><a href="#commission-model">6. Commission Model</a></li>
-                    <li><a href="#tender-model">7. Tender / Buyout Model</a></li>
-                    <li><a href="#payments">8. Payments & Subscriptions</a></li>
-                    <li><a href="#subdomains">9. Subdomains</a></li>
-                    <li><a href="#digital-services">10. Digital Services</a></li>
-                    <li><a href="#franchise-terms">11. Franchise Terms</a></li>
-                    <li><a href="#partnerships">12. Partnerships & Outsourcing</a></li>
-                    <li><a href="#prohibited">13. Prohibited Activities</a></li>
-                    <li><a href="#liability">14. Liability Limitations</a></li>
-                    <li><a href="#intellectual-property">15. Intellectual Property</a></li>
-                    <li><a href="#termination">16. Termination</a></li>
-                    <li><a href="#privacy-data">17. Privacy & Data</a></li>
-                    <li><a href="#governing-law">18. Governing Law</a></li>
-                    <li><a href="#modifications">19. Modifications</a></li>
-                    <li><a href="#contact">20. Contact</a></li>
+                    <li><a href="#tender-model">7. Tender / Buyout Model (Detailed)</a></li>
+                    <li><a href="#partner-tiers">8. Partner Tiered Access Packages</a></li>
+                    <li><a href="#tailor-black">9. Tailor Black Governance</a></li>
+                    <li><a href="#payments">10. Payments & Subscriptions</a></li>
+                    <li><a href="#subdomains">11. Subdomains</a></li>
+                    <li><a href="#digital-services">12. Digital Services</a></li>
+                    <li><a href="#franchise-terms">13. Franchise Terms</a></li>
+                    <li><a href="#partnerships">14. Partnerships & Outsourcing</a></li>
+                    <li><a href="#prohibited">15. Prohibited Activities</a></li>
+                    <li><a href="#liability">16. Liability Limitations</a></li>
+                    <li><a href="#intellectual-property">17. Intellectual Property</a></li>
+                    <li><a href="#termination">18. Termination</a></li>
+                    <li><a href="#privacy-data">19. Privacy & Data</a></li>
+                    <li><a href="#governing-law">20. Governing Law</a></li>
+                    <li><a href="#modifications">21. Modifications</a></li>
+                    <li><a href="#contact">22. Contact</a></li>
                 </ul>
             </div>
 
             <div class="terms-content">
-                <!-- Section 1: Introduction -->
-                <div class="terms-section fade-in">
+                <!-- Section 1: Introduction (UPDATED) -->
+                <div class="terms-section fade-in" id="introduction">
                     <h2>Introduction</h2>
                     <p>By accessing and using <strong>tailors.lk</strong> (the "Platform"), you agree to be bound by these Terms and Conditions. The Platform operates as:</p>
                     
                     <ul>
                         <li>A <strong>marketplace</strong> connecting customers with tailoring professionals across Sri Lanka</li>
+                        <li>A <strong>B2B tender platform</strong> facilitating exclusive bulk orders through annual and private tenders</li>
                         <li>A <strong>service provider</strong> offering digital solutions for tailoring businesses</li>
                         <li>A <strong>digital agency</strong> providing web development, SEO, and marketing services</li>
                         <li>A <strong>franchise platform</strong> enabling brand expansion and partnership opportunities</li>
@@ -783,6 +1003,7 @@
                     <ul>
                         <li><strong>Customers</strong> seeking tailoring services</li>
                         <li><strong>Tailors</strong> and tailoring businesses listed on the platform</li>
+                        <li><strong>Tender Partners</strong> participating in B2B tender bids</li>
                         <li><strong>Partners</strong> collaborating with Tailors.lk</li>
                         <li><strong>Franchisees</strong> operating under the Tailors.lk brand</li>
                         <li><strong>Learners</strong> accessing educational content</li>
@@ -793,7 +1014,7 @@
                     </div>
                 </div>
 
-                <!-- Section 2: Definitions -->
+                <!-- Section 2: Definitions (UPDATED with Tender Terms) -->
                 <div class="terms-section fade-in" id="definitions">
                     <h2>1. Definitions</h2>
                     <p>The following terms have specific meanings in these Terms:</p>
@@ -817,6 +1038,31 @@
                         <div class="definition-item">
                             <div class="definition-term">Featured Tailor</div>
                             <div class="definition-desc">A Tailor on a paid subscription plan receiving priority placement, premium visibility, and access to private order opportunities.</div>
+                        </div>
+                        
+                        <div class="definition-item">
+                            <div class="definition-term">Tender</div>
+                            <div class="definition-desc">An exclusive B2B contract opportunity for high-volume orders, awarded through a competitive bidding process.</div>
+                        </div>
+                        
+                        <div class="definition-item">
+                            <div class="definition-term">Entry Fee</div>
+                            <div class="definition-desc">Non-refundable fee (Min. LKR 5,000) paid to submit a bid for a tender.</div>
+                        </div>
+                        
+                        <div class="definition-item">
+                            <div class="definition-term">License Bid</div>
+                            <div class="definition-desc">The annual fee proposed by a bidder to secure exclusive rights to a tender category (typically LKR 50,000 to 500,000+).</div>
+                        </div>
+                        
+                        <div class="definition-item">
+                            <div class="definition-term">Security Deposit</div>
+                            <div class="definition-desc">Refundable deposit (10-20x Entry Fee) paid by winning bidders to guarantee performance.</div>
+                        </div>
+                        
+                        <div class="definition-item">
+                            <div class="definition-term">Tailor Black</div>
+                            <div class="definition-desc">An invitation-only governance status held by top-performing partners, with exclusive rights to oppose tender awards.</div>
                         </div>
                         
                         <div class="definition-item">
@@ -846,7 +1092,7 @@
                         
                         <div class="definition-item">
                             <div class="definition-term">Tender Order</div>
-                            <div class="definition-desc">An exclusive category of orders allocated to a specific Tailor through a monthly buyout system.</div>
+                            <div class="definition-desc">An exclusive category of orders allocated to a specific Tailor through the tender system, with 0% commission.</div>
                         </div>
                         
                         <div class="definition-item">
@@ -866,7 +1112,8 @@
                     </div>
                 </div>
 
-                <!-- Section 3: User Accounts -->
+                <!-- Sections 2-6 from original preserved... -->
+                <!-- Section 3: User Accounts (PRESERVED) -->
                 <div class="terms-section fade-in" id="user-accounts">
                     <h2>2. User Accounts</h2>
                     
@@ -887,6 +1134,7 @@
                         <li><strong>Non-Payment:</strong> Failure to pay commissions, subscriptions, or service fees</li>
                         <li><strong>Misrepresentation:</strong> False claims about skills, experience, or service capabilities</li>
                         <li><strong>Legal Violations:</strong> Breach of applicable laws or regulations</li>
+                        <li><strong>Tender Revocation:</strong> Triggering tender revocation as per Section 7</li>
                     </ul>
                     
                     <div class="warning-box">
@@ -894,7 +1142,7 @@
                     </div>
                 </div>
 
-                <!-- Section 4: Tailor Listing Process -->
+                <!-- Section 4: Tailor Listing Process (PRESERVED) -->
                 <div class="terms-section fade-in" id="tailor-listing">
                     <h2>3. Tailor Listing Process</h2>
                     <p>The listing process for tailors on our platform follows a structured verification system:</p>
@@ -922,7 +1170,7 @@
                     </div>
                 </div>
 
-                <!-- Section 5: Verified & Featured Tailors -->
+                <!-- Section 5: Verified & Featured Tailors (UPDATED with Badge Info) -->
                 <div class="terms-section fade-in" id="verified-featured">
                     <h2>4. Verified & Featured Tailors</h2>
                     
@@ -939,7 +1187,26 @@
                         <p><strong>Verification Rights:</strong> Tailors.lk may audit Verified Tailors at any time. Verification status can be removed without prior notice for failure to maintain standards.</p>
                     </div>
                     
-                    <h3>4.2 Featured Tailors</h3>
+                    <h3>4.2 Trust Badges</h3>
+                    <div class="badge-container">
+                        <div class="badge-item">
+                            <div class="badge-title">VERIFIED BADGE</div>
+                            <div class="badge-price">Rs. 1,200/month or Rs. 10,000/year</div>
+                            <div class="badge-note">Unannounced audit, +40% visibility, Golden Badge nomination eligibility. Limited to 10-15 slots/month.</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-title">FEATURED BADGE</div>
+                            <div class="badge-price">Rs. 500/month or Rs. 5,000/year</div>
+                            <div class="badge-note">Priority search placement, "Featured" label on profile.</div>
+                        </div>
+                        <div class="badge-item">
+                            <div class="badge-title">TAILOR BLACK</div>
+                            <div class="badge-price">By Invitation Only</div>
+                            <div class="badge-note">Highest search ranking, exclusive brand campaigns, dedicated account manager. Cannot be bought — must be earned.</div>
+                        </div>
+                    </div>
+                    
+                    <h3>4.3 Featured Tailors</h3>
                     <p>Featured Tailor status is a premium subscription tier with additional benefits:</p>
                     <ul>
                         <li><strong>Paid Subscription:</strong> Monthly or annual recurring payment required</li>
@@ -954,7 +1221,7 @@
                     </div>
                 </div>
 
-                <!-- Section 6: Order Allocation System -->
+                <!-- Section 6: Order Allocation System (PRESERVED) -->
                 <div class="terms-section fade-in" id="order-allocation">
                     <h2>5. Order Allocation System</h2>
                     
@@ -988,15 +1255,16 @@
                     <p><strong>No Order Guarantees:</strong> Tailors.lk does not guarantee any minimum order volume, frequency, or value to any tailor, regardless of subscription tier or performance history.</p>
                 </div>
 
-                <!-- Section 7: Commission Model -->
+                <!-- Section 7: Commission Model (UPDATED with Tender Commission) -->
                 <div class="terms-section fade-in" id="commission-model">
                     <h2>6. Commission Model</h2>
                     
-                    <p>Tailors.lk operates a commission-based revenue model for certain orders facilitated through the Platform.</p>
-                    
-                    <h3>6.1 Commission Structure</h3>
+                    <h3>6.1 Standard Commission Structure</h3>
                     <ul>
-                        <li><strong>Commission Percentage:</strong> [Commission % to be defined] of the total order value</li>
+                        <li><strong>Starter Package:</strong> 10% commission on standard orders</li>
+                        <li><strong>Growth Package:</strong> 7% commission on standard orders</li>
+                        <li><strong>Professional Package:</strong> 5% commission on standard orders</li>
+                        <li><strong>Enterprise Package:</strong> 0% commission on tender orders (annual license fee applies)</li>
                         <li><strong>Applicable Orders:</strong> Commission applies to orders marked as "Commission Orders" in the Platform</li>
                         <li><strong>Calculation Basis:</strong> Commission calculated on the final invoiced amount to the customer</li>
                         <li><strong>Payment Timing:</strong> Commission payable upon customer payment or as specified in order terms</li>
@@ -1024,49 +1292,269 @@
                     </div>
                 </div>
 
-                <!-- Section 8: Tender Model -->
+                <!-- Section 8: Tender Model (COMPLETELY UPDATED with PDF Details) -->
                 <div class="terms-section fade-in" id="tender-model">
                     <h2>7. Tender / Buyout Model</h2>
                     
-                    <p>Certain order categories may be offered as monthly tenders available for exclusive buyout by qualified tailors.</p>
+                    <p>Tailors.lk offers exclusive B2B order opportunities through our annual tender system and private tender requests. These are binding commercial arrangements governed by these Terms and the <a href="/legal">Tender Guidelines</a>.</p>
                     
-                    <h3>7.1 Tender Categories</h3>
-                    <p>Examples of tenderable categories include:</p>
+                    <h3>7.1 Annual Tender Cycle</h3>
+                    <div class="timeline-grid">
+                        <div class="timeline-item">
+                            <div class="timeline-date">May 10th</div>
+                            <div class="timeline-event">Tenders Open</div>
+                            <div class="timeline-desc">10:00 AM IST</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">May 20th</div>
+                            <div class="timeline-event">Bidding Closes</div>
+                            <div class="timeline-desc">11:59 PM IST</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">May 21st</div>
+                            <div class="timeline-event">Awards Announced</div>
+                            <div class="timeline-desc">Winners notified</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 1st</div>
+                            <div class="timeline-event">Deposit Due</div>
+                            <div class="timeline-desc">Winners only</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 1st</div>
+                            <div class="timeline-event">Contract Start</div>
+                            <div class="timeline-desc">Upon deposit clear</div>
+                        </div>
+                    </div>
+                    
+                    <h3>7.2 Tender Financial Terms</h3>
+                    <table class="terms-table">
+                        <tr>
+                            <th>Fee Type</th>
+                            <th>Amount</th>
+                            <th>Refundable</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Entry Fee</strong></td>
+                            <td>Minimum LKR 5,000 per tender bid</td>
+                            <td>Non-refundable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>License Bid</strong></td>
+                            <td>Annual fee (LKR 50,000 to 500,000+ depending on category)</td>
+                            <td>N/A - Winning bid</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security Deposit</strong></td>
+                            <td>10-20x entry fee (e.g., LKR 75,000-100,000)</td>
+                            <td>Refundable*</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commission</strong></td>
+                            <td>0% on tender orders</td>
+                            <td>N/A</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>7.3 Step-by-Step Bidding Process</h3>
+                    <ol>
+                        <li><strong>BROWSE:</strong> Visit tailors.lk/tenders and review active tender cards</li>
+                        <li><strong>SELECT & APPLY:</strong> Click [Apply Now] on desired tender</li>
+                        <li><strong>SUBMIT PRIVATE BID:</strong> Enter confidential license bid amount (must exceed Minimum Bid)</li>
+                        <li><strong>PAY ENTRY FEE:</strong> Pay non-refundable Entry Fee (Min. LKR 5,000)</li>
+                        <li><strong>AWAIT RESULTS:</strong> Winners notified via email & dashboard by May 21st</li>
+                        <li><strong>SIGN CONTRACT & PAY DEPOSIT:</strong> Winners receive formal contract + invoice. Pay Refundable Security Deposit by June 1st</li>
+                        <li><strong>EXECUTE & REPORT:</strong> Fulfill orders per timeline and submit quarterly revenue data</li>
+                    </ol>
+                    
+                    <h3>7.4 Eligibility Requirements</h3>
                     <ul>
-                        <li>Custom suits and formal wear</li>
-                        <li>Bridal and wedding attire</li>
-                        <li>Corporate uniform programs</li>
-                        <li>Specialty fabric work</li>
-                        <li>High-volume alteration projects</li>
+                        <li><strong>Active Partner Account:</strong> Must have active Tailors.lk partner account</li>
+                        <li><strong>Business Registration:</strong> Valid business registration (BR/NIC) required</li>
+                        <li><strong>Capacity Documentation:</strong> Proof of production capacity (staff count, machine inventory, workspace)</li>
+                        <li><strong>Minimum Rating:</strong> 4.0+ average customer rating (if previously active)</li>
+                        <li><strong>No Violations:</strong> No unresolved complaints or policy violations</li>
+                        <li><strong>Revenue Reporting:</strong> Agreement to submit quarterly revenue data</li>
                     </ul>
                     
-                    <h3>7.2 Tender Terms</h3>
+                    <h3>7.5 Revocation Triggers</h3>
+                    <p>A tender may be revoked immediately, with full or partial forfeiture of Security Deposit, for:</p>
                     <ul>
-                        <li><strong>Exclusive Rights:</strong> Tender owner receives all Platform orders in the purchased category for the tender period</li>
-                        <li><strong>Monthly Payment:</strong> Tender fees payable in advance each month</li>
-                        <li><strong>Pricing Control:</strong> Tailors.lk controls customer pricing for tender orders</li>
-                        <li><strong>Quality Audits:</strong> Tender owners remain subject to quality audits and standards</li>
-                        <li><strong>Commission Application:</strong> Commission may still apply to tender orders at reduced rates</li>
+                        <li><strong>Quality Failure:</strong> Multiple complaints about craftsmanship, use of substandard materials without disclosure, failure to meet specifications</li>
+                        <li><strong>Delivery Failure:</strong> Missing deadlines without prior communication, inability to fulfill >20% of assigned volume, abandonment of contract</li>
+                        <li><strong>Ethical Breach:</strong> Fraudulent documentation, unauthorized subcontracting, harassment, discrimination, or illegal practices</li>
+                        <li><strong>Client Solicitation:</strong> Direct contact with tender-sourced clients for outside work (removing Tailors.lk branding, offering private deals)</li>
+                        <li><strong>Non-Cooperation:</strong> Failure to respond to platform mediation within 48 hours, refusal to provide evidence</li>
+                        <li><strong>Revenue Reporting Failure:</strong> Failure to report for 2+ consecutive quarters</li>
                     </ul>
                     
-                    <div class="legal-highlight">
-                        <p><strong>Tender Limitations:</strong> Tailors.lk reserves the right to exclude specific orders from tender categories, adjust tender pricing, or terminate tender agreements with 30 days notice.</p>
+                    <h3>7.6 Re-award Process</h3>
+                    <p>If a tender is revoked:</p>
+                    <ol>
+                        <li>Original winner notified of revocation and deposit forfeiture</li>
+                        <li>Offer extended to 2nd Highest Bidder from original cycle (if bid remains valid)</li>
+                        <li>Second bidder has 48 hours to accept and pay deposit</li>
+                        <li>If declined, tender may be re-listed or cancelled</li>
+                        <li>Original winner barred from bidding on any Tailors.lk tenders for 12 months</li>
+                    </ol>
+                    
+                    <h3>7.7 Brand Attribution & Client Protection</h3>
+                    <p>All tender-sourced work must adhere to:</p>
+                    <ul>
+                        <li><strong>Mandatory Branding:</strong> All contracts, invoices, delivery notes must display "Fulfilled by [Partner Name] via Tailors.lk" with platform logo</li>
+                        <li><strong>Platform Order References:</strong> Use Tailors.lk-provided order reference numbers</li>
+                        <li><strong>Client Solicitation Restriction:</strong> For contract duration + 12 months after completion, partners agree NOT to directly solicit, contact, or re-engage any customer acquired through a Tailors.lk tender for work outside the platform</li>
+                        <li><strong>Prohibited:</strong> Removing Tailors.lk branding, presenting tender work as "direct" partnership, using client lists for external marketing</li>
+                        <li><strong>Consequences:</strong> Immediate tender revocation, forfeiture of Security Deposit, account suspension/termination, legal action for breach of contract</li>
+                    </ul>
+                    
+                    <h3>7.8 Revenue Reporting Requirements</h3>
+                    <p>All tender partners must submit quarterly revenue data to unlock peer benchmarking, renewal consideration, and growth insights:</p>
+                    <ul>
+                        <li>Gross revenue from tender orders</li>
+                        <li>Material costs (optional, for margin insights)</li>
+                        <li>Delivery completion rate</li>
+                        <li>Customer satisfaction score (1-5)</li>
+                    </ul>
+                    <div class="warning-box">
+                        <p><strong>Important:</strong> Failure to report for 2+ consecutive quarters may trigger tender review or non-renewal. All data is encrypted and confidential.</p>
+                    </div>
+                    
+                    <h3>7.9 Private Tenders</h3>
+                    <p>Year-round opportunities for niche, urgent, or custom orders not included in the annual May cycle. Process:</p>
+                    <ol>
+                        <li><strong>REQUEST:</strong> Verified partner submits request via email or platform</li>
+                        <li><strong>REVIEW:</strong> Tailors.lk assesses feasibility (3-5 business days)</li>
+                        <li><strong>PUBLIC LISTING:</strong> If approved, tender listed for 7 days for bids</li>
+                        <li><strong>BIDDING & AWARD:</strong> Highest valid bid wins; if no bids, offered directly to requesting partner</li>
+                        <li><strong>EXECUTION:</strong> Same rules apply: Entry Fee, License Bid, Deposit, Performance Expectations, Reporting</li>
+                    </ol>
+                    
+                    <div class="note-box">
+                        <p><strong>Full tender guidelines, including the Tailor Black governance privilege, are detailed in our <a href="/legal">Legal & Platform Policies</a> page.</strong></p>
                     </div>
                 </div>
 
-                <!-- Section 9: Payments -->
-                <div class="terms-section fade-in" id="payments">
-                    <h2>8. Payments & Subscriptions</h2>
+                <!-- NEW Section 9: Partner Tiered Access Packages -->
+                <div class="terms-section fade-in" id="partner-tiers">
+                    <h2>8. Partner Tiered Access Packages</h2>
                     
-                    <h3>8.1 Subscription Models</h3>
+                    <p>Tailors.lk offers tiered growth packages providing direct access to verified order sales. All prices are starting rates and may vary based on location, capacity, and customization.</p>
+                    
+                    <div class="package-grid">
+                        <div class="package-card">
+                            <div class="package-name">STARTER</div>
+                            <div class="package-price">Rs. 5,000<span style="font-size: 0.9rem; color: var(--text-light);">/year +</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 5-10 Orders/month</li>
+                                <li><i class="fas fa-check"></i> Email Support</li>
+                                <li><i class="fas fa-check"></i> Standard Profile</li>
+                                <li><i class="fas fa-check"></i> General Orders</li>
+                                <li><i class="fas fa-percent"></i> 10% Commission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="package-card">
+                            <div class="package-name">GROWTH <span class="package-badge">POPULAR</span></div>
+                            <div class="package-price">Rs. 15,000<span style="font-size: 0.9rem; color: var(--text-light);">/year +</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 20-40 Orders/month</li>
+                                <li><i class="fas fa-check"></i> WhatsApp Support</li>
+                                <li><i class="fas fa-check"></i> Premium Profile</li>
+                                <li><i class="fas fa-check"></i> Regional Special</li>
+                                <li><i class="fas fa-percent"></i> 7% Commission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="package-card">
+                            <div class="package-name">PROFESSIONAL</div>
+                            <div class="package-price">Rs. 35,000<span style="font-size: 0.9rem; color: var(--text-light);">/year +</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> 60-100 Orders/month</li>
+                                <li><i class="fas fa-check"></i> Priority Support</li>
+                                <li><i class="fas fa-check"></i> Subdomain (Website)</li>
+                                <li><i class="fas fa-check"></i> Tender Priority</li>
+                                <li><i class="fas fa-percent"></i> 5% Commission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="package-card">
+                            <div class="package-name">ENTERPRISE</div>
+                            <div class="package-price">Custom<span style="font-size: 0.9rem; color: var(--text-light);"> +</span></div>
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i> Unlimited Orders</li>
+                                <li><i class="fas fa-check"></i> Dedicated Manager</li>
+                                <li><i class="fas fa-check"></i> Custom Domain</li>
+                                <li><i class="fas fa-check"></i> Exclusive Tenders</li>
+                                <li><i class="fas fa-percent"></i> 0% on Tenders*</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Profile URL Options</h3>
                     <ul>
-                        <li><strong>Featured Tailor Subscriptions:</strong> Recurring monthly or annual payments</li>
-                        <li><strong>Tender Payments:</strong> Monthly advance payments for category exclusivity</li>
-                        <li><strong>Digital Services:</strong> Project-based or retainer invoices</li>
-                        <li><strong>Subdomain Hosting:</strong> Annual or monthly hosting fees</li>
+                        <li><strong>Custom Profile URL:</strong> Rs. 1,500/year - tailors.lk/t/yourname (Profile OR Microsite view)</li>
+                        <li><strong>Premium Profile URL:</strong> Rs. 2,500/year - tailors.lk/yourname (+25% search visibility, custom meta tags, no platform branding)</li>
+                        <li><strong>Branded Subdomain:</strong> Rs. 3,500/year - yourname.tailors.lk (FULL website mode, advanced analytics, custom domain mapping support)</li>
                     </ul>
                     
-                    <h3>8.2 Payment Terms</h3>
+                    <p>All Packages Include: Dashboard Access, WhatsApp Integration, Basic Analytics, Customer Review System.</p>
+                </div>
+
+                <!-- NEW Section 10: Tailor Black Governance -->
+                <div class="terms-section fade-in" id="tailor-black">
+                    <h2>9. Tailor Black Governance Privilege</h2>
+                    
+                    <h3>9.1 Exclusive Opposition Right</h3>
+                    <p>Only partners holding TAILOR BLACK status possess the privilege to formally oppose a tender award.</p>
+                    
+                    <h4>Valid Grounds for Opposition:</h4>
+                    <ul>
+                        <li>Proven capacity misrepresentation by winner</li>
+                        <li>Documented quality failures on prior platform work</li>
+                        <li>Ethical breaches (fraud, harassment, conflict of interest)</li>
+                        <li>Anti-competitive behavior</li>
+                    </ul>
+                    
+                    <h4>Invalid Grounds:</h4>
+                    <ul>
+                        <li>Disagreement with bid amount</li>
+                        <li>Personal rivalry or preference</li>
+                        <li>Speculation without evidence</li>
+                    </ul>
+                    
+                    <h3>9.2 Review Process</h3>
+                    <ol>
+                        <li><strong>SUBMISSION:</strong> Tailor Black partner submits formal opposition with supporting evidence to black@tailors.lk</li>
+                        <li><strong>PRELIMINARY REVIEW:</strong> Tailors.lk governance team assesses validity within 3 business days. Invalid oppositions dismissed with explanation.</li>
+                        <li><strong>INVESTIGATION:</strong> If valid, winner notified of opposition (details redacted). Evidence reviewed; additional info requested. Timeline: 7-10 business days.</li>
+                        <li><strong>DECISION:</strong> Upheld: Tender re-evaluated; may be re-awarded. Dismissed: Original award stands; no appeal.</li>
+                        <li><strong>CONFIDENTIALITY:</strong> All opposition details kept confidential. Retaliation against opposing partner prohibited.</li>
+                    </ol>
+                    
+                    <div class="warning-box">
+                        <p><strong>Warning:</strong> Abuse of this privilege (frivolous oppositions) may result in Tailor Black status review.</p>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>Note:</strong> Tailor Black status cannot be bought. It is earned through consistent excellence (2+ years as Verified partner, 4.8+ rating, zero complaints, community contribution) and invitation-only review.</p>
+                    </div>
+                </div>
+
+                <!-- Section 11: Payments (UPDATED with Tender Terms) -->
+                <div class="terms-section fade-in" id="payments">
+                    <h2>10. Payments & Subscriptions</h2>
+                    
+                    <h3>10.1 Subscription Models</h3>
+                    <ul>
+                        <li><strong>Featured Tailor Subscriptions:</strong> Recurring monthly or annual payments</li>
+                        <li><strong>Tender Payments:</strong> Entry Fee (non-refundable), License Bid (annual), Security Deposit (refundable)</li>
+                        <li><strong>Digital Services:</strong> Project-based or retainer invoices</li>
+                        <li><strong>Subdomain Hosting:</strong> Annual or monthly hosting fees</li>
+                        <li><strong>Trust Badges:</strong> Monthly or annual payments for Verified and Featured badges</li>
+                    </ul>
+                    
+                    <h3>10.2 Payment Terms</h3>
                     <ul>
                         <li><strong>Due Dates:</strong> Payments due as specified in invoices or subscription terms</li>
                         <li><strong>Late Payments:</strong> 5% monthly penalty on overdue amounts</li>
@@ -1074,12 +1562,36 @@
                         <li><strong>Currency:</strong> Sri Lankan Rupees (LKR) unless otherwise specified</li>
                     </ul>
                     
-                    <h3>8.3 Refund Policy</h3>
+                    <h3>10.3 Security Deposit Refund Policy</h3>
+                    <p>Security Deposits are fully refunded at contract end if:</p>
+                    <ul>
+                        <li>All orders delivered on time</li>
+                        <li>Quality standards met</li>
+                        <li>No valid complaints filed</li>
+                        <li>Revenue reporting completed</li>
+                        <li>Brand attribution rules followed</li>
+                        <li>No client solicitation violations</li>
+                    </ul>
+                    
+                    <p>Security Deposit is forfeited (non-refundable) if:</p>
+                    <ul>
+                        <li>Tender revoked due to performance failure</li>
+                        <li>Valid quality/delivery complaints upheld</li>
+                        <li>Partner breaches contract terms</li>
+                        <li>Brand/client protection violations</li>
+                        <li>Platform intervention enforced refunds</li>
+                    </ul>
+                    
+                    <div class="legal-highlight">
+                        <p><strong>Refund Timeline:</strong> Within 30 days of contract end and performance approval.</p>
+                    </div>
+                    
+                    <h3>10.4 Non-Refundable Policy</h3>
                     <div class="warning-box">
-                        <p><strong>Non-Refundable Policy:</strong> Unless explicitly stated in a separate written agreement:</p>
+                        <p><strong>Unless explicitly stated in a separate written agreement:</strong></p>
                         <ul>
                             <li>Subscription fees are non-refundable</li>
-                            <li>Tender payments are non-refundable</li>
+                            <li>Tender Entry Fees are non-refundable</li>
                             <li>Digital service deposits are non-refundable</li>
                             <li>Commission payments are non-refundable</li>
                         </ul>
@@ -1087,13 +1599,13 @@
                     </div>
                 </div>
 
-                <!-- Section 10: Subdomains -->
+                <!-- Section 12: Subdomains (PRESERVED) -->
                 <div class="terms-section fade-in" id="subdomains">
-                    <h2>9. Subdomains (name.tailors.lk)</h2>
+                    <h2>11. Subdomains (name.tailors.lk)</h2>
                     
                     <p>Tailors.lk offers custom subdomains to qualified tailors as part of their digital presence package.</p>
                     
-                    <h3>9.1 Subdomain Terms</h3>
+                    <h3>11.1 Subdomain Terms</h3>
                     <ul>
                         <li><strong>Request Process:</strong> Subdomains available upon request to Verified or Featured Tailors</li>
                         <li><strong>Ownership:</strong> All subdomains remain property of Tailors.lk</li>
@@ -1101,7 +1613,7 @@
                         <li><strong>Payment Requirements:</strong> Hosting and maintenance fees may apply</li>
                     </ul>
                     
-                    <h3>9.2 Termination Conditions</h3>
+                    <h3>11.2 Termination Conditions</h3>
                     <p>Subdomain access may be terminated for:</p>
                     <ul>
                         <li><strong>Non-Payment:</strong> Failure to pay hosting or subscription fees</li>
@@ -1115,13 +1627,13 @@
                     </div>
                 </div>
 
-                <!-- Section 11: Digital Services -->
+                <!-- Section 13: Digital Services (PRESERVED) -->
                 <div class="terms-section fade-in" id="digital-services">
-                    <h2>10. Digital Services</h2>
+                    <h2>12. Digital Services</h2>
                     
                     <p>Tailors.lk provides digital marketing and development services to tailoring businesses.</p>
                     
-                    <h3>10.1 Service Offerings</h3>
+                    <h3>12.1 Service Offerings</h3>
                     <ul>
                         <li><strong>Web Development:</strong> Custom website design and development</li>
                         <li><strong>SEO Services:</strong> Search engine optimization for better online visibility</li>
@@ -1131,7 +1643,7 @@
                         <li><strong>WhatsApp Funnels:</strong> Customer enquiry management systems</li>
                     </ul>
                     
-                    <h3>10.2 Service Terms</h3>
+                    <h3>12.2 Service Terms</h3>
                     <div class="legal-highlight">
                         <p><strong>Service Agreements:</strong> Digital services are governed by separate service agreements outlining scope, timelines, and payment terms.</p>
                     </div>
@@ -1144,13 +1656,13 @@
                     </ul>
                 </div>
 
-                <!-- Section 12: Franchise Terms -->
+                <!-- Section 14: Franchise Terms (PRESERVED) -->
                 <div class="terms-section fade-in" id="franchise-terms">
-                    <h2>11. Franchise Terms</h2>
+                    <h2>13. Franchise Terms</h2>
                     
                     <p>Tailors.lk offers franchise opportunities for expansion of its brand and services.</p>
                     
-                    <h3>11.1 Franchise Structure</h3>
+                    <h3>13.1 Franchise Structure</h3>
                     <ul>
                         <li><strong>Brand Operation:</strong> Franchisees operate under the Tailors.lk brand</li>
                         <li><strong>Territory Assignment:</strong> Exclusive or non-exclusive geographic territories may be assigned</li>
@@ -1158,7 +1670,7 @@
                         <li><strong>Revenue Sharing:</strong> Structured revenue sharing models as defined in franchise agreements</li>
                     </ul>
                     
-                    <h3>11.2 Franchise Requirements</h3>
+                    <h3>13.2 Franchise Requirements</h3>
                     <ul>
                         <li><strong>Brand Control:</strong> Tailors.lk controls all brand standards, marketing, and customer experience guidelines</li>
                         <li><strong>Quality Audits:</strong> Regular audits of franchise operations and service quality</li>
@@ -1166,12 +1678,12 @@
                         <li><strong>Reporting Obligations:</strong> Regular operational and financial reporting</li>
                     </ul>
                     
-                    <h3>11.3 Intellectual Property</h3>
+                    <h3>13.3 Intellectual Property</h3>
                     <div class="warning-box">
                         <p><strong>IP Ownership:</strong> All intellectual property including logos, platform code, business processes, and brand assets remain exclusive property of Tailors.lk. Franchisees receive limited license for operational use only.</p>
                     </div>
                     
-                    <h3>11.4 Termination Rights</h3>
+                    <h3>13.4 Termination Rights</h3>
                     <p>Tailors.lk may terminate franchise agreements for:</p>
                     <ul>
                         <li>Breach of quality standards</li>
@@ -1182,13 +1694,13 @@
                     </ul>
                 </div>
 
-                <!-- Section 13: Partnerships -->
+                <!-- Section 15: Partnerships (PRESERVED) -->
                 <div class="terms-section fade-in" id="partnerships">
-                    <h2>12. Partnerships & Outsourcing</h2>
+                    <h2>14. Partnerships & Outsourcing</h2>
                     
                     <p>Tailors.lk collaborates with various partners to enhance Platform capabilities and service offerings.</p>
                     
-                    <h3>12.1 Partnership Models</h3>
+                    <h3>14.1 Partnership Models</h3>
                     <ul>
                         <li><strong>Service Delivery Partners:</strong> External providers for specific services (photography, content, etc.)</li>
                         <li><strong>Operational Partners:</strong> Management of specific Platform functions or regions</li>
@@ -1196,7 +1708,7 @@
                         <li><strong>Content Partners:</strong> Creation and distribution of educational content</li>
                     </ul>
                     
-                    <h3>12.2 Partnership Terms</h3>
+                    <h3>14.2 Partnership Terms</h3>
                     <ul>
                         <li><strong>Confidentiality:</strong> Partners must maintain confidentiality of Platform data and processes</li>
                         <li><strong>Audit Rights:</strong> Tailors.lk reserves right to audit partner work and processes</li>
@@ -1209,13 +1721,13 @@
                     </div>
                 </div>
 
-                <!-- Section 14: Prohibited Activities -->
+                <!-- Section 16: Prohibited Activities (UPDATED with Tender Violations) -->
                 <div class="terms-section fade-in" id="prohibited">
-                    <h2>13. Prohibited Activities</h2>
+                    <h2>15. Prohibited Activities</h2>
                     
                     <p>The following activities are strictly prohibited on the Tailors.lk Platform:</p>
                     
-                    <h3>13.1 Platform Abuse</h3>
+                    <h3>15.1 Platform Abuse</h3>
                     <ul>
                         <li><strong>False Listings:</strong> Creating fake tailor profiles or misrepresenting skills</li>
                         <li><strong>Spamming:</strong> Unsolicited messages to customers or other tailors</li>
@@ -1223,7 +1735,7 @@
                         <li><strong>Data Scraping:</strong> Automated extraction of Platform data without permission</li>
                     </ul>
                     
-                    <h3>13.2 System Manipulation</h3>
+                    <h3>15.2 System Manipulation</h3>
                     <ul>
                         <li><strong>Algorithm Gaming:</strong> Attempting to manipulate search rankings or order allocation</li>
                         <li><strong>Fake Reviews:</strong> Creating虚假 customer reviews or ratings</li>
@@ -1231,7 +1743,16 @@
                         <li><strong>Account Sharing:</strong> Sharing account access with unauthorized users</li>
                     </ul>
                     
-                    <h3>13.3 Legal Violations</h3>
+                    <h3>15.3 Tender-Specific Violations</h3>
+                    <ul>
+                        <li><strong>Client Solicitation:</strong> Directly contacting tender-sourced clients for work outside the platform during contract + 12 months after completion</li>
+                        <li><strong>Brand Removal:</strong> Removing Tailors.lk branding from tender-related documents</li>
+                        <li><strong>Bid Manipulation:</strong> Collusion or anti-competitive bidding practices</li>
+                        <li><strong>Capacity Misrepresentation:</strong> Falsifying production capacity in tender applications</li>
+                        <li><strong>Unauthorized Subcontracting:</strong> Subcontracting tender work without written approval</li>
+                    </ul>
+                    
+                    <h3>15.4 Legal Violations</h3>
                     <ul>
                         <li><strong>Intellectual Property Theft:</strong> Using copyrighted material without permission</li>
                         <li><strong>Fraudulent Activity:</strong> Any form of financial fraud or deception</li>
@@ -1240,29 +1761,38 @@
                     </ul>
                     
                     <div class="warning-box">
-                        <p><strong>Consequences:</strong> Violation of prohibited activities may result in immediate account termination, legal action, and reporting to relevant authorities.</p>
+                        <p><strong>Consequences:</strong> Violation of prohibited activities may result in immediate account termination, forfeiture of Security Deposits, legal action, and reporting to relevant authorities.</p>
                     </div>
                 </div>
 
-                <!-- Section 15: Liability -->
+                <!-- Section 17: Liability (UPDATED with Tender Liability) -->
                 <div class="terms-section fade-in" id="liability">
-                    <h2>14. Liability Limitations</h2>
+                    <h2>16. Liability Limitations</h2>
                     
-                    <h3>14.1 Platform Role</h3>
-                    <p>Tailors.lk operates as a connecting platform between customers and tailors. We are not:</p>
+                    <h3>16.1 Platform Role</h3>
+                    <p>Tailors.lk operates as a connecting platform between customers and tailors, and as a facilitator for B2B tenders. We are not:</p>
                     <ul>
                         <li>A direct provider of tailoring services</li>
                         <li>An employer of listed tailors</li>
                         <li>A guarantor of service quality or outcomes</li>
                         <li>A party to agreements between customers and tailors</li>
+                        <li>Liable for tender partner's business losses or order volume</li>
                     </ul>
                     
-                    <h3>14.2 Dispute Resolution</h3>
+                    <h3>16.2 Dispute Resolution</h3>
                     <div class="legal-highlight">
                         <p><strong>No Liability for User Disputes:</strong> Tailors.lk is not responsible for disputes between customers and tailors. Users must resolve disputes directly. Tailors.lk may, at its discretion, facilitate resolution but assumes no liability for outcomes.</p>
                     </div>
                     
-                    <h3>14.3 Service Limitations</h3>
+                    <h3>16.3 Tender-Specific Limitations</h3>
+                    <ul>
+                        <li>Tailors.lk does not guarantee order volume or profitability from tender contracts</li>
+                        <li>Tailors.lk is not liable for partner business losses related to tender awards, revocations, or governance rights</li>
+                        <li>Tailors.lk reserves final discretion in tender awards, revocations, and re-awards</li>
+                        <li>Platform intervention in disputes may result in refunds deducted from Security Deposits</li>
+                    </ul>
+                    
+                    <h3>16.4 Service Limitations</h3>
                     <ul>
                         <li><strong>"As Is" Basis:</strong> The Platform is provided "as is" without warranties of any kind</li>
                         <li><strong>No Indirect Damages:</strong> Tailors.lk is not liable for indirect, incidental, or consequential damages</li>
@@ -1271,11 +1801,11 @@
                     </ul>
                 </div>
 
-                <!-- Section 16: Intellectual Property -->
+                <!-- Section 18: Intellectual Property (PRESERVED) -->
                 <div class="terms-section fade-in" id="intellectual-property">
-                    <h2>15. Intellectual Property</h2>
+                    <h2>17. Intellectual Property</h2>
                     
-                    <h3>15.1 Tailors.lk Property</h3>
+                    <h3>17.1 Tailors.lk Property</h3>
                     <p>The following are exclusive property of Tailors.lk:</p>
                     <ul>
                         <li><strong>Platform Code:</strong> All software, databases, and technical infrastructure</li>
@@ -1283,9 +1813,10 @@
                         <li><strong>Content:</strong> Platform content, guides, and educational materials</li>
                         <li><strong>Business Processes:</strong> Operational systems and methodologies</li>
                         <li><strong>Data Analytics:</strong> Platform usage data and analytics insights</li>
+                        <li><strong>Tender Data:</strong> Bid amounts (confidential), revenue reports, performance metrics</li>
                     </ul>
                     
-                    <h3>15.2 User Restrictions</h3>
+                    <h3>17.2 User Restrictions</h3>
                     <p>Users may not:</p>
                     <ul>
                         <li>Copy, modify, or resell Platform content</li>
@@ -1300,42 +1831,46 @@
                     </div>
                 </div>
 
-                <!-- Section 17: Termination -->
+                <!-- Section 19: Termination (UPDATED with Tender Grounds) -->
                 <div class="terms-section fade-in" id="termination">
-                    <h2>16. Termination</h2>
+                    <h2>18. Termination</h2>
                     
-                    <h3>16.1 Termination Rights</h3>
+                    <h3>18.1 Termination Rights</h3>
                     <p>Tailors.lk may terminate:</p>
                     <ul>
                         <li><strong>User Accounts:</strong> For violation of these Terms</li>
+                        <li><strong>Tender Agreements:</strong> For revocation triggers as specified in Section 7</li>
                         <li><strong>Partnerships:</strong> As per partnership agreement terms</li>
                         <li><strong>Franchises:</strong> According to franchise agreement provisions</li>
                         <li><strong>Service Agreements:</strong> For breach of service terms</li>
                     </ul>
                     
-                    <h3>16.2 Effects of Termination</h3>
+                    <h3>18.2 Effects of Termination</h3>
                     <ul>
                         <li><strong>Access Revocation:</strong> Immediate loss of Platform access</li>
                         <li><strong>Pending Orders:</strong> Cancellation or reassignment of pending orders</li>
                         <li><strong>Outstanding Payments:</strong> Acceleration of all payment obligations</li>
+                        <li><strong>Security Deposit:</strong> Forfeiture if termination due to breach</li>
                         <li><strong>Data Retention:</strong> Tailors.lk may retain user data as required by law or for business purposes</li>
                         <li><strong>No Reinstatement:</strong> Tailors.lk has no obligation to reinstate terminated accounts</li>
+                        <li><strong>Tender Suspension:</strong> Original winner barred from bidding for 12 months following revocation</li>
                     </ul>
                     
-                    <h3>16.3 User Termination Rights</h3>
+                    <h3>18.3 User Termination Rights</h3>
                     <p>Users may terminate their accounts by written request, subject to:</p>
                     <ul>
                         <li>Completion of all pending orders</li>
                         <li>Payment of all outstanding amounts</li>
                         <li>30-day notice period for subscription services</li>
+                        <li>Tender partners must complete all contractual obligations</li>
                     </ul>
                 </div>
 
-                <!-- Section 18: Privacy -->
+                <!-- Section 20: Privacy (UPDATED with Tender Data) -->
                 <div class="terms-section fade-in" id="privacy-data">
-                    <h2>17. Privacy & Data</h2>
+                    <h2>19. Privacy & Data</h2>
                     
-                    <h3>17.1 Data Collection</h3>
+                    <h3>19.1 Data Collection</h3>
                     <p>Tailors.lk collects data including:</p>
                     <ul>
                         <li>User registration information</li>
@@ -1343,35 +1878,43 @@
                         <li>Platform usage analytics</li>
                         <li>Communication records</li>
                         <li>Service delivery data</li>
+                        <li><strong>Tender Data:</strong> Bid amounts (confidential), revenue reports, performance metrics</li>
+                        <li><strong>Verification Data:</strong> Business registration, capacity documentation, shop visit records</li>
                     </ul>
                     
-                    <h3>17.2 Data Usage</h3>
+                    <h3>19.2 Data Usage</h3>
                     <p>Collected data may be used for:</p>
                     <ul>
                         <li><strong>Platform Operation:</strong> Service delivery and user management</li>
+                        <li><strong>Tender Management:</strong> Bid processing, award decisions, performance monitoring</li>
                         <li><strong>Marketing:</strong> Promotional communications (opt-out available)</li>
                         <li><strong>Analytics:</strong> Platform improvement and business intelligence</li>
                         <li><strong>Legal Compliance:</strong> Meeting regulatory requirements</li>
                     </ul>
                     
                     <div class="legal-highlight">
-                        <p><strong>Consent:</strong> By using the Platform, users consent to data collection and usage as described in these Terms and our Privacy Policy.</p>
+                        <p><strong>Consent:</strong> By using the Platform, users consent to data collection and usage as described in these Terms and our <a href="/privacy">Privacy Policy</a>.</p>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>Bid Confidentiality:</strong> Bid amounts are confidential between bidder and Tailors.lk admin team. Revenue reporting data is encrypted and confidential.</p>
                     </div>
                 </div>
 
-                <!-- Section 19: Governing Law -->
+                <!-- Section 21: Governing Law (PRESERVED) -->
                 <div class="terms-section fade-in" id="governing-law">
-                    <h2>18. Governing Law</h2>
+                    <h2>20. Governing Law</h2>
                     
-                    <h3>18.1 Jurisdiction</h3>
-                    <p>These Terms are governed by and construed in accordance with the laws of Sri Lanka.</p>
+                    <h3>20.1 Jurisdiction</h3>
+                    <p>These Terms are governed by and construed in accordance with the laws of the Democratic Socialist Republic of Sri Lanka.</p>
                     
-                    <h3>18.2 Dispute Resolution Process</h3>
+                    <h3>20.2 Dispute Resolution Process</h3>
                     <ol>
                         <li><strong>Direct Negotiation:</strong> Parties must attempt to resolve disputes through direct communication</li>
+                        <li><strong>Platform Mediation:</strong> Tailors.lk may mediate disputes for platform-managed orders and tender contracts</li>
                         <li><strong>Mediation:</strong> If unresolved, parties agree to mediation in Colombo, Sri Lanka</li>
                         <li><strong>Arbitration:</strong> If mediation fails, binding arbitration under Sri Lankan arbitration laws</li>
-                        <li><strong>Court Proceedings:</strong> Legal proceedings may be initiated in Colombo courts</li>
+                        <li><strong>Court Proceedings:</strong> Legal proceedings may be initiated in Colombo Commercial High Court</li>
                     </ol>
                     
                     <div class="note-box">
@@ -1379,11 +1922,11 @@
                     </div>
                 </div>
 
-                <!-- Section 20: Modifications -->
+                <!-- Section 22: Modifications (PRESERVED) -->
                 <div class="terms-section fade-in" id="modifications">
-                    <h2>19. Modifications</h2>
+                    <h2>21. Modifications</h2>
                     
-                    <h3>19.1 Terms Updates</h3>
+                    <h3>21.1 Terms Updates</h3>
                     <p>Tailors.lk reserves the right to modify these Terms at any time by:</p>
                     <ul>
                         <li>Posting updated Terms on the Platform</li>
@@ -1391,38 +1934,46 @@
                         <li>Updating the "Last Updated" date</li>
                     </ul>
                     
-                    <h3>19.2 Acceptance of Changes</h3>
+                    <h3>21.2 Acceptance of Changes</h3>
                     <div class="legal-highlight">
                         <p><strong>Continued Use:</strong> Continued use of the Platform after Terms modifications constitutes acceptance of the updated Terms. Users who do not agree to modified Terms must cease using the Platform immediately.</p>
                     </div>
                     
-                    <p><strong>Material Changes:</strong> For material changes affecting user rights, Tailors.lk will provide at least 30 days notice before changes take effect.</p>
+                    <p><strong>Material Changes:</strong> For material changes affecting user rights, Tailors.lk will provide at least 30 days notice before changes take effect via email or platform notification.</p>
                 </div>
 
-                <!-- Section 21: Contact -->
+                <!-- Section 23: Contact (UPDATED with Tender Contacts) -->
                 <div class="terms-section fade-in" id="contact">
-                    <h2>20. Contact</h2>
+                    <h2>22. Contact</h2>
                     
-                    <h3>20.1 General Enquiries</h3>
+                    <h3>22.1 General Enquiries</h3>
                     <p>For questions about these Terms or the Platform:</p>
                     <ul>
                         <li><strong>Website:</strong> Visit our <a href="/contact">Contact Page</a></li>
-                        <li><strong>Email:</strong> <a href="mailto:team@tailors.lk">team@tailor.lk</a></li>
-                        <li><strong>Phone:</strong> <a href="tel:+94758244216">+94758244216</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:team@tailors.lk">team@tailors.lk</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:+94758244216">+94 75 824 4216</a></li>
                         <li><strong>Address:</strong> Colombo, Sri Lanka</li>
                     </ul>
                     
-                    <h3>20.2 Legal Notices</h3>
-                    <p>Official legal notices should be sent via registered mail to Tailors.lk's registered office address.</p>
+                    <h3>22.2 Tender-Specific Enquiries</h3>
+                    <ul>
+                        <li><strong>Tender Inquiries:</strong> <a href="mailto:tenders@tailors.lk">tenders@tailors.lk</a></li>
+                        <li><strong>Performance & Reporting:</strong> <a href="mailto:tenders@tailors.lk">tenders@tailors.l</a></li>
+                        <li><strong>Verification:</strong> <a href="mailto:verify@tailors.lk"></a>verify@tailors.lk</li>
+                        <li><strong>Tailor Black:</strong> <a href="mailto:black@tailors.lk">black@tailors.lk</a></li>
+                    </ul>
+                    
+                    <h3>22.3 Legal Notices</h3>
+                    <p>Official legal notices should be sent via registered mail to Tailors.lk's registered office address in Colombo, Sri Lanka.</p>
                     
                     <div class="note-box">
-                        <p><strong>Professional Statement:</strong> Tailors.lk is committed to operating a transparent, fair, and professional platform for Sri Lanka's tailoring industry. These Terms are designed to protect all Platform users while enabling business growth and quality service delivery.</p>
+                        <p><strong>Professional Statement:</strong> Tailors.lk is committed to operating a transparent, fair, and professional platform for Sri Lanka's tailoring industry. These Terms are designed to protect all Platform users while enabling business growth and quality service delivery through our marketplace, B2B tender system, and partner programs.</p>
                     </div>
                     
                     <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
-                        <p style="font-weight: 600; color: var(--teal);">These Terms and Conditions were last updated on January 20, 2026.</p>
+                        <p style="font-weight: 600; color: var(--teal);">These Terms and Conditions were last updated on March 15, 2026.</p>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 10px;">
-                            © 2025 Tailors.lk. All rights reserved. | Uplifting Sri Lanka's tailoring tradition.
+                            © <span id="current-year"></span> Tailors.lk. All rights reserved. | Uplifting Sri Lanka's tailoring tradition.
                         </p>
                     </div>
                 </div>
@@ -1430,7 +1981,7 @@
         </div>
     </main>
 
-    <!-- FOOTER - PRESERVED -->
+    <!-- FOOTER - PRESERVED (Updated with Tender Links) -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1445,7 +1996,7 @@
                         <a href="https://instagram.com/Tailors.lk" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://x.com/Tailorslk" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://youtube.com/@tailorslk" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://linkedin.com/company/tailors-lk" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                       <!-- <a href="https://linkedin.com/company/tailors-lk" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                 </div>
                 
@@ -1468,6 +2019,7 @@
                     <ul class="footer-links">
                         <li><a href="/for-tailors"><i class="fas fa-user-tie"></i> For Tailors</a></li>
                         <li><a href="/for-businesses"><i class="fas fa-briefcase"></i> For Businesses</a></li>
+                        <li><a href="/tenders"><i class="fas fa-gavel"></i> B2B Tenders</a></li>
                         <li><a href="/for-brands"><i class="fas fa-tag"></i> For Brands</a></li>
                         <li><a href="/community"><i class="fas fa-users"></i> Community</a></li>
                         <li><a href="/tools"><i class="fas fa-tools"></i> Tools</a></li>
@@ -1502,7 +2054,7 @@
                     </ul>
                 </div>
                 
-                <!-- Legal Section with Fixed Contact Info -->
+                <!-- Legal Section with Contact Info -->
                 <div>
                     <h4>Legal</h4>
                     <ul class="footer-links">
@@ -1513,17 +2065,17 @@
                         <li><a href="/policies"><i class="fas fa-file-alt"></i> All Policies</a></li>
                     </ul>
                     
-                    <!-- Contact Info - FIXED Alignment -->
+                    <!-- Contact Info -->
                     <div class="contact-info">
                         <h4>Contact Info</h4>
                         <ul class="footer-links">
                             <li>
                                 <i class="fas fa-phone"></i>
-                                <a href="tel:+94758244216">+94758244216</a>
+                                <a href="tel:+94758244216">+94 75 824 4216</a>
                             </li>
                             <li>
                                 <i class="fas fa-envelope"></i>
-                                <a href="mailto:team@tailors.lk">team@tailors.lk</a>
+                                <a href="team@tailors.lk">team@tailors.lk</a>
                             </li>
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
@@ -1551,27 +2103,29 @@
             const hamburger = document.getElementById('hamburger');
             const mobileMenu = document.getElementById('mobileMenu');
             
-            hamburger.addEventListener('click', (e) => {
-                e.stopPropagation();
-                hamburger.classList.toggle('active');
-                mobileMenu.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking outside or on a link
-            document.addEventListener('click', (e) => {
-                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                }
-            });
-
-            // Close mobile menu when clicking a link
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    hamburger.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
                 });
-            });
+
+                // Close mobile menu when clicking outside or on a link
+                document.addEventListener('click', (e) => {
+                    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+
+                // Close mobile menu when clicking a link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
 
             // Smooth scrolling for anchor links in terms page
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1582,8 +2136,10 @@
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
                             // Close mobile menu if open
-                            hamburger.classList.remove('active');
-                            mobileMenu.classList.remove('active');
+                            if (hamburger && mobileMenu) {
+                                hamburger.classList.remove('active');
+                                mobileMenu.classList.remove('active');
+                            }
                             
                             targetElement.scrollIntoView({
                                 behavior: 'smooth',
