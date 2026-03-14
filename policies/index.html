@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Policies, Returns, Refunds & Order Rules | Tailors.lk Sri Lanka</title>
-    <meta name="description" content="Tailors.lk platform policies including orders, payments, refunds, cancellations, tailoring rules, delivery, quality standards and dispute resolution in Sri Lanka." />
-    <meta name="keywords" content="tailoring policies Sri Lanka, tailor refund policy Sri Lanka, custom clothing returns Sri Lanka, tailoring marketplace Sri Lanka, bespoke tailoring Sri Lanka" />
+    <meta name="description" content="Tailors.lk platform policies including orders, payments, refunds, cancellations, tailoring rules, delivery, quality standards, B2B tender policies and dispute resolution in Sri Lanka." />
+    <meta name="keywords" content="tailoring policies Sri Lanka, tailor refund policy Sri Lanka, custom clothing returns Sri Lanka, tailoring marketplace Sri Lanka, bespoke tailoring Sri Lanka, B2B tender policies, tailoring contracts Sri Lanka" />
     <!-- Updated favicon -->
     <link rel="icon" href="https://data.tailors.lk/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -411,6 +411,72 @@
             padding-left: 5px;
         }
 
+        /* Table Styles */
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .policy-table th {
+            background: rgba(31, 78, 95, 0.08);
+            color: var(--teal);
+            font-weight: 600;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        .policy-table td {
+            padding: 12px;
+            border: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .policy-table tr:hover {
+            background: rgba(31, 78, 95, 0.02);
+        }
+
+        /* Milestone Timeline */
+        .milestone-timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+            justify-content: space-between;
+        }
+
+        .milestone-item {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(31, 78, 95, 0.03);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .milestone-date {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .milestone-event {
+            font-weight: 600;
+            color: var(--teal);
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+
+        .milestone-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
         /* Policy Note */
         .policy-note {
             background: rgba(31, 78, 95, 0.05);
@@ -804,6 +870,19 @@
                 font-size: 1rem;
             }
 
+            .milestone-timeline {
+                flex-direction: column;
+            }
+
+            .policy-table {
+                font-size: 0.85rem;
+            }
+
+            .policy-table th,
+            .policy-table td {
+                padding: 8px;
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 gap: 15px;
@@ -920,7 +999,7 @@
         <section class="policies-hero fade-in">
             <div class="policies-hero-content">
                 <h1>Platform Policies & Service Rules</h1>
-                <p class="hero-description">These policies define how orders, services, refunds, cancellations, quality standards and platform usage work on Tailors.lk across Sri Lanka. Understanding these policies ensures smooth transactions and clear expectations for all platform users.</p>
+                <p class="hero-description">These policies define how orders, services, refunds, cancellations, quality standards, B2B tenders and platform usage work on Tailors.lk across Sri Lanka. Understanding these policies ensures smooth transactions and clear expectations for all platform users.</p>
                 <div class="hero-cta">
                     <a href="/contact" class="btn btn-primary">
                         <i class="fas fa-headset"></i>
@@ -941,6 +1020,10 @@
                     <a href="#orders" class="anchor-link">
                         <i class="fas fa-shopping-cart"></i>
                         Orders
+                    </a>
+                    <a href="#tenders" class="anchor-link">
+                        <i class="fas fa-gavel"></i>
+                        Tenders
                     </a>
                     <a href="#measurements" class="anchor-link">
                         <i class="fas fa-ruler-combined"></i>
@@ -1017,6 +1100,137 @@
                 <li><strong>Platform Rights:</strong> Tailors.lk retains pricing and quality assurance rights</li>
                 <li><strong>Campaign Specific:</strong> Terms vary by specific campaign or tender agreement</li>
             </ul>
+        </section>
+
+        <!-- NEW SECTION: Tender & Exclusive Contract Policies -->
+        <section id="tenders" class="policy-section fade-in">
+            <h2>Tender & Exclusive Contract Policies</h2>
+            <p>For high-volume B2B orders, Tailors.lk operates a separate Tender Marketplace. These exclusive contracts follow specific rules designed for bulk orders, corporate uniforms, and institutional clients.</p>
+
+            <h3>Annual Tender Cycle</h3>
+            <div class="milestone-timeline">
+                <div class="milestone-item">
+                    <div class="milestone-date">May 10th</div>
+                    <div class="milestone-event">Tenders Open</div>
+                    <div class="milestone-desc">10:00 AM IST</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 20th</div>
+                    <div class="milestone-event">Bidding Closes</div>
+                    <div class="milestone-desc">11:59 PM IST</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">May 21st</div>
+                    <div class="milestone-event">Awards Announced</div>
+                    <div class="milestone-desc">Winners notified</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">June 1st</div>
+                    <div class="milestone-event">Deposit Due</div>
+                    <div class="milestone-desc">Winners only</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-date">June 1st</div>
+                    <div class="milestone-event">Contract Start</div>
+                    <div class="milestone-desc">Upon deposit clear</div>
+                </div>
+            </div>
+
+            <h3>Eligibility Requirements</h3>
+            <ul>
+                <li><strong>Active Partner Account:</strong> Must have active Tailors.lk partner account</li>
+                <li><strong>Business Registration:</strong> Valid business registration (BR/NIC) required</li>
+                <li><strong>Capacity Documentation:</strong> Proof of production capacity (staff count, machine inventory, workspace)</li>
+                <li><strong>Minimum Rating:</strong> 4.0+ average customer rating (if previously active)</li>
+                <li><strong>No Violations:</strong> No unresolved complaints or policy violations</li>
+                <li><strong>Revenue Reporting:</strong> Agreement to submit quarterly revenue data</li>
+            </ul>
+
+            <h3>Tender Financial Terms</h3>
+            <table class="policy-table">
+                <tr>
+                    <th>Fee Type</th>
+                    <th>Amount</th>
+                    <th>Refundable</th>
+                </tr>
+                <tr>
+                    <td><strong>Entry Fee</strong></td>
+                    <td>Minimum LKR 5,000 per tender bid</td>
+                    <td>Non-refundable</td>
+                </tr>
+                <tr>
+                    <td><strong>License Bid</strong></td>
+                    <td>Annual fee (LKR 50,000 to 500,000+ depending on category)</td>
+                    <td>N/A - Winning bid</td>
+                </tr>
+                <tr>
+                    <td><strong>Security Deposit</strong></td>
+                    <td>10-20x entry fee (e.g., LKR 75,000-100,000)</td>
+                    <td>Refundable*</td>
+                </tr>
+                <tr>
+                    <td><strong>Commission</strong></td>
+                    <td>0% on tender orders</td>
+                    <td>N/A</td>
+                </tr>
+            </table>
+
+            <h3>Step-by-Step Bidding Process</h3>
+            <ol>
+                <li><strong>BROWSE:</strong> Visit tailors.lk/tenders and review active tender cards</li>
+                <li><strong>SELECT & APPLY:</strong> Click [Apply Now] on desired tender</li>
+                <li><strong>SUBMIT PRIVATE BID:</strong> Enter confidential license bid amount (must exceed Minimum Bid)</li>
+                <li><strong>PAY ENTRY FEE:</strong> Pay non-refundable Entry Fee (Min. LKR 5,000)</li>
+                <li><strong>AWAIT RESULTS:</strong> Winners notified via email & dashboard by May 21st</li>
+                <li><strong>SIGN CONTRACT & PAY DEPOSIT:</strong> Winners receive formal contract + invoice. Pay Refundable Security Deposit by June 1st</li>
+                <li><strong>EXECUTE & REPORT:</strong> Fulfill orders per timeline and submit quarterly revenue data</li>
+            </ol>
+
+            <h3>Revocation Triggers</h3>
+            <p>A tender may be revoked immediately for:</p>
+            <ul>
+                <li><strong>Quality Failure:</strong> Multiple complaints about craftsmanship, use of substandard materials</li>
+                <li><strong>Delivery Failure:</strong> Missing deadlines, inability to fulfill >20% of assigned volume</li>
+                <li><strong>Ethical Breach:</strong> Fraudulent documentation, unauthorized subcontracting</li>
+                <li><strong>Client Solicitation:</strong> Direct contact with tender-sourced clients for outside work</li>
+                <li><strong>Non-Cooperation:</strong> Failure to respond to platform mediation within 48 hours</li>
+            </ul>
+
+            <h3>Re-award Process</h3>
+            <p>If a tender is revoked:</p>
+            <ol>
+                <li>Original winner notified of revocation and deposit forfeiture</li>
+                <li>Offer extended to 2nd Highest Bidder from original cycle (if bid remains valid)</li>
+                <li>Second bidder has 48 hours to accept and pay deposit</li>
+                <li>If declined, tender may be re-listed or cancelled</li>
+                <li>Original winner barred from bidding for 12 months</li>
+            </ol>
+
+            <h3>Brand Attribution & Client Protection</h3>
+            <p>All tender-sourced work must adhere to:</p>
+            <ul>
+                <li><strong>Mandatory Branding:</strong> All documents must display "Fulfilled by [Partner Name] via Tailors.lk" with platform logo</li>
+                <li><strong>Platform Order References:</strong> Use Tailors.lk-provided order reference numbers</li>
+                <li><strong>Client Solicitation Ban:</strong> No direct solicitation of tender-sourced clients for contract duration + 12 months after completion</li>
+                <li><strong>Consequences:</strong> Violation leads to immediate revocation, deposit forfeiture, account suspension, and legal action</li>
+            </ul>
+
+            <h3>Revenue Reporting Requirements</h3>
+            <p>All tender partners must submit quarterly revenue data:</p>
+            <ul>
+                <li>Gross revenue from tender orders</li>
+                <li>Material costs (optional, for margin insights)</li>
+                <li>Delivery completion rate</li>
+                <li>Customer satisfaction score (1-5)</li>
+            </ul>
+            <p><strong>Important:</strong> Failure to report for 2+ consecutive quarters may trigger tender review or non-renewal.</p>
+
+            <h3>Private Tenders</h3>
+            <p>Year-round opportunities for niche, urgent, or custom orders not included in the annual May cycle. Same rules apply: Entry Fee, License Bid, Deposit, Performance Expectations, and Reporting.</p>
+
+            <div class="policy-note">
+                <p><i class="fas fa-file-contract"></i><strong>Full tender rules, including the Tailor Black governance privilege, are detailed in our <a href="/legal" style="color: var(--teal); font-weight: 600; text-decoration: underline;">Legal & Platform Policies</a> page.</strong></p>
+            </div>
         </section>
 
         <!-- SECTION: Tailor Responsibility Policy -->
@@ -1266,11 +1480,11 @@
         <section class="policy-section fade-in">
             <h2>Tailors.lk: Sri Lanka's Trusted Tailoring Marketplace</h2>
             <div class="seo-content">
-                <p>Tailors.lk has established comprehensive policies to ensure fair, transparent, and professional operations across Sri Lanka's tailoring industry. Our platform policies cover every aspect of tailoring services, from initial measurements to final delivery and quality assurance. These policies protect both customers and tailors while maintaining the high standards expected from Sri Lanka's premier tailoring marketplace.</p>
+                <p>Tailors.lk has established comprehensive policies to ensure fair, transparent, and professional operations across Sri Lanka's tailoring industry. Our platform policies cover every aspect of tailoring services, from initial measurements to final delivery and quality assurance, including specialized B2B tender contracts. These policies protect both customers and tailors while maintaining the high standards expected from Sri Lanka's premier tailoring marketplace.</p>
                 
                 <p>Our refund policy in Sri Lanka balances customer protection with the practical realities of custom tailoring work. Unlike ready-made clothing, custom garments are created specifically for individual clients, making standard return policies impractical. Instead, we focus on quality assurance, clear communication, and fair resolution processes that respect the craftsmanship involved in bespoke tailoring services across Sri Lanka.</p>
                 
-                <p>The tailoring marketplace policies on Tailors.lk support Sri Lanka's rich tradition of craftsmanship while embracing modern standards of customer service and business transparency. Whether you're seeking custom suits in Colombo, traditional attire in Kandy, or resort wear in Galle, our policies ensure consistent standards and clear expectations for all tailoring services booked through our platform.</p>
+                <p>The tailoring marketplace policies on Tailors.lk support Sri Lanka's rich tradition of craftsmanship while embracing modern standards of customer service and business transparency. Whether you're seeking custom suits in Colombo, traditional attire in Kandy, resort wear in Galle, or B2B bulk orders through our tender system, our policies ensure consistent standards and clear expectations for all tailoring services booked through our platform.</p>
                 
                 <p>For custom clothing returns and alterations in Sri Lanka, our policies provide clear guidelines that respect both the tailor's work and the customer's satisfaction. We believe in building long-term relationships between customers and tailors, supported by policies that encourage communication, quality workmanship, and professional resolution of any issues that may arise.</p>
                 
@@ -1293,9 +1507,9 @@
                         <i class="fas fa-search"></i>
                         Find Tailors
                     </a>
-                    <a href="/careers" class="btn btn-outline btn-lg">
-                        <i class="fas fa-users"></i>
-                        Explore Careers
+                    <a href="/for-businesses" class="btn btn-outline btn-lg">
+                        <i class="fas fa-briefcase"></i>
+                        B2B Tenders
                     </a>
                 </div>
             </div>
@@ -1360,7 +1574,7 @@
                     <ul class="footer-links">
                         <li><a href="/for-tailors"><i class="fas fa-user-tie"></i> For Tailors</a></li>
                         <li><a href="/for-businesses"><i class="fas fa-briefcase"></i> For Businesses</a></li>
-                        <li><a href="/for-brands"><i class="fas fa-tag"></i> For Brands</a></li>
+                        <li><a href="/tenders"><i class="fas fa-gavel"></i> B2B Tenders</a></li>
                         <li><a href="/community"><i class="fas fa-users"></i> Community</a></li>
                         <li><a href="/tools"><i class="fas fa-tools"></i> Tools</a></li>
                         <li><a href="/partnerships"><i class="fas fa-handshake"></i> Partnerships</a></li>
@@ -1417,6 +1631,10 @@
                             <a href="mailto:team@tailors.lk">team@tailors.lk</a>
                         </div>
                         <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:tenders@tailors.lk">tenders@tailors.lk</a>
+                        </div>
+                        <div class="contact-info-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Colombo, Sri Lanka</span>
                         </div>
@@ -1427,7 +1645,7 @@
             <!-- Newsletter Signup -->
             <div class="newsletter">
                 <h4>Stay Updated</h4>
-                <p>Get the latest on tailoring trends, special offers, and new tailors</p>
+                <p>Get the latest on tailoring trends, special offers, new tailors, and B2B tender opportunities</p>
                 <div class="newsletter-form">
                     <input type="email" placeholder="Your email address" class="newsletter-input" id="footer-email" required>
                     <button class="btn btn-primary btn-sm" id="footer-subscribe">
@@ -1449,7 +1667,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Policies, Returns, Refunds & Order Rules | Tailors.lk Sri Lanka",
-        "description": "Tailors.lk platform policies including orders, payments, refunds, cancellations, tailoring rules, delivery, quality standards and dispute resolution in Sri Lanka.",
+        "description": "Tailors.lk platform policies including orders, payments, refunds, cancellations, tailoring rules, delivery, quality standards, B2B tender policies and dispute resolution in Sri Lanka.",
         "url": "https://tailors.lk/policies",
         "publisher": {
             "@type": "Organization",
@@ -1472,12 +1690,12 @@
         "about": {
             "@type": "Thing",
             "name": "Platform Policies",
-            "description": "Order rules, refund policies, quality standards, and service guidelines for Tailors.lk marketplace"
+            "description": "Order rules, refund policies, quality standards, B2B tender guidelines, and service rules for Tailors.lk marketplace"
         },
         "mainEntity": {
             "@type": "Service",
             "name": "Tailoring Platform Policies",
-            "description": "Comprehensive platform policies covering orders, payments, refunds, cancellations, delivery, and quality standards",
+            "description": "Comprehensive platform policies covering orders, payments, refunds, cancellations, delivery, quality standards, and B2B tender contracts",
             "serviceType": "Platform Policies",
             "areaServed": "Sri Lanka",
             "hasOfferCatalog": {
@@ -1489,6 +1707,13 @@
                         "itemOffered": {
                             "@type": "Service",
                             "name": "Order Classification Policy"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Tender & Exclusive Contract Policies"
                         }
                     },
                     {
