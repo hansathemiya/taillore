@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Partner with Tailors.lk | Franchise & Collaboration Opportunities in Sri Lanka</title>
-  <meta name="description" content="Collaborate with Tailors.lk in Sri Lanka. Explore franchise opportunities, outsourcing partnerships, and B2B collaborations to grow your tailoring or digital services business." />
-  <meta name="keywords" content="tailoring business partnerships sri lanka, franchise tailoring business colombo, collaborate with tailors sri lanka, outsourcing tailoring services colombo, corporate uniform partnership sri lanka, grow tailoring business sri lanka" />
+  <title>Partner with Tailors.lk | Franchise, Tiers & Collaboration Opportunities in Sri Lanka</title>
+  <meta name="description" content="Partner with Tailors.lk in Sri Lanka. Explore franchise opportunities, tailor partnership tiers (Starter, Growth, Professional, Enterprise), trust badges, and B2B collaborations to grow your tailoring or digital services business." />
+  <meta name="keywords" content="tailoring business partnerships sri lanka, franchise tailoring business colombo, collaborate with tailors sri lanka, outsourcing tailoring services colombo, corporate uniform partnership sri lanka, grow tailoring business sri lanka, tailor tiers sri lanka, verified badge tailors" />
 
   <!-- Favicon -->
   <link rel="icon" href="https://data.tailors.lk/favicon.ico" type="image/x-icon" />
@@ -24,7 +24,7 @@
   "@type": "AboutPage",
   "name": "Partner with Tailors.lk – Expand Your Business in Sri Lanka",
   "description": "Tailors.lk collaborates with tailors, workshops, corporate clients, suppliers, and digital service providers to create growth opportunities, premium partnerships, and franchise possibilities across Sri Lanka.",
-  "url": "https://dev.tailors.lk/partnerships/",
+  "url": "https://tailors.lk/partnerships/",
   "mainEntity": {
     "@type": "Service",
     "name": "Tailors.lk Partnership Program",
@@ -51,62 +51,71 @@
         {
           "@type": "OfferCatalog",
           "name": "Franchising Program",
-          "description": "Operate Tailors.lk in your city or region, manage local tailors, and earn recurring revenue through featured subscriptions, commission splits, and digital services.",
+          "description": "Operate Tailors.lk in your city or region, manage local tailors, and earn recurring revenue through featured subscriptions, commission splits, and digital services."
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Tailor Partnership Tiers",
+          "description": "Join as a Starter, Growth, Professional, or Enterprise partner to access premium customers and growth opportunities.",
           "itemListElement": [
             {
               "@type": "Service",
-              "name": "Franchise Opportunity",
-              "description": "Become the official representative and operations manager for your territory in Sri Lanka. Available in Colombo, Kandy, Galle, and other major cities."
+              "name": "Starter Tier",
+              "description": "Rs. 5,000/year, 5-10 orders/month, 10% commission"
+            },
+            {
+              "@type": "Service",
+              "name": "Growth Tier",
+              "description": "Rs. 15,000/year, 20-40 orders/month, 7% commission"
+            },
+            {
+              "@type": "Service",
+              "name": "Professional Tier",
+              "description": "Rs. 35,000/year, 60-100 orders/month, 5% commission"
+            },
+            {
+              "@type": "Service",
+              "name": "Enterprise Tier",
+              "description": "Custom pricing, unlimited orders, 0% on tenders"
             }
           ]
         },
         {
           "@type": "OfferCatalog",
-          "name": "Tailor Partnerships",
-          "description": "Join as a verified or featured tailor to access premium customers and growth opportunities.",
+          "name": "Trust Badges",
+          "description": "Enhance your profile with Verified, Featured, or Tailor Black badges.",
           "itemListElement": [
             {
               "@type": "Service",
-              "name": "Verified Tailor Status",
-              "description": "Premium access with verified status, featured placement, and digital profile optimization."
+              "name": "Verified Badge",
+              "description": "Rs. 1,200/month or Rs. 10,000/year, unannounced audit, +40% visibility"
+            },
+            {
+              "@type": "Service",
+              "name": "Featured Badge",
+              "description": "Rs. 500/month or Rs. 5,000/year, priority placement"
+            },
+            {
+              "@type": "Service",
+              "name": "Tailor Black",
+              "description": "By invitation only, highest ranking, exclusive campaigns"
             }
           ]
         },
         {
           "@type": "OfferCatalog",
           "name": "Corporate & Bulk Orders",
-          "description": "Partner for large-scale uniform and clothing projects across Sri Lanka.",
-          "itemListElement": [
-            {
-              "@type": "Service",
-              "name": "Bulk Tailoring Services",
-              "description": "Hotel, school, and corporate uniforms; promotional clothing; event attire; and bulk tailoring requirements."
-            }
-          ]
+          "description": "Partner for large-scale uniform and clothing projects across Sri Lanka."
         },
         {
           "@type": "OfferCatalog",
           "name": "Supplier & Vendor Partnerships",
-          "description": "Connect fabric and accessory suppliers with our verified tailoring network.",
-          "itemListElement": [
-            {
-              "@type": "Service",
-              "name": "Supplier Partnership",
-              "description": "For fabric suppliers, thread and accessory vendors, equipment suppliers, packaging partners, and logistics collaborators."
-            }
-          ]
+          "description": "Connect fabric and accessory suppliers with our verified tailoring network."
         },
         {
           "@type": "OfferCatalog",
           "name": "Digital Agency Collaborations",
-          "description": "Handle digital services for our platform or partner tailors.",
-          "itemListElement": [
-            {
-              "@type": "Service",
-              "name": "Digital Services Partnership",
-              "description": "Marketing campaigns, content creation, website development, social media management, and SEO optimization."
-            }
-          ]
+          "description": "Handle digital services for our platform or partner tailors."
         }
       ]
     },
@@ -114,7 +123,7 @@
       "@type": "JoinAction",
       "target": {
         "@type": "EntryPoint",
-        "url": "https://dev.tailors.lk/partnerships/#partnership-form",
+        "url": "https://tailors.lk/partnerships/#partnership-form",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -776,6 +785,221 @@
       font-size: 0.95rem;
     }
 
+    /* Package Cards for Tiers */
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .package-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 30px 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--gold);
+    }
+
+    .package-popular {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background: var(--gold);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .package-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 5px;
+    }
+
+    .package-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    .package-price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .package-commission {
+      font-size: 1rem;
+      color: var(--teal-light);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .package-features {
+      list-style: none;
+      margin: 20px 0;
+      flex-grow: 1;
+    }
+
+    .package-features li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .package-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .package-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: var(--transition);
+      align-self: flex-start;
+    }
+
+    .package-link:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* Trust Badges Section */
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+
+    .badge-card {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      background: linear-gradient(135deg, rgba(31, 78, 95, 0.03) 0%, rgba(185, 145, 95, 0.03) 100%);
+      border-radius: var(--radius);
+      padding: 30px 25px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .badge-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .badge-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .badge-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+
+    .badge-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .badge-price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .badge-desc {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .badge-note {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .badge-invite {
+      background: var(--teal-dark);
+      color: var(--gold-light);
+      padding: 5px 10px;
+      border-radius: var(--radius-xs);
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
     /* Partnership Types */
     .partnership-types-grid {
       display: grid;
@@ -1133,6 +1357,9 @@
       .partnerships-hero h1 {
         font-size: 2rem;
       }
+      .package-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -1172,6 +1399,21 @@
       }
       .benefits-grid, .partnership-types-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+      .badge-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .badge-card {
+        width: 100%;
+        max-width: 100%;
+      }
+      .stats-bar {
+        flex-direction: column;
         gap: 20px;
       }
       .franchise-section {
@@ -1320,6 +1562,7 @@
         <a href="/about">About</a>
         <a href="/for-businesses">For Businesses</a>
         <a href="/for-tailors">For Tailors</a>
+        <a href="/tenders">B2B Tenders</a>
         <a href="/partnerships" class="active">Partnerships</a>
         <a href="/contact">Contact</a>
       </nav>
@@ -1366,6 +1609,7 @@
     <a href="/about">About</a>
     <a href="/for-businesses">For Businesses</a>
     <a href="/for-tailors">For Tailors</a>
+    <a href="/tenders">B2B Tenders</a>
     <a href="/partnerships" class="active">Partnerships</a>
     <a href="/contact">Contact</a>
 
@@ -1398,15 +1642,30 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT STARTS HERE (with appropriate spacing) -->
+  <!-- MAIN CONTENT STARTS HERE -->
 
-  <!-- 1) HERO SECTION -->
+  <!-- 1) HERO SECTION (UPDATED with Stats) -->
   <section class="partnerships-hero">
     <div class="container partnerships-hero-content">
       <h1>Partner with Tailors.lk – Expand Your Business in Sri Lanka</h1>
       <p class="partnerships-hero-subtitle">
-        Tailors.lk collaborates with tailors, workshops, corporate clients, suppliers, and digital service providers to create growth opportunities, premium partnerships, and franchise possibilities across Sri Lanka.
+        Join Sri Lanka's #1 digital marketplace for tailoring services. With 300+ verified partners across 9 cities and Rs. 45M+ revenue generated, we offer tailored growth paths for your business.
       </p>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Verified Partners</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">9</div>
+          <div class="stat-label">Cities</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Rs. 45M+</div>
+          <div class="stat-label">Revenue Generated</div>
+        </div>
+      </div>
 
       <div class="hero-cta-buttons">
         <a href="/contact" class="btn btn-primary btn-lg">
@@ -1438,7 +1697,7 @@
     </div>
   </section>
 
-  <!-- 2) WHY PARTNER WITH US -->
+  <!-- 2) WHY PARTNER WITH US (PRESERVED) -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Why Businesses Collaborate with Tailors.lk</h2>
@@ -1489,7 +1748,138 @@
     </div>
   </section>
 
-  <!-- 3) FRANCHISE OPPORTUNITIES -->
+  <!-- NEW SECTION: Tailor Partnership Tiers -->
+  <section class="section" style="background: linear-gradient(135deg, rgba(31, 78, 95, 0.03) 0%, rgba(13, 54, 69, 0.03) 100%);">
+    <div class="container">
+      <h2 class="section-title">Tailor Partnership Tiers</h2>
+      <p class="section-subtitle">
+        Choose the growth tier that fits your business. Get direct access to verified order sales with transparent pricing and commission structures.
+      </p>
+
+      <div class="package-grid fade-in">
+        <!-- Starter Package -->
+        <div class="package-card">
+          <div class="package-name">STARTER</div>
+          <div class="package-price">Rs. 5,000<small>/year +</small></div>
+          <div class="package-commission">10% Commission</div>
+          <ul class="package-features">
+            <li>5-10 Orders/month</li>
+            <li>Email Support</li>
+            <li>Standard Profile</li>
+            <li>General Orders Access</li>
+            <li>Customer Review System</li>
+          </ul>
+          <a href="/register" class="package-link">Get Started →</a>
+        </div>
+
+        <!-- Growth Package - Popular -->
+        <div class="package-card" style="border-color: var(--gold);">
+          <div class="package-popular">POPULAR</div>
+          <div class="package-name">GROWTH</div>
+          <div class="package-price">Rs. 15,000<small>/year +</small></div>
+          <div class="package-commission">7% Commission</div>
+          <ul class="package-features">
+            <li>20-40 Orders/month</li>
+            <li>WhatsApp Support</li>
+            <li>Premium Profile</li>
+            <li>Regional Specials</li>
+            <li>Dashboard Access</li>
+          </ul>
+          <a href="/register" class="package-link">Upgrade to Growth →</a>
+        </div>
+
+        <!-- Professional Package -->
+        <div class="package-card">
+          <div class="package-name">PROFESSIONAL</div>
+          <div class="package-price">Rs. 35,000<small>/year +</small></div>
+          <div class="package-commission">5% Commission</div>
+          <ul class="package-features">
+            <li>60-100 Orders/month</li>
+            <li>Priority Support</li>
+            <li>Subdomain (yourname.tailors.lk)</li>
+            <li>Tender Priority Access</li>
+            <li>Advanced Analytics</li>
+          </ul>
+          <a href="/register" class="package-link">Go Professional →</a>
+        </div>
+
+        <!-- Enterprise Package -->
+        <div class="package-card">
+          <div class="package-name">ENTERPRISE</div>
+          <div class="package-price">Custom<small> +</small></div>
+          <div class="package-commission">0% on Tenders*</div>
+          <ul class="package-features">
+            <li>Unlimited Orders</li>
+            <li>Dedicated Manager</li>
+            <li>Custom Domain</li>
+            <li>Exclusive Tenders</li>
+            <li>Revenue Reporting Insights</li>
+          </ul>
+          <a href="#contact-form" class="package-link">Contact for Pricing →</a>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 20px;">
+        *Enterprise partners pay annual tender license fee instead of per-order commission. All packages include Dashboard Access, WhatsApp Integration, and Basic Analytics.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Trust Badges -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Enhance Your Profile with Trust Badges</h2>
+      <p class="section-subtitle">
+        Stand out from the competition and build customer confidence with our official trust badges.
+      </p>
+
+      <div class="badge-container fade-in">
+        <!-- Verified Badge -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="badge-title">VERIFIED BADGE</div>
+          <div class="badge-price">Rs. 1,200<small>/month</small> or Rs. 10,000<small>/year</small></div>
+          <div class="badge-desc">
+            Unannounced quality audit, +40% search visibility, Golden Badge nomination eligibility.
+          </div>
+          <div class="badge-note">Limited to 10-15 slots per month</div>
+        </div>
+
+        <!-- Featured Badge -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="badge-title">FEATURED BADGE</div>
+          <div class="badge-price">Rs. 500<small>/month</small> or Rs. 5,000<small>/year</small></div>
+          <div class="badge-desc">
+            Priority search placement, "Featured" label on profile, enhanced visibility.
+          </div>
+        </div>
+
+        <!-- Tailor Black -->
+        <div class="badge-card">
+          <div class="badge-icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="badge-title">TAILOR BLACK</div>
+          <div class="badge-price">By Invitation Only</div>
+          <div class="badge-desc">
+            Highest search ranking, exclusive brand campaigns, dedicated account manager.
+          </div>
+          <div class="badge-invite">Cannot be bought — must be earned</div>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: var(--text-light); font-size: 0.9rem; margin-top: 20px;">
+        Verified Badge requires passing an unannounced shop visit assessing craftsmanship, hygiene, and customer service.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3) FRANCHISE OPPORTUNITIES (UPDATED with Stats) -->
   <section class="section" style="background: linear-gradient(135deg, rgba(31, 78, 95, 0.03) 0%, rgba(13, 54, 69, 0.03) 100%);">
     <div class="container">
       <h2 class="section-title">Tailors.lk Franchising Program</h2>
@@ -1520,6 +1910,10 @@
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
+          <p style="color: var(--text); margin-bottom: 15px; font-weight: 500;">
+            <i class="fas fa-chart-line" style="color: var(--gold);"></i> 
+            Join our network of 300+ verified partners across 9 cities
+          </p>
           <a href="https://wa.me/94758244216?text=Hi%20Tailors.lk,%20I'm%20interested%20in%20the%20franchise%20opportunity%20for%20my%20city%20in%20Sri%20Lanka"
              class="btn btn-primary btn-lg">
             <i class="fas fa-crown"></i>
@@ -1533,7 +1927,7 @@
     </div>
   </section>
 
-  <!-- 4) OUTSOURCING & COLLABORATIONS -->
+  <!-- 4) OUTSOURCING & COLLABORATIONS (PRESERVED) -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Work With Us to Manage Specific Services</h2>
@@ -1576,7 +1970,7 @@
     </div>
   </section>
 
-  <!-- 5) PARTNERSHIP TYPES -->
+  <!-- 5) PARTNERSHIP TYPES (UPDATED with more specific options) -->
   <section class="section" style="background: linear-gradient(135deg, rgba(185, 145, 95, 0.05) 0%, rgba(212, 178, 140, 0.05) 100%);">
     <div class="container">
       <h2 class="section-title">Types of Partnerships Available</h2>
@@ -1587,33 +1981,32 @@
       <div class="partnership-types-grid fade-in">
         <div class="type-card">
           <h3><i class="fas fa-user-tie" style="color: var(--teal); margin-right: 10px;"></i> Tailor Partnerships</h3>
-          <p>Join as a verified or featured tailor to access premium customers and growth opportunities.</p>
+          <p>Choose from Starter, Growth, Professional, or Enterprise tiers to access premium customers and growth opportunities.</p>
           <ul>
-            <li>Verified Tailor status for trust</li>
-            <li>Featured placement in search results</li>
-            <li>Access to premium orders</li>
-            <li>Digital profile optimization</li>
-            <li>Customer review management</li>
+            <li>Starter (Rs. 5,000/yr): 5-10 orders/month, 10% commission</li>
+            <li>Growth (Rs. 15,000/yr): 20-40 orders/month, 7% commission</li>
+            <li>Professional (Rs. 35,000/yr): 60-100 orders/month, 5% commission</li>
+            <li>Enterprise (Custom): Unlimited orders, 0% on tenders</li>
           </ul>
-          <a href="/for-tailors" class="btn btn-outline btn-sm" style="margin-top: 15px; display: inline-block;">Learn More</a>
+          <a href="/for-tailors" class="btn btn-outline btn-sm" style="margin-top: 15px; display: inline-block;">View All Tiers</a>
         </div>
 
         <div class="type-card">
           <h3><i class="fas fa-building" style="color: var(--teal); margin-right: 10px;"></i> Corporate & Bulk Orders</h3>
-          <p>Partner for large-scale uniform and clothing projects across Sri Lanka.</p>
+          <p>Partner for large-scale uniform and clothing projects across Sri Lanka through our B2B tender system.</p>
           <ul>
             <li>Hotel & restaurant uniforms</li>
             <li>School & corporate uniforms</li>
             <li>Promotional clothing projects</li>
             <li>Event & conference attire</li>
-            <li>Bulk tailoring requirements</li>
+            <li>Government & institutional contracts</li>
           </ul>
-          <a href="/for-businesses" class="btn btn-outline btn-sm" style="margin-top: 15px; display: inline-block;">Corporate Services</a>
+          <a href="/tenders" class="btn btn-outline btn-sm" style="margin-top: 15px; display: inline-block;">Explore Tenders</a>
         </div>
 
         <div class="type-card">
           <h3><i class="fas fa-tshirt" style="color: var(--teal); margin-right: 10px;"></i> Supplier & Vendor Partnerships</h3>
-          <p>Connect fabric and accessory suppliers with our verified tailoring network.</p>
+          <p>Connect fabric and accessory suppliers with our verified tailoring network of 300+ partners.</p>
           <ul>
             <li>Fabric suppliers</li>
             <li>Thread & accessory vendors</li>
@@ -1626,7 +2019,7 @@
 
         <div class="type-card">
           <h3><i class="fas fa-laptop-code" style="color: var(--teal); margin-right: 10px;"></i> Digital Agency Collaborations</h3>
-          <p>Handle digital services for our platform or partner tailors.</p>
+          <p>Handle digital services for our platform or partner tailors. Instructors can earn Rs. 15,000-75,000/month part-time.</p>
           <ul>
             <li>Marketing campaigns</li>
             <li>Content creation</li>
@@ -1648,7 +2041,7 @@
     </div>
   </section>
 
-  <!-- 6) SUCCESS BENEFITS -->
+  <!-- 6) SUCCESS BENEFITS (PRESERVED) -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Benefits of Partnering with Tailors.lk</h2>
@@ -1703,7 +2096,7 @@
     </div>
   </section>
 
-  <!-- 7) SEO CONTENT BLOCKS -->
+  <!-- 7) SEO CONTENT BLOCKS (UPDATED) -->
   <section class="section" style="background: linear-gradient(135deg, rgba(31, 78, 95, 0.02) 0%, rgba(13, 54, 69, 0.02) 100%);">
     <div class="container">
       <h2 class="section-title">Partnership Opportunities in Sri Lanka's Tailoring Industry</h2>
@@ -1719,12 +2112,11 @@
           but also creates collaborative opportunities for suppliers, digital service providers, and business owners interested in franchise operations.
         </p>
         <p>
-          Whether you operate a tailoring business in Colombo's commercial districts, a bridal shop in Kandy, or an alteration service in Galle,
-          partnering with Tailors.lk provides access to a broader customer base, digital marketing support, and operational efficiencies.
-          Our verified network ensures quality partnerships that benefit all stakeholders in Sri Lanka's tailoring ecosystem.
+          With transparent tiered packages starting from Rs. 5,000/year (Starter) to custom Enterprise solutions, partners can choose the growth path that fits their capacity.
+          Verified partners enjoy up to 40% more visibility, and top performers can earn Tailor Black status for exclusive benefits.
         </p>
         <div class="seo-links">
-          <a href="/for-tailors" class="btn btn-outline btn-sm">Explore Tailor Partnerships</a>
+          <a href="/for-tailors" class="btn btn-outline btn-sm">Explore Tailor Tiers</a>
           <a href="#contact-form" class="btn btn-outline btn-sm">Contact for Partnership</a>
         </div>
       </div>
@@ -1738,8 +2130,8 @@
         </p>
         <p>
           The franchise model includes comprehensive training, marketing materials, operational guidelines, and ongoing technical support.
-          Franchisees benefit from recurring revenue streams through featured tailor subscriptions, commission structures, and digital service offerings.
-          This model is particularly effective in Sri Lanka's growing tailoring market, where digital adoption is increasing but local expertise remains crucial.
+          Franchisees benefit from recurring revenue streams through featured tailor subscriptions (Rs. 500-1,200/month), commission structures, and digital service offerings.
+          Join our network of 300+ verified partners and tap into Rs. 45M+ in generated revenue.
         </p>
         <div class="seo-links">
           <a href="#contact-form" class="btn btn-outline btn-sm">Inquire About Franchise</a>
@@ -1755,23 +2147,18 @@
         </p>
         <p>
           If your business specializes in digital services, content production, or operational management, we invite you to explore collaboration opportunities.
-          These partnerships allow you to work with Sri Lanka's leading tailoring platform while growing your own business. We're particularly interested in
-          collaborations that enhance our service offerings to tailors and customers across Sri Lanka.
-        </p>
-        <p>
-          Our outsourcing partnerships include content pipelines for tailoring education, social media management for platform promotion,
-          digital marketing campaigns for specific services, and customer operation management for premium clients. Each collaboration is structured
-          to provide mutual benefits and growth opportunities in Sri Lanka's evolving digital landscape.
+          These partnerships allow you to work with Sri Lanka's leading tailoring platform while growing your own business. Instructors can earn Rs. 15,000-75,000/month
+          part-time through our Tailors.lk Learn program.
         </p>
         <div class="seo-links">
           <a href="/register" class="btn btn-primary">Register Interest</a>
-          <a href="/contact" class="btn btn-outline">Contact for Collaboration</a>
+          <a href="/learn" class="btn btn-outline">Explore Instructor Opportunities</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 8) FINAL CTA / CONTACT FORM -->
+  <!-- 8) FINAL CTA / CONTACT FORM (PRESERVED) -->
   <section class="section" id="contact-form" style="padding-top: 0;">
     <div class="container">
       <div class="contact-form-section fade-in">
@@ -1809,10 +2196,15 @@
               <select id="contact-partnership" class="form-control select">
                 <option value="">Select partnership type</option>
                 <option value="Franchise Opportunity">Franchise Opportunity</option>
-                <option value="Tailor Partnership">Tailor Partnership</option>
+                <option value="Starter Tier (Rs. 5,000/yr)">Starter Tier (Rs. 5,000/yr)</option>
+                <option value="Growth Tier (Rs. 15,000/yr)">Growth Tier (Rs. 15,000/yr)</option>
+                <option value="Professional Tier (Rs. 35,000/yr)">Professional Tier (Rs. 35,000/yr)</option>
+                <option value="Enterprise Tier (Custom)">Enterprise Tier (Custom)</option>
+                <option value="Verified Badge">Verified Badge (Rs. 10,000/yr)</option>
                 <option value="Corporate/Bulk Orders">Corporate/Bulk Orders</option>
                 <option value="Supplier/Vendor">Supplier/Vendor</option>
                 <option value="Digital Agency Collaboration">Digital Agency Collaboration</option>
+                <option value="Instructor/Learn Program">Instructor/Learn Program</option>
                 <option value="Outsourcing/Collaboration">Outsourcing/Collaboration</option>
                 <option value="Other Partnership">Other Partnership</option>
               </select>
@@ -1866,7 +2258,7 @@
         <div>
           <h4>Tailors.lk</h4>
           <p style="color: rgba(255,255,255,0.7); margin-bottom: 16px; font-size: 0.85rem; line-height: 1.4;">
-            Connecting Sri Lanka's tailoring community since 2024.
+            Connecting Sri Lanka's tailoring community since 2024. 300+ Verified Partners | 9 Cities | Rs. 45M+ Revenue Generated
           </p>
           <div class="social-links">
             <a href="https://facebook.com/Tailors.lk.find" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -1896,6 +2288,7 @@
           <ul class="footer-links">
             <li><a href="/for-tailors"><i class="fas fa-user-tie"></i> For Tailors</a></li>
             <li><a href="/for-businesses"><i class="fas fa-briefcase"></i> For Businesses</a></li>
+            <li><a href="/tenders"><i class="fas fa-gavel"></i> B2B Tenders</a></li>
             <li><a href="/for-brands"><i class="fas fa-tag"></i> For Brands</a></li>
             <li><a href="/community"><i class="fas fa-users"></i> Community</a></li>
             <li><a href="/tools"><i class="fas fa-tools"></i> Tools</a></li>
@@ -1945,8 +2338,8 @@
           <div class="contact-info">
             <h4>Contact Info</h4>
             <ul class="footer-links">
-              <li><i class="fas fa-phone"></i> <a href="tel:+94758244216">+94758244216</a></li>
-              <li><i class="fas fa-envelope"></i> <a href="mailto:team@tailors.lk">team@tailors.lk</a></li>
+              <li><i class="fas fa-phone"></i> <a href="tel:+94758244216">+94 75 824 4216</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:partnerships@tailors.lk">partnerships@tailors.lk</a></li>
               <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
             </ul>
           </div>
@@ -1959,7 +2352,7 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
   <script>
     (function() {
       // Initialize
